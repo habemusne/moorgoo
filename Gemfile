@@ -43,3 +43,9 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'rails_admin', '~> 0.6.2'
+
+gem 'cancan'
+
+gem 'devise'
