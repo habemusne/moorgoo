@@ -1,1 +1,6 @@
-<p>hello</p>
+<%= flash[:alert] %>
+
+<%= form_tag( books_path, :method=>'get') do %>
+  <%= text_field_tag :search, nil, :placeholder=>'ISBN here'%>
+  <%= submit_tag("Search")%>
+<% end %>

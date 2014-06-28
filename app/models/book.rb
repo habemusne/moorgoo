@@ -1,4 +1,5 @@
 class Book < ActiveRecord::Base
   belongs_to :school
-  belongs_to :user
+  has_many :bookprices
+  has_many :users, :through=> :bookprices
 end

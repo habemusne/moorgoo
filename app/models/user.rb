@@ -4,5 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   belongs_to :school
-  has_many :books
+  has_many :bookprices
+  has_many :books, :through=> :bookprices
 end
