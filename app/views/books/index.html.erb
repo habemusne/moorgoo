@@ -6,6 +6,12 @@
   <%= b.edition %>
   <br>
   <%= b.isbn %>
+  <br>
+  <% b.bookprices.each do |p| %>
+    <p>Price: <%= p.price%></p>
+    <p>Condition: <%= p.condition%></p>
+    <p>Contact: <%= p.contact%></p>
+  <% end %>
   <hr>
   <br>
 <% end %>

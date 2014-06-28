@@ -1,3 +1,4 @@
+require 'open-uri'
 class BookpricesController < ApplicationController
   def new
     @bookprice = Bookprice.new
@@ -24,10 +25,19 @@ class BookpricesController < ApplicationController
     end
 
     def processISBN
-      book = Book.find_by(:isbn => params[:bookprice][:isbn]) or fetch_book
+      book = Book.find_by(:isbn => params[:bookprice][:isbn]) || fetch_book(params[:bookprice][:isbn])
       book
     end
 
-    def fetch_book
+    def fetch_book(isbn)
+      url = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{isbn}"
+      result = JSON.load(open(url).read)
+      book = Book.create(
+        :title => result["items"][0]["volumeInfo"]["title"],
+        :isbn => isbn,
+        :author => result["items"][0]["volumeInfo"]["authors"][0],
+        :pic_url => result["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
+        )
+      book
     end
 end

@@ -1,0 +1,15 @@
+<%= form_for(@user, url: user_registration_path(@user)) do |u| %>
+  <%= u.label :name %>
+  <%= u.text_field :name %>
+
+  <%= u.label :email %>
+  <%= u.text_field :email %>
+
+  <%= u.label :password %>
+  <%= u.text_field :password %>
+
+  <%= u.label :password_confirmation %>
+  <%= u.text_field :password_confirmation %>
+
+  <%= u.submit 'Sign up' %>
+<% end %>
