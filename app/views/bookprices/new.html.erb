@@ -1,0 +1,19 @@
+<%= form_for @bookprice do |bp| %>
+  <%= bp.label :ISBN %>
+  <%= bp.text_field :isbn %>
+
+  <%= bp.label :price %>
+  <%= bp.text_field :price %>
+
+  <%= bp.label :condition %>
+  <%= bp.text_field :condition %>
+
+  <%= bp.label :contact %>
+  <%= bp.text_area :contact %>
+
+  <% if user_signed_in? %>
+    <%= bp.submit 'Done' %>
+  <% else %>
+    <%= bp.submit 'Login' %>
+  <% end %>
+<% end %>

@@ -1,0 +1,8 @@
+<%= link_to 'I want to sell', new_bookprice_path %>
+
+<% if user_signed_in? %>
+  <%= current_user.id %>
+  <%= link_to "Sign out", destroy_user_session_path, :method=>:delete %>
+<% else %>
+  <%= link_to 'Login', new_user_session_path %>
+<% end %>
