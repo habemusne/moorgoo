@@ -1,0 +1,24 @@
+
+<div class="panel panel-default col-sm-8 col-sm-offset-2">
+  <div class="panel-body">
+    <div class="col-sm-3">
+      <%= image_tag b.pic_url%>
+    </div>
+    <div class="col-sm-9">
+      <%= b.title %>
+      <br>
+      <%= b.author %>
+      <br>
+      <%= b.edition %>
+      <br>
+      <%= b.isbn %>
+      <br>
+    </div>
+  </div>
+</div>
+
+<% b.bookprices.each do |p| %>
+    <p>Price: <%= p.price%></p>
+    <p>Condition: <%= p.condition%></p>
+    <p>Contact: <%= p.contact%></p>
+  <% end %>
