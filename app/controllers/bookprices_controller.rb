@@ -6,15 +6,20 @@ class BookpricesController < ApplicationController
 
   def create
     @book = processISBN
-    if current_user
-      @bookprice = current_user.bookprices.create(bookprice_params)
-      @bookprice.update_attribute(:book_id, @book.id)
-      redirect_to @book
+    if @book.nil?
+      flash[:alert] = "Invalid ISBN!"
+      redirect_to new_bookprice_path
     else
-      @bookprice = Bookprice.create(bookprice_params)
-      @bookprice.update_attribute(:book_id, @book.id)
-      cookies.signed[:tempPrice] = {:value => @bookprice.id, :expires => 1.hour.from_now}
-      redirect_to new_user_session_path
+      if current_user
+        @bookprice = current_user.bookprices.create(bookprice_params)
+        @bookprice.update_attribute(:book_id, @book.id)
+        redirect_to @book
+      else
+        @bookprice = Bookprice.create(bookprice_params)
+        @bookprice.update_attribute(:book_id, @book.id)
+        cookies.signed[:tempPrice] = {:value => @bookprice.id, :expires => 1.hour.from_now}
+        redirect_to new_user_session_path
+      end
     end
   end
 
@@ -32,12 +37,16 @@ class BookpricesController < ApplicationController
     def fetch_book(isbn)
       url = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{isbn}"
       result = JSON.load(open(url).read)
-      book = Book.create(
-        :title => result["items"][0]["volumeInfo"]["title"],
-        :isbn => isbn,
-        :author => result["items"][0]["volumeInfo"]["authors"][0],
-        :pic_url => result["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
-        )
-      book
+      if result["totalItems"] == 0
+        nil
+      else
+        book = Book.create(
+          :title => result["items"][0]["volumeInfo"]["title"],
+          :isbn => isbn,
+          :author => result["items"][0]["volumeInfo"]["authors"][0],
+          :pic_url => result["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
+          )
+        book
+      end
     end
 end

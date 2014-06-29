@@ -3,7 +3,7 @@
 <div class="main-block">
   
 
-  <% unless flash[:alert].nil? %>
+  <% if has_alert? %>
     <div class="alert alert-warning alert-dismissible" role="alert">
       <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
       <strong>Sorry!</strong> <%= flash[:alert] %>
