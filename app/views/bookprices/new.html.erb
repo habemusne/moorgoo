@@ -1,19 +1,29 @@
-<%= form_for @bookprice do |bp| %>
-  <%= bp.label :ISBN %>
-  <%= bp.text_field :isbn %>
+<div class="col-sm-6 col-sm-offset-3">
+  <%= form_for @bookprice do |bp| %>
+    <div class="form-group">
+      <%= bp.label :ISBN %>
+      <%= bp.text_field :isbn, :class=>'form-control' %>
+    </div>
 
-  <%= bp.label :price %>
-  <%= bp.text_field :price %>
+    <div class="form-group">
+      <%= bp.label :price %>
+      <%= bp.text_field :price, :class=>'form-control' %>
+    </div>
 
-  <%= bp.label :condition %>
-  <%= bp.text_field :condition %>
+    <div class="form-group">
+      <%= bp.label :condition %>
+      <%= bp.text_field :condition, :class=>'form-control' %>
+    </div>
 
-  <%= bp.label :contact %>
-  <%= bp.text_area :contact %>
+    <div class="form-group">
+      <%= bp.label :contact %>
+      <%= bp.text_area :contact, :class=>'form-control' %>
+    </div>
 
-  <% if user_signed_in? %>
-    <%= bp.submit 'Done' %>
-  <% else %>
-    <%= bp.submit 'Login' %>
+    <% if user_signed_in? %>
+      <%= bp.submit 'Done', :class=>'btn btn-default' %>
+    <% else %>
+      <%= bp.submit 'Login', :class=>'btn btn-default' %>
+    <% end %>
   <% end %>
-<% end %>
+</div>

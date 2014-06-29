@@ -1,24 +1,23 @@
-
-<div class="panel panel-default col-sm-8 col-sm-offset-2">
+<div class="panel panel-default col-sm-8 col-sm-offset-2 bookinfo-row">
   <div class="panel-body">
-    <div class="col-sm-3">
-      <%= image_tag b.pic_url%>
+    <div class="col-sm-4">
+      <%= image_tag b.pic_url, :class=>'book-img'%>
     </div>
-    <div class="col-sm-9">
-      <%= b.title %>
-      <br>
-      <%= b.author %>
-      <br>
-      <%= b.edition %>
-      <br>
-      <%= b.isbn %>
+    <div class="col-sm-8">
+      <h4>Title: <%= b.title %></h4>
+      <h4>Author: <%= b.author %></h4>
+      <h4> ISBN: <%= b.isbn %></h4>
       <br>
     </div>
   </div>
 </div>
-
-<% b.bookprices.each do |p| %>
-    <p>Price: <%= p.price%></p>
-    <p>Condition: <%= p.condition%></p>
-    <p>Contact: <%= p.contact%></p>
-  <% end %>
+  
+<% b.bookprices.order(:price).each do |p| %>
+  <div class="panel panel-default col-sm-8 col-sm-offset-2 bookinfo-row">
+    <div class="panel-heading"><%= p.price%></div>
+    <div class="panel-body">
+      <p>Condition: <%= p.condition%></p>
+      <p>Contact: <%= p.contact%></p>
+    </div>
+  </div>
+<% end %>

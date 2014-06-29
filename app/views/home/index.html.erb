@@ -1,7 +1,14 @@
 
 
 <div class="main-block">
-  <%= flash[:alert] %>
+  
+
+  <% unless flash[:alert].nil? %>
+    <div class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <strong>Sorry!</strong> <%= flash[:alert] %>
+    </div>
+  <% end %>
 
   <%= form_tag( books_path, :method=>'get', :class=>'form-inline') do %>
     <%= text_field_tag :search, nil, :placeholder=>'ISBN here', :class=>'form-control'%>
