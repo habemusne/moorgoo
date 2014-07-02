@@ -1,0 +1,18 @@
+
+<div class="center">
+  <% unless flash[:alert].nil? %>
+    <div class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <strong>Sorry!</strong> <%= flash[:alert] %>
+    </div>
+  <% end %>
+
+<div class="input_error_container">
+  <div class="input_error_notice"></div>
+</div>
+  <%= form_tag( books_path, :method=>'get', :class=>'form-inline info_form', :id=>'isbnForm') do %>
+    <%= text_field_tag :search, nil, :placeholder=>'Search ISBN', :class=>'form-control', :style => 'width:250px;height:40px;margin-top:5px;' %><br>
+    <%= submit_tag("Search", :class=>"btn btn-warning info_form-submitButton")%>
+  <% end %>
+</div>
+

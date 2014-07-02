@@ -11,3 +11,36 @@
  *= require_self
  *= require_tree .
  */
+ @import "bootstrap";
+.input_error_container{
+	height: 20px;
+}
+div.input_error_notice {
+	font-size: 14px;
+	height:20px;
+	color: red;
+	font-style: italic;
+}
+.center {
+  text-align: center;
+  padding: 150px;
+}
+.info_form {
+
+}
+.info_form-label {
+
+}
+.info_form-submitButton {
+	width:250px;
+	height:40px;
+	margin-top:5px;
+}
+label.info_form-auxChoice {
+	font-size: 14px;
+	color: grey;
+	margin-top: 5px;
+}
+.info_form-auxChoice-box{
+	size: 14px;
+}

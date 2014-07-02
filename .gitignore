@@ -10,8 +10,8 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+/db/schema.rb
 
-# TODO Comment out these rules if you are OK with secrets being uploaded to the repo
 config/initializers/secret_token.rb
 config/secrets.yml
 
@@ -20,7 +20,7 @@ config/secrets.yml
 /vendor/bundle
 
 # these should all be checked in to normalise the environment:
-# Gemfile.lock, .ruby-version, .ruby-gemset
+Gemfile.lock
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
