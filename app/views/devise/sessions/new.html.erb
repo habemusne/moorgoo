@@ -1,17 +1,21 @@
-<h2>Sign in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+<div class='center'>
+<h2>Sign in </h2>
+<div class="input_error_container">
+	<div class="input_error_notice"></div>
+</div>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => { :id => 'signinForm', :class => 'form-inline info-form'}) do |f| %>
 
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+  <%= f.email_field :email, autofocus: true, class: 'form-control', style: 'width:250px;height:40px;margin-top:5px;', placeholder: 'Email' %><br>
 
+  <%= f.password_field :password, autocomplete: "off", class: 'form-control', style: 'width:250px;height:40px;margin-top:5px;', placeholder: 'Password' %>
+
+
+  <div><%= f.submit "Sign in", class: "btn btn-warning info_form-submitButton" %></div>
   <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    <%= f.check_box :remember_me %><%= f.label :remember_me, class: 'info_form-auxChoice' %>
   <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>

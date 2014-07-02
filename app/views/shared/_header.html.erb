@@ -20,7 +20,7 @@
             <%= current_user.id %>
             <%= link_to "Sign out", destroy_user_session_path, :method=>:delete %>
           <% else %>
-            <%= link_to 'Login', new_user_session_path %>
+            <%= link_to 'My Account', new_user_session_path %>
           <% end %>
         </li>
       </ul>
