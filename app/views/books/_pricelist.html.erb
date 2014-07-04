@@ -1,0 +1,9 @@
+<% b.bookprices.order(:price).each do |p| %>
+  <div class="panel panel-default">
+    <div class="panel-heading"> $ <%= p.price%></div>
+    <div class="panel-body">
+      <p>Condition: <%= p.condition%></p>
+      <p>Contact: <%= p.contact%></p>
+    </div>
+  </div>
+<% end %>

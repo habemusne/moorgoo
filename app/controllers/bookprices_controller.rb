@@ -1,7 +1,20 @@
 require 'open-uri'
 class BookpricesController < ApplicationController
+  before_filter :check_user, :only=>[:index, :update]
+
+  def index
+    @bookprices = current_user.bookprices.where(:status=>params[:status].to_i).order(updated_at: :desc)
+    @sold = params[:status]
+  end
+
   def new
     @bookprice = Bookprice.new
+  end
+
+  def update
+    @bookprice = Bookprice.find(params[:id])
+    @bookprice.update_attribute(:status, params[:bookprice][:status].to_i)
+    redirect_to bookprices_path(:status=>@bookprice.status)
   end
 
   def create
@@ -25,13 +38,16 @@ class BookpricesController < ApplicationController
 
 
   private
+    def check_user
+      redirect_to new_user_session_path unless user_signed_in?
+    end
+
     def bookprice_params
       params.require(:bookprice).permit(:isbn, :price, :condition, :contact)
     end
 
     def processISBN
       book = Book.find_by(:isbn => params[:bookprice][:isbn]) || fetch_book(params[:bookprice][:isbn])
-      book
     end
 
     def fetch_book(isbn)
@@ -43,10 +59,9 @@ class BookpricesController < ApplicationController
         book = Book.create(
           :title => result["items"][0]["volumeInfo"]["title"],
           :isbn => isbn,
-          :author => result["items"][0]["volumeInfo"]["authors"][0],
+          :author => result["items"][0]["volumeInfo"]["authors"][0] || " ",
           :pic_url => result["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
           )
-        book
       end
     end
 end

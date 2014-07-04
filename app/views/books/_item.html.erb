@@ -1,4 +1,4 @@
-<div class="panel panel-default col-sm-8 col-sm-offset-2 bookinfo-row">
+<div class="panel panel-default">
   <div class="panel-body">
     <div class="col-sm-4">
       <%= image_tag b.pic_url, :class=>'book-img'%>
@@ -12,12 +12,4 @@
   </div>
 </div>
   
-<% b.bookprices.order(:price).each do |p| %>
-  <div class="panel panel-default col-sm-8 col-sm-offset-2 bookinfo-row">
-    <div class="panel-heading"><%= p.price%></div>
-    <div class="panel-body">
-      <p>Condition: <%= p.condition%></p>
-      <p>Contact: <%= p.contact%></p>
-    </div>
-  </div>
-<% end %>
+
