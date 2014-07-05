@@ -6,8 +6,11 @@ class CreateBookprices < ActiveRecord::Migration
       t.integer :book_id
       t.string :condition
       t.text :contact
+      t.integer :isbn, index: true
 
       t.timestamps
     end
+
+    change_column :books, :isbn, :integer, index: true
   end
 end
