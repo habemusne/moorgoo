@@ -15,3 +15,6 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+//= require jquery.validate
+//= require jquery.validate.additional-methods
+//= require bootstrap
