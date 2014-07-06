@@ -6,7 +6,6 @@ $(document).ready(function() {
   var INPUT_ERROR_NOTICE_ID = 'input_error_notice';
   var VALID_EMAIL_PATTERN = new RegExp(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.[Ee][Dd][Uu]$/);
 
-  document.getElementById(INPUT_ERROR_NOTICE_ID).innerHTML === '';
   $("#signup_confirmButton").click(false);
 
   $("#signup_username").keyup(function(){
