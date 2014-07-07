@@ -1,4 +1,4 @@
-<div class="center">
+<div class="center-row">
 <h2>Forgot password?</h2>
 
 <div class="input_error_container">
@@ -7,7 +7,7 @@
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { :class => 'form-inline form', :id => 'signinForm', method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
- <%= f.email_field :email, autofocus: true, class: 'form-control', style: 'width:250px;height:40px;margin-top:5px;', placeholder: 'Your campus email' %>
+  <%= f.email_field :email, autofocus: true, class: 'form-control', style: 'width:250px;height:40px;margin-top:5px;', placeholder: 'Your campus email' %>
 
   <div><%= f.submit "Send me reset instructions", class: "btn btn-warning info_form-submitButton"  %></div>
 <% end %>

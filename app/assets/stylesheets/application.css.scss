@@ -13,17 +13,18 @@
  */
  @import "bootstrap";
 .input_error_container{
-	height: 20px;
+  height: 20px;
 }
 div.input_error_notice {
-	font-size: 14px;
-	height:20px;
-	color: red;
-	font-style: italic;
+  font-size: 14px;
+  height:20px;
+  color: red;
+  font-style: italic;
 }
-.center {
+.center-row {
   text-align: center;
-  padding: 150px;
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 .info_form {
 
@@ -32,15 +33,15 @@ div.input_error_notice {
 
 }
 .info_form-submitButton {
-	width:250px;
-	height:40px;
-	margin-top:5px;
+  width:250px;
+  height:40px;
+  margin-top:5px;
 }
-label.info_form-auxChoice {
-	font-size: 14px;
-	color: grey;
-	margin-top: 5px;
+label.info_form-auxChoice { 
+  font-size: 14px;
+  color: grey;
+  margin-top: 5px;
 }
 .info_form-auxChoice-box{
-	size: 14px;
+  size: 14px;
 }

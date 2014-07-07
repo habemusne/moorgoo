@@ -1,3 +1,4 @@
+# deprecated!
 class Addisbntoprice < ActiveRecord::Migration
   def change
     add_column :bookprices, :isbn, :long, index: true

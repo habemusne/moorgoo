@@ -1,0 +1,26 @@
+<ul class="nav nav-tabs" role="tablist">
+  <li class="unsold-book <%= 'active' if @sold == '0' %>">
+    <%= link_to "Unsold", bookprices_path(:status=>0)%>
+  </li>
+  <li class="sold-book <%= 'active' if @sold == '1' %>">
+    <%= link_to "Sold", bookprices_path(:status=>1)%>
+  </li>
+</ul>
+<div class="unsold-booklist">
+  <% unless @bookprices.empty? %>
+    <% @bookprices.each do |bp|%>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <%= link_to book_path(bp.book) do %>
+            <div class="col-sm-8">
+              <%= render 'books/item', :b=>bp.book%>
+            </div>
+          <% end %>
+          <div class="col-sm-4">
+            <%= render 'singleprice', :bookprice=>bp, :b=>bp.book%>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

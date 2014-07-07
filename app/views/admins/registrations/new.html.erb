@@ -1,18 +1,21 @@
-<div class="center">
+<div class="center-row">
 <h2>Sign Up</h2>
 <div class="input_error_container">
-	<div class="input_error_notice"></div>
+  <div id="input_error_notice" class="input_error_notice"></div>
 </div>
-<%= form_for(resource, as: resource_name, url: 'users/sign_up', :html => { :class => 'form-inline form', :id => 'signupForm'}) do |u| %>
+<script>
 
-  <%= u.text_field :name, class: 'form-control', style: 'width:250px;height:40px;margin-top:5px;', placeholder: 'Username' %><br>
+</script>
+<%= form_for(resource, as: resource_name, url: user_registration_path, :html => { :class => 'form-inline form', :id => 'signupForm'}) do |u| %>
 
-  <%= u.text_field :email, class: 'form-control', style: 'width:250px;height:40px;margin-top:5px;', placeholder: 'Your campus email' %><br>
+  <%= u.text_field :name, type: 'text', class: 'form-control', style: 'width:250px;height:40px;margin-top:5px;', placeholder: 'Username', id: 'signup_username' %><br>
 
-  <%= u.text_field :password, class: 'form-control', style: 'width:250px;height:40px;margin-top:5px;', placeholder: 'Password' %><br>
+  <%= u.text_field :email, class: 'form-control', style: 'width:250px;height:40px;margin-top:5px;', placeholder: 'Your campus email', id: 'signup_email' %><br>
 
-  <%= u.text_field :password_confirmation, class: 'form-control', style: 'width:250px;height:40px;margin-top:5px;', placeholder: 'Confirm password' %>
+  <%= u.text_field :password, class: 'form-control', style: 'width:250px;height:40px;margin-top:5px;', placeholder: 'Password', id: 'signup_password' %><br>
 
-  <div><%= u.submit 'Sign up', class: "btn btn-warning info_form-submitButton" %></div>
+  <%= u.text_field :password_confirmation, class: 'form-control', style: 'width:250px;height:40px;margin-top:5px;', placeholder: 'Confirm password', id: 'signup_confirm_password' %>
+
+  <div><%= u.submit 'Sign up', class: "btn btn-warning info_form-submitButton", id:'signup_confirmButton' %></div>
 <% end %>
 </div>

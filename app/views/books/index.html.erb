@@ -1,3 +1,8 @@
 <% @books.each do |b| %>
+<div class="col-sm-8 col-sm-offset-2 bookinfo-row">
   <%= render 'item', :b=>b%>
+</div>
+<div class="col-sm-8 col-sm-offset-2 bookinfo-row">
+  <%= render 'pricelist', :b=>b%>
+</div>
 <% end %>
