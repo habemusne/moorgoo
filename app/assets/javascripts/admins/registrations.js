@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function(){
   var USERNAME_LENGTH_ERROR_TEXT = 'Username should contain at least 6 characters';
   var EMAIL_FORMAT_ERROR_TEXT = 'Please enter a valid campus email';
   var PASSWORD_LENGTH_ERROR_TEXT = 'Password should contain at least 6 characters';
@@ -6,7 +6,7 @@ $(document).ready(function() {
   var INPUT_ERROR_NOTICE_ID = 'input_error_notice';
   var VALID_EMAIL_PATTERN = new RegExp(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.[Ee][Dd][Uu]$/);
 
-  $("#signup_confirmButton").click(false);
+  // $("#signup_confirmButton").click(false);
 
   $("#signup_username").keyup(function(){
     username_input = $("#signup_username")[0].value;

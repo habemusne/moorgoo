@@ -6,7 +6,7 @@
 <script>
 
 </script>
-<%= form_for(resource, as: resource_name, url: 'users/sign_up', :html => { :class => 'form-inline form', :id => 'signupForm'}) do |u| %>
+<%= form_for(resource, as: resource_name, url: user_registration_path, :html => { :class => 'form-inline form', :id => 'signupForm'}) do |u| %>
 
   <%= u.text_field :name, type: 'text', class: 'form-control', style: 'width:250px;height:40px;margin-top:5px;', placeholder: 'Username', id: 'signup_username' %><br>
 
