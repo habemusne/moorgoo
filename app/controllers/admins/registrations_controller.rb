@@ -19,6 +19,7 @@ class Admins::RegistrationsController < Devise::RegistrationsController
   end
 
   def update
+    devise_parameter_sanitizer.for(:account_update) << :name
     super
   end
 
