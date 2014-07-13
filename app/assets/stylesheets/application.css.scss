@@ -11,7 +11,7 @@
  *= require_self
  *= require_tree .
  */
- @import "bootstrap";
+@import "bootstrap";
 .input_error_container{
   height: 20px;
 }
@@ -26,22 +26,148 @@ div.input_error_notice {
   padding-top: 150px;
   padding-bottom: 150px;
 }
-.info_form {
-
-}
-.info_form-label {
-
-}
-.info_form-submitButton {
-  width:250px;
-  height:40px;
-  margin-top:5px;
-}
-label.info_form-auxChoice { 
+.info_form-auxChoice { 
   font-size: 14px;
   color: grey;
   margin-top: 5px;
 }
-.info_form-auxChoice-box{
-  size: 14px;
+
+/* From css3pie.com/demos/tabs/ */
+.tabBox .tabs {
+    margin: 0;
+    overflow: hidden;
+    margin-bottom: -1px;
 }
+
+.header_above_form {
+  padding-bottom: 40px;
+}
+
+.tabBox .tabs li {
+    display: inline-block;
+    float: center;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid #FFF;
+}
+
+.tabBox .tabs li.active {
+    z-index: 3;
+}
+
+.tabBox .content {
+    clear: left;
+    position: relative;
+    z-index: 2;
+    padding: 2em 1em;
+    border: 1px solid #CCC;
+    background: #FFF;
+    border-radius: 3px;
+ -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: #CCC 0 0 .25em;
+    -moz-box-shadow: #CCC 0 0 .25em;
+    box-shadow: 0 0 1.0em #505050;
+        behavior: url(/pie/PIE.htc);
+}
+
+.tabs > li.active > img,
+.tabs > li.active > img:hover,
+.tabs > li.active > img:focus {
+  color: #555;
+  cursor: default;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
+
+.tabs > li.active,
+.tabs > li.active:hover,
+.tabs > li.active:focus {
+  box-shadow: 0 0 1.0em #505050;;
+}
+
+.shadowed_header {
+  box-shadow: 0 0 1.5em #000000;
+}
+
+.with_bottom_bar {
+  color: #777777;
+  padding: 15px 15px 15px 15px;
+  text-decoration: none;
+}
+
+.with_bottom_bar:hover {
+  color: #777777;
+  text-decoration: none;
+  border-bottom-width: 1px;
+  border-bottom-color: black;
+  border-bottom-style: dotted;
+  padding: 5px 5px 5px 5px;
+  margin: 10px 10px 9px 10px;
+}
+
+@media (max-width: 767px){
+  .tabs > li > img {
+    width:80px;
+  }
+
+  .tabs li {
+    width:80px;
+    height: 80px;
+  }
+  .left_big_icon {
+    display: none;
+  }
+  .content {
+    width:300px;
+  }
+  .form_input_field {
+    width:250px;
+    height:40px;
+    margin-top:5px;
+  }
+  .form_input_button {
+    width:250px;
+    height:40px;
+    margin-top:10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .tabs > li > img {
+    width:80px;
+  }
+
+  .tabs li {
+    width:80px;
+    height: 80px;
+  }
+  .left_big_icon img {
+     width:120px;
+     float: right;
+  }
+  .content {
+    width:400px;
+  }
+  .form_input_field {
+    width:300px;
+    height:40px;
+    margin-top:5px;
+  }
+  .form_input_button {
+    width:300px;
+    height:40px;
+    margin-top:10px;
+  }
+}
+
+.tabs {
+  padding-top:20px;
+}
+
+
