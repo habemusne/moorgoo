@@ -88,7 +88,8 @@ div.input_error_notice {
 .tabs > li.active,
 .tabs > li.active:hover,
 .tabs > li.active:focus {
-  box-shadow: 0 0 1.0em #505050;;
+  box-shadow: 0 0 1.0em #505050;
+  margin-bottom: -5px;
 }
 
 .shadowed_header {

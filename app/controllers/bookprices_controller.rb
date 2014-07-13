@@ -61,7 +61,7 @@ class BookpricesController < ApplicationController
           :isbn => isbn,
           :author => result["items"][0]["volumeInfo"]["authors"][0] || " ",
           :pic_url => result["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
-          )
+        )
       end
     end
 end

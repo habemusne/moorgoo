@@ -24,35 +24,7 @@
             <img src="/assets/default.gif"/>
           </div>
           <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 tabBox" align="center">
-            <%= form_tag( books_path, :method=>'get', :class=>'form-horizontal', :id=>'isbnForm') do %>
-              <ul class="tabs" role="tablist">
-                <li class="active"><img href="#bookname" role="tab" data-toggle="tab" src="/assets/default.gif"></li>
-                <li><img href="#isbn" role="tab" data-toggle="tab" src="/assets/default.gif"></li>
-                <li><img href="#classcode" role="tab" data-toggle="tab" src="/assets/default.gif"></li>
-              </ul>
-              <div class="tab-content content row">
-                <div class="tab-pane active col-xs-offset-1 col-xs-10" id="bookname">
-                  <div class="form-group myForm-input-container">
-                    <%= text_field_tag :search, nil, :placeholder=>'Search By Bookname', :class=>'form-control', :id=>"bookname" %>
-                  </div>
-                </div>
-                <div class="tab-pane col-xs-offset-1 col-xs-10" id="isbn">
-                  <div class="form-group myForm-input-container">
-                    <%= text_field_tag :search, nil, :placeholder=>'Search By ISBN', :class=>'form-control', :id=>"isbnID" %>
-                  </div>
-                </div>
-                <div class="tab-pane col-xs-offset-1 col-xs-10" id="classcode">
-                  <div class="form-group myForm-input-container">
-                    <%= text_field_tag :search, nil, :placeholder=>'Search By Classcode', :class=>'form-control', :id=>"classcode" %>
-                  </div>
-                </div>
-                <div class="form-group myForm-input-container row">
-                  <div class="col-xs-offset-1 col-xs-10">
-                    <%= submit_tag("Search", :class=>"btn btn-warning form-control")%>
-                  </div>
-                </div>
-              </div>
-            <% end %>
+            <%= render 'form'%>
           </div>
         </div>
       </div>
