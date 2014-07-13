@@ -1,17 +1,10 @@
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <p class='navbar-brand'>All Rights Reserved</p>
-    </div>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <%= link_to "About Us", about_path, :class=>'navbar-brand' %>
-        </li>
-        <li>
-          <%= link_to "Terms", '#', :class=>'navbar-brand' %>
-        </li>
-      </ul>
-  </div><!-- /.container-fluid -->
-</nav>
+<div class="container-fluid" style="font-size:16px;background-color: #f8f8f8;border-color: #e7e7e7;min-height: 50px;display:block;padding-left:0;padding-right:0;">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div style="float:left;margin-top:15px;">
+    <p style="color: #777777">All Rights Reserved</p>
+  </div>
+  <div style="float:right;margin-top:15px;">
+    <%= link_to "About Us", about_path, :class=>"with_bottom_bar" %>
+    <%= link_to "Terms", '#', :class=>"with_bottom_bar" %>
+  </div>
+</div><!-- /.container-fluid -->

@@ -2,15 +2,15 @@
 <html>
 <head>
   <title>Campustrade</title>
+  <meta charset="UTF-8">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag 'flat-ui-2', media: :all %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
     <%= render 'shared/header' %>
     <%= yield %>
-<%= render 'shared/footer' %>
-  </div>
+    <%= render 'shared/footer' %>
 </body>
 </html>
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
