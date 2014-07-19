@@ -5,10 +5,16 @@ class Admins::SessionsController < Devise::SessionsController
 
   def create
     super
-    Bookprice.find(cookies.signed[:tempPrice]).update_attribute(:user_id, current_user.id) unless cookies.signed[:tempPrice].nil?
+    unless cookies.signed[:tempPrice].nil?
+      bookprice = Bookprice.find(cookies.signed[:tempPrice])
+      bookprice.update_attribute(:user_id, current_user.id)
+      flash[:success] = "#{view_context.link_to('VIEW', bookprice.book)}"
+      cookies.signed[:tempPrice] = nil
+    end
   end
 
   def destroy
     super
+    flash[:notice] = nil
   end
 end

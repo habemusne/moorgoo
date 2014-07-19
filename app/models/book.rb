@@ -3,8 +3,6 @@ class Book < ActiveRecord::Base
   has_many :bookprices
   has_many :users, :through=> :bookprices
 
-  before_save :generalize_course
-
   def self.similar_search( type, word )
     @books = []
     p type
@@ -20,10 +18,6 @@ class Book < ActiveRecord::Base
       @books = Book.where(type => word.downcase.delete(' '))
     end
     @books
-  end
-
-  def generalize_course
-    self.course = self.course.downcase.delete ' '
   end
 
 end

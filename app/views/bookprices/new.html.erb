@@ -19,10 +19,10 @@
                 <div class="input_error_notice"></div>
               </div>
               <%= form_for (@bookprice), :class=> 'form-horizontal', id: 'sellForm' do |bp| %>
-                <%= bp.text_field :isbn, :class=> 'form-control form_input_field', :placeholder=> 'ISBN', :id => 'sellForm_isbn' %>
                 <%= bp.text_field :price, :class=> 'form-control form_input_field', :placeholder=> 'Price', :id => 'sellForm_price' %>
                 <%= bp.text_field :condition, :class=> 'form-control form_input_field', :placeholder=> 'Condition', :id => 'sellForm_condition' %>
                 <%= bp.text_area :contact, :class=> 'form-control form_input_field', :placeholder=> 'Contact', :id => 'sellForm_contact' %>
+                <%= bp.hidden_field :book_id, :value=>@book_id%>
                 <% if user_signed_in? %>
                   <%= bp.submit 'Sell!', :class=> "btn btn-warning form_input_button", :id=>'signup_confirmButton' %>
                 <% else %>
