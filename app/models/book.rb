@@ -3,7 +3,7 @@ class Book < ActiveRecord::Base
   has_many :bookprices
   has_many :users, :through=> :bookprices
 
-  before_save :generalize_course
+  #before_save :generalize_course
 
   def self.similar_search( word )
     if word.to_i == 0
@@ -26,7 +26,7 @@ class Book < ActiveRecord::Base
     result.sort_by{|k,v| v}.last(6).each do |f|
       books << Book.find(f[0])
     end
-    books
+    books.reverse
   end
 
   def generalize_course

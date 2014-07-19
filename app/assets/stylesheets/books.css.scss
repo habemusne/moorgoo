@@ -1,9 +1,79 @@
 .booklist{
-  margin-top: 100px;
-  .bookinfo-row{
-    padding: 0 0;
-    .book-img{
+  margin-top: 50px;
+  padding: 50px;
+  .book-center-block{
+    width: 945px;
+    margin: 0 auto;
+    @media( max-width: 991px){
       width: 100%;
+    }
+    .bookinfo-row{
+      padding: 0 0;
+      .book-card{
+        width: 440px;
+        height: 200px;
+        padding: 0px;
+        margin: 30px auto 5px auto;
+        box-shadow: 1px 1px 4px #aeaeae;
+        border-width: 0px;
+        &:hover{
+          box-shadow: 1px 1px 6px #aeaeae;
+        }
+        .book-img-container{
+          height: 100%;
+          padding: 0px;
+          .book-img{
+            height: 100%;
+            width: 138px;
+          }
+        }
+        .book-info-container{
+          padding: 10px;
+          .book-title{
+            font-size: 23px;
+            color: #555;
+          }
+          .book-author{
+            font-size: 18px;
+            font-weight: 400;
+            color: #888;
+            font-style: italic;
+          }
+        }
+      }
+      .price-card{
+        font-size: 16px;
+        width: 440px;
+        margin: 0px auto 3px auto;
+        .panel-heading{
+          background-color: #fbfbfb;
+          border-color: white;
+          padding-bottom: 0px;
+          .book-price{
+            float: right;
+            color: #1ABC9C;
+            font-style: italic;
+            font-size: 18px;
+          }
+          .book-pricetime{
+            font-size: 12px;
+            font-weight: 300;
+            color: #B8B4B4;
+            font-style: italic;
+          }
+          .book-condition{
+            color: #555;
+            font-size: 20px;
+            text-align: right;
+          }
+        }
+        .panel-body{
+          background-color: #fbfbfb;
+          padding-top: 0px;
+          padding-bottom: 5px;
+        }
+      }
     }
   }
 }
+

@@ -18,7 +18,7 @@
               <div class="input_error_container">
                 <div class="input_error_notice"></div>
               </div>
-              <%= form_for(resource, as: resource_name, url: 'users/sign_up', :html => { :class => 'form-horizontal', :id => 'signupForm'}) do |u| %>
+              <%= form_for(resource, as: resource_name, :url => registration_path(resource_name), :html => { :class => 'form-horizontal', :id => 'signupForm'}) do |u| %>
                 <%= u.text_field :name, type: 'text', class: 'form-control form_input_field', placeholder: 'Username', id: 'signup_username' %>
                 <%= u.text_field :email, class: 'form-control form_input_field', placeholder: 'Your campus email', id: 'signup_email' %>
                 <%= u.text_field :password, class: 'form-control form_input_field', placeholder: 'Password', id: 'signup_password' %>
