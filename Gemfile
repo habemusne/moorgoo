@@ -11,8 +11,6 @@ gem 'sass-rails', '~> 4.0.0'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 
-gem 'flat-ui-2-rails', '~> 1.3.0'
-
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

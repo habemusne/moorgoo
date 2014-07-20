@@ -10,7 +10,9 @@
       </div>
       <div class="col-md-6 bookinfo-row">
         <% odd_arr(@books.count-1).each do |f|%>
-          <%= render 'item', :b=>@books[f]%>
+          <div class="single-book-block">
+            <%= render 'item', :b=>@books[f]%>
+          </div>
         <% end %>
       </div>
     </div>

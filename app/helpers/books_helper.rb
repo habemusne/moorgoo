@@ -6,4 +6,5 @@ module BooksHelper
   def even_arr(n)
     (0..n).step(2).to_a
   end
+
 end

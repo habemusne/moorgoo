@@ -26,6 +26,7 @@ class BookpricesController < ApplicationController
     else
       @bookprice = Bookprice.create(bookprice_params)
       cookies.signed[:tempPrice] = {:value => @bookprice.id, :expires => 1.hour.from_now}
+      flash[:notice] = "You are almost there! Just sign in or sign up, and we'll do the rest!"
       redirect_to new_user_session_path
     end
   end
