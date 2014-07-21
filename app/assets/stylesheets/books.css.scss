@@ -1,34 +1,13 @@
-/*.progressbar{
-  ul{
-    li{
-      list-style: none;
-      float: left;
-      width: 25%;
-      position: relative;
-      img{
-        width: 30px;
-        height: 30px;
-        position: relative;
-        left: 50%;
-        bottom: 15px;
-        z-index: 1000;
-      }
-    }
-    #connect-1{
-      border-top: 2px solid white;
-    }
-    #connect-2{
-      border-top: 2px solid white;
-    }
-  }
-}
-*/
+
 .book-progress{
   width: 400px;
 }
 .booklist{
   margin-top: 50px;
   padding: 50px;
+  @media(max-width: 500px){
+    padding: 20px;
+  }
   .book-center-block{
     width: 945px;
     margin: 0 auto;
@@ -40,6 +19,10 @@
       .book-card{
         width: 440px;
         height: 200px;
+        @media( max-width: 500px){
+          width: 360px;
+          height: 170px;
+        }
         padding: 0px;
         margin: 30px auto 5px auto;
         box-shadow: 1px 1px 4px #aeaeae;
@@ -53,6 +36,9 @@
           .book-img{
             height: 100%;
             width: 138px;
+            @media(max-width: 500px){
+              width: 115px;
+            }
           }
         }
         .book-info-container{
@@ -72,6 +58,9 @@
       .price-card{
         font-size: 16px;
         width: 440px;
+        @media(max-width: 500px){
+          width: 360px;
+        }
         margin: 0px auto 3px auto;
         .panel-heading{
           background-color: #fbfbfb;
@@ -104,4 +93,5 @@
     }
   }
 }
+
 

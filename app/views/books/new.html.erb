@@ -1,58 +1,35 @@
 <div class='container'>
   <div class="center-row">
     <div class="container-fluid">
-      <!-- <div class="col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-2"> -->
-        <!-- <div class="row header_above_form"> -->
-          <!-- <div class="col-xs-0 col-sm-2 col-md-3 col-lg-2"> -->
-          <!-- </div> -->
-         <!--  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 tabBox" align="center">
-            <h2>Sell My Book</h2>
-          </div> -->
-        <!-- </div> -->
-<!--         <div class="row">
- -->          <!-- <div class="col-xs-0 col-sm-2 col-md-3 col-lg-2 left_big_icon">
-            <img src="/assets/default.gif"/>
-          </div> -->
-          <div class="tabBox" align="center">
-            <% unless flash[:alert].nil? %>
-              <div class="alert alert-warning alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <%= flash[:alert] %>
-              </div>
+      <div class="tabBox" align="center">
+        <div class="progress book-progress animated bounceInDown">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+            50%
+          </div>
+        </div>
+        <h2 class="animated bounceInDown" style="margin: 50px auto;"> 1/2: What book is it? </h2>
+
+        <% unless flash[:alert].nil? %>
+          <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <%= flash[:alert] %>
+          </div>
+        <% end %>
+
+        <div class="content animated bounceInUp">
+          <%= form_for @book, :class=>'form-horizontal', :id=> 'sellForm' do |f| %>
+            <% if flash[:alert].nil? %>
+              <%= f.text_field :isbn, :class=> 'form-control form_input_field', :placeholder=> 'ISBN', :id => 'sellForm_isbn' %>
+              <%= hidden_field_tag :save_mode, :auto %>
+            <% else %>
+              <%= f.text_field :title, :class=> 'form-control form_input_field', :placeholder=> 'Title', :id => 'sellForm_title' %>
+              <%= f.text_area :author, :class=> 'form-control form_input_field', :placeholder=> 'Author', :id => 'sellForm_title' %>
+              <%= hidden_field_tag :save_mode, :manual %>
             <% end %>
-
-<!--             <div class="progressbar">
-              <ul>
-                <li><%= image_tag "Book-icon-orange.gif"%></li>
-                <li id="connect-1"><%= image_tag "Book-icon-orange.gif"%></li>
-                <li id="connect-2"><%= image_tag "Book-icon-orange.gif"%></li>
-                <li></li>
-              </ul>
-            </div>
- --> 
-
-            <div class="progress book-progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
-                50%
-              </div>
-            </div>
-
-            <div class="content">
-              <%= form_for @book, :class=>'form-horizontal', :id=> 'sellForm' do |f| %>
-                <%= f.text_field :course, :class=>'form-control form_input_field', :placeholder=>'Course, e.g. MATH 20C', :id=>'sellForm_title'%>
-                <% if flash[:alert].nil? %>
-                  <%= f.text_field :isbn, :class=> 'form-control form_input_field', :placeholder=> 'ISBN', :id => 'sellForm_isbn' %>
-                  <%= hidden_field_tag :save_mode, :auto %>
-                <% else %>
-                  <%= f.text_field :title, :class=> 'form-control form_input_field', :placeholder=> 'Title', :id => 'sellForm_title' %>
-                  <%= f.text_area :author, :class=> 'form-control form_input_field', :placeholder=> 'Author', :id => 'sellForm_title' %>
-                  <%= hidden_field_tag :save_mode, :manual %>
-                <% end %>
-                  <%= f.submit 'Next', :class=> "btn btn-warning form_input_button", :id=>'signup_confirmButton' %>
-              <% end %>
-            </div>
-          <!-- </div> -->
-        <!-- </div> -->
+              <%= f.text_field :course, :class=>'form-control form_input_field', :placeholder=>'Course, e.g. MATH 20C', :id=>'sellForm_title'%>
+              <%= f.submit 'Next', :class=> "btn btn-warning form_input_button", :id=>'signup_confirmButton' %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-<div class="panel panel-default book-card">
+<div class="panel panel-default book-card <%= "noprice" if @prices[b.id].empty? %>" >
   <div class="col-xs-4 book-img-container">
     <%= image_tag b.pic_url, :class=>'book-img'%>
   </div>
@@ -8,7 +8,3 @@
     <br>
   </div>
 </div>
-<div class="bookprice-area" style="display: none;">
-  <%= render 'pricelist', :b => b%>
-</div>
-

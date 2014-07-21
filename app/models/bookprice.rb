@@ -1,7 +1,7 @@
 class Bookprice < ActiveRecord::Base
   belongs_to :book
   belongs_to :user
-  default_scope{ where("user_id IS NOT NULL")}
+  scope :valid, ->{ where("user_id > ?", 0)}
 
 
   def inverseStatus

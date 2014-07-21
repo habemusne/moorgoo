@@ -10,19 +10,12 @@ class BooksController < ApplicationController
     if @books.count == 1
       redirect_to book_path(@books.first)
     end
-    # @left = []
-    # @right = []
-    # books.each do |b|
-    #   if b.id % 6 < 3
-    #     @left << b
-    #   else
-    #     @right << b
-    #   end
-    # end
+    get_bookprices @books
   end
 
   def show
-    @book ||= Book.find(params[:id])
+    @book ||= Book.where(:id=>params[:id])
+    get_bookprices @book
   end
 
   def new
@@ -72,9 +65,15 @@ class BooksController < ApplicationController
             :pic_url => result["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
           )
         rescue
-          p "============info cuowei======="
           nil
         end
+      end
+    end
+
+    def get_bookprices(book_arr)
+      @prices = {}
+      book_arr.each do |b|
+        @prices[b.id] = b.bookprices.valid
       end
     end
 
