@@ -12,6 +12,15 @@
  *= require_tree .
  */
 @import "bootstrap";
+
+body {
+  background-image: url('old_book.jpg');
+}
+
+.right_link .shadowed_header {
+  /* Changed background-color From #16A085 to #BDC3C7 */
+}
+
 .input_error_container{
   height: 20px;
 }
@@ -93,7 +102,9 @@ div.input_error_notice {
 }
 
 .shadowed_header {
+  border-bottom: 0px;
   box-shadow: 0 0 1.5em #000000;
+  background-color: #16A085;
 }
 
 .with_bottom_bar {
@@ -171,4 +182,129 @@ div.input_error_notice {
   padding-top:20px;
 }
 
+/* header */
+.right_link_cluster {
+  float: right;
+  margin: auto;
+}
+
+.right_link {
+  float: left;
+  display: block;
+  position: relative;
+  padding: 10px 40px 3px 40px;
+  background-color: #BDC3C7;
+  cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-delay:0s;
+}
+
+.right_link:hover {
+  background-color: #95A5A6;
+}
+
+.right_link_img {
+  float:center;
+  width:40px;
+}
+
+.right_link_label {
+  font-size: 14px;
+  display: block;
+  text-align:center;
+  color: #1ABC9C;
+  cursor: pointer;
+}
+
+.rignt_link_dropdown {
+  padding: 20px 18px 20px 18px;
+  background-color: #555555;
+}
+
+.right_link_dropdown_a {
+  display: block;
+  float:center;
+  padding: 3px 10px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.right_link_label_a {
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.my_dropdown_trigger {
+  /* This class is used in home.js */ 
+}
+
+.my_dropdown_menu {
+  display:none;
+  list-style: none;
+  position: absolute;
+  right: 0;
+  margin-top:4px;
+  min-width:160px;
+}
+
+.arrow_container {
+  position: fixed;
+  top:0;
+  z-index:499px;
+  right: 100px;
+
+  transition-property: top;
+  transition-duration: 0.5s;
+  transition-delay:0s;
+}
+
+.arrow_top {
+  width: 80px;
+  height: 100px;
+  background: #ea6153;
+
+  transition-property: background;
+  transition-duration: 0.5s;
+  transition-delay:0s;
+}
+
+.arrow_bottom {
+  width: 0; 
+  height: 0; 
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 20px solid #ea6153;
+
+  transition-property: border-top;
+  transition-duration: 0.5s;
+  transition-delay:0s;
+}
+
+.arrow_bottom_text {
+  position:relative;
+  bottom: 35px;
+  right: 16px;
+  font-size: 18px;
+  color: #f2a097;
+}
+/*
+.arrow_container:hover {
+  top: 40px;
+  .arrow_top {
+    background: #e74c3c;
+  }
+  .arrow_bottom {
+    border-top: 20px solid #e74c3c;
+  }
+}
+*/
+.container-fluid {
+  z-index: 500px;
+}
 
