@@ -11,22 +11,22 @@
       <%= link_to "Stuffs", root_path, :class=>'navbar-brand'%>
     </div>
 
-    <div class="right_link_cluster">
-      <%= link_to '#', :class=>"right_link" do %>
-        <img src="/assets/default.gif" class="right_link_img"/>
-        <label class="right_link_label">Books</label>
+    <div class="right-link-cluster">
+      <%= link_to '#', :class=>"right-link" do %>
+        <img src="/assets/default.gif" class="right-link-img"/>
+        <label class="right-link-label">Books</label>
       <% end %>
-      <%= link_to '#', :class=>"right_link" do %>
-        <img src="/assets/default.gif" class="right_link_img"/>
-        <label class="right_link_label">Cars</label>
+      <%= link_to '#', :class=>"right-link" do %>
+        <img src="/assets/default.gif" class="right-link-img"/>
+        <label class="right-link-label">Cars</label>
       <% end %>
-      <div class="my_dropdown_trigger right_link">
-        <img src="/assets/default.gif" class="right_link_img"/>
+      <div class="my-dropdown-trigger right-link">
+        <img src="/assets/default.gif" class="right-link-img"/>
       <% if user_signed_in? %>
-        <label href="#" class="right_link_label">
+        <label href="#" class="right-link-label">
           <%= current_user.name%>
         </label>
-        <ul class="my_dropdown_menu">
+        <ul class="my-dropdown-menu">
           <li>
             <%= link_to "My books", bookprices_path(:status=>0) %>
           </li>
@@ -38,18 +38,18 @@
           </li>
         </ul>
       <% else %>
-        <label href="#" class="right_link_label">
+        <label href="#" class="right-link-label">
           Me
         </label>
-        <ul class="my_dropdown_menu">
-          <li class="rignt_link_dropdown">
+        <ul class="my-dropdown-menu">
+          <li class="rignt-link-dropdown">
             <div>
-              <%= link_to "My books", new_user_session_path, :class=>"right_link_dropdown_a right_link_label"%>
+              <%= link_to "My books", new_user_session_path, :class=>"right-link-dropdown-a right-link-label"%>
             </div>
           </li>
-          <li class="rignt_link_dropdown">
+          <li class="rignt-link-dropdown">
             <div>
-              <%= link_to "Settings", new_user_session_path, :class=>"right_link_dropdown_a" %>
+              <%= link_to "Settings", new_user_session_path, :class=>"right-link-dropdown-a" %>
             </div>
           </li>
         </ul>
@@ -58,10 +58,10 @@
     </div>
   </div>
 </nav>
-<div class="arrow_container">
-  <div class="arrow_top"></div>
-  <div class="arrow_bottom">
-    <p class="arrow_bottom_text">Sell</p>
+<div class="arrow-container">
+  <div class="arrow-top"></div>
+  <div class="arrow-bottom">
+    <p class="arrow-bottom-text">Sell</p>
   </div>
 </div>
 

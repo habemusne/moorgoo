@@ -16,7 +16,7 @@ $(function(){
 
 
   //"Sell" Tag Animations
-  $('.arrow_container').mouseover(function(event) {
+  $('.arrow-container').mouseover(function(event) {
     $(this)
       .animate(
         { 
@@ -28,7 +28,7 @@ $(function(){
         }
       );
   });  
-  $('.arrow_container').mouseout(function(event) {
+  $('.arrow-container').mouseout(function(event) {
     $(this)
       .animate(
         { 
@@ -42,11 +42,11 @@ $(function(){
 
 
   //Dropdown Menu Animation
-  $('.my_dropdown_trigger').mouseover(function(event) {
-    $('.my_dropdown_menu')[0].style.display = 'block';
+  $('.my-dropdown-trigger').mouseover(function(event) {
+    $('.my-dropdown-menu')[0].style.display = 'block';
   });
-  $('.my_dropdown_trigger').mouseout(function(event) {
-    $('.my_dropdown_menu')[0].style.display = 'none';
+  $('.my-dropdown-trigger').mouseout(function(event) {
+    $('.my-dropdown-menu')[0].style.display = 'none';
   });
 })
 

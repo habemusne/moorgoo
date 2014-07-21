@@ -17,7 +17,7 @@ body {
   background-image: url('old_book.jpg');
 }
 
-.right_link .shadowed_header {
+.right-link .shadowed_header {
   /* Changed background-color From #16A085 to #BDC3C7 */
 }
 
@@ -183,12 +183,12 @@ div.input_error_notice {
 }
 
 /* header */
-.right_link_cluster {
+.right-link-cluster {
   float: right;
   margin: auto;
 }
 
-.right_link {
+.right-link {
   float: left;
   display: block;
   position: relative;
@@ -201,16 +201,16 @@ div.input_error_notice {
   transition-delay:0s;
 }
 
-.right_link:hover {
+.right-link:hover {
   background-color: #95A5A6;
 }
 
-.right_link_img {
+.right-link-img {
   float:center;
   width:40px;
 }
 
-.right_link_label {
+.right-link-label {
   font-size: 14px;
   display: block;
   text-align:center;
@@ -218,12 +218,12 @@ div.input_error_notice {
   cursor: pointer;
 }
 
-.rignt_link_dropdown {
+.rignt-link-dropdown {
   padding: 20px 18px 20px 18px;
   background-color: #555555;
 }
 
-.right_link_dropdown_a {
+.right-link-dropdown-a {
   display: block;
   float:center;
   padding: 3px 10px;
@@ -234,17 +234,17 @@ div.input_error_notice {
   white-space: nowrap;
 }
 
-.right_link_label_a {
+.right-link-label-a {
   max-width: 100%;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
-.my_dropdown_trigger {
+.my-dropdown-trigger {
   /* This class is used in home.js */ 
 }
 
-.my_dropdown_menu {
+.my-dropdown-menu {
   display:none;
   list-style: none;
   position: absolute;
@@ -253,7 +253,7 @@ div.input_error_notice {
   min-width:160px;
 }
 
-.arrow_container {
+.arrow-container {
   position: fixed;
   top:0;
   z-index:499px;
@@ -264,7 +264,7 @@ div.input_error_notice {
   transition-delay:0s;
 }
 
-.arrow_top {
+.arrow-top {
   width: 80px;
   height: 100px;
   background: #ea6153;
@@ -274,7 +274,7 @@ div.input_error_notice {
   transition-delay:0s;
 }
 
-.arrow_bottom {
+.arrow-bottom {
   width: 0; 
   height: 0; 
   border-left: 40px solid transparent;
@@ -286,7 +286,7 @@ div.input_error_notice {
   transition-delay:0s;
 }
 
-.arrow_bottom_text {
+.arrow-bottom-text {
   position:relative;
   bottom: 35px;
   right: 16px;
@@ -294,12 +294,12 @@ div.input_error_notice {
   color: #f2a097;
 }
 /*
-.arrow_container:hover {
+.arrow-container:hover {
   top: 40px;
-  .arrow_top {
+  .arrow-top {
     background: #e74c3c;
   }
-  .arrow_bottom {
+  .arrow-bottom {
     border-top: 20px solid #e74c3c;
   }
 }
