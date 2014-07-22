@@ -13,7 +13,8 @@ Campustrade::Application.routes.draw do
   resources :bookprices
 
   match '/about', to: 'home#about', via: 'get'
-
+  match '/campus', to: 'home#campus', via: 'get'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
