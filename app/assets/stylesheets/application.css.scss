@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, p{
 body{
   background-color: #efefef;
 }
+
 .input_error_container{
   height: 20px;
 }
@@ -99,7 +100,9 @@ div.input_error_notice {
 }
 
 .shadowed_header {
+  border-bottom: 0px;
   box-shadow: 0 0 1.5em #000000;
+  background-color: #16A085;
 }
 
 .with_bottom_bar {
@@ -177,4 +180,129 @@ div.input_error_notice {
   padding-top:20px;
 }
 
+/* header */
+.right-link-cluster {
+  float: right;
+  margin: auto;
+}
+
+.right-link {
+  float: left;
+  display: block;
+  position: relative;
+  padding: 10px 40px 3px 40px;
+  background-color: #BDC3C7;
+  cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-delay:0s;
+}
+
+.right-link:hover {
+  background-color: #95A5A6;
+}
+
+.right-link-img {
+  float:center;
+  width:40px;
+}
+
+.right-link-label {
+  font-size: 14px;
+  display: block;
+  text-align:center;
+  color: #1ABC9C;
+  cursor: pointer;
+}
+
+.rignt-link-dropdown {
+  padding: 20px 18px 20px 18px;
+  background-color: #555555;
+}
+
+.right-link-dropdown-a {
+  display: block;
+  float:center;
+  padding: 3px 10px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.right-link-label-a {
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.my-dropdown-trigger {
+  /* This class is used in home.js */ 
+}
+
+.my-dropdown-menu {
+  display:none;
+  list-style: none;
+  position: absolute;
+  right: 0;
+  margin-top:4px;
+  min-width:160px;
+}
+
+.arrow-container {
+  position: fixed;
+  top:0;
+  z-index:499px;
+  right: 100px;
+
+  transition-property: top;
+  transition-duration: 0.5s;
+  transition-delay:0s;
+}
+
+.arrow-top {
+  width: 80px;
+  height: 100px;
+  background: #ea6153;
+
+  transition-property: background;
+  transition-duration: 0.5s;
+  transition-delay:0s;
+}
+
+.arrow-bottom {
+  width: 0; 
+  height: 0; 
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 20px solid #ea6153;
+
+  transition-property: border-top;
+  transition-duration: 0.5s;
+  transition-delay:0s;
+}
+
+.arrow-bottom-text {
+  position:relative;
+  bottom: 35px;
+  right: 16px;
+  font-size: 18px;
+  color: #f2a097;
+}
+/*
+.arrow-container:hover {
+  top: 40px;
+  .arrow-top {
+    background: #e74c3c;
+  }
+  .arrow-bottom {
+    border-top: 20px solid #e74c3c;
+  }
+}
+*/
+.container-fluid {
+  z-index: 500px;
+}
 
