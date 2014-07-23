@@ -13,15 +13,12 @@
 
     <div class="right-link-cluster">
       <%= link_to '#', :class=>"right-link" do %>
-        <img src="/assets/default.gif" class="right-link-img"/>
         <label class="right-link-label">Books</label>
       <% end %>
       <%= link_to '#', :class=>"right-link" do %>
-        <img src="/assets/default.gif" class="right-link-img"/>
         <label class="right-link-label">Cars</label>
       <% end %>
       <div class="my-dropdown-trigger right-link">
-        <img src="/assets/default.gif" class="right-link-img"/>
       <% if user_signed_in? %>
         <label href="#" class="right-link-label">
           <%= current_user.name%>
@@ -42,15 +39,11 @@
           Me
         </label>
         <ul class="my-dropdown-menu">
-          <li class="rignt-link-dropdown">
-            <div>
+          <li class="rignt-link-dropdown-entry">
               <%= link_to "My books", new_user_session_path, :class=>"right-link-dropdown-a right-link-label"%>
-            </div>
           </li>
-          <li class="rignt-link-dropdown">
-            <div>
+          <li class="rignt-link-dropdown-entry">
               <%= link_to "Settings", new_user_session_path, :class=>"right-link-dropdown-a" %>
-            </div>
           </li>
         </ul>
       <% end %>
@@ -58,12 +51,10 @@
     </div>
   </div>
 </nav>
-<div class="arrow-container">
+<!-- <div class="arrow-container">
   <div class="arrow-top"></div>
   <div class="arrow-bottom">
     <p class="arrow-bottom-text">Sell</p>
   </div>
 </div>
-
-
-
+-->
