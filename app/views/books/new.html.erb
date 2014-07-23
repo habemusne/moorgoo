@@ -17,7 +17,7 @@
         <% end %>
 
         <div class="content animated bounceInUp">
-          <%= form_for @book, :class=>'form-horizontal', :id=> 'sellForm' do |f| %>
+          <%= form_for [@school.name, @book], :url=>school_books_path(@school.name, @book), :class=>'form-horizontal', :id=> 'sellForm' do |f| %>
             <% if flash[:alert].nil? %>
               <%= f.text_field :isbn, :class=> 'form-control form_input_field', :placeholder=> 'ISBN', :id => 'sellForm_isbn' %>
               <%= hidden_field_tag :save_mode, :auto %>

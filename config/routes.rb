@@ -8,9 +8,11 @@ Campustrade::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
-  resources :books
+  resources :schools, :path=>'' do
+    resources :books
 
-  resources :bookprices
+    resources :bookprices
+  end
 
   match '/about', to: 'home#about', via: 'get'
   match '/campus', to: 'home#campus', via: 'get'

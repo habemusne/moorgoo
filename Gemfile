@@ -56,3 +56,5 @@ gem 'devise'
 
 gem 'similar_text'
 gem 'passenger'
+
+gem 'friendly_id', '~> 5.0.0'

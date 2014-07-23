@@ -8,7 +8,7 @@ class BooksController < ApplicationController
       redirect_to root_path
     end
     if @books.count == 1
-      redirect_to book_path(@books.first)
+      redirect_to school_book_path(@school.name, @books.first)
     end
     get_bookprices @books
   end
@@ -27,14 +27,14 @@ class BooksController < ApplicationController
       @book = processISBN
       if @book.nil?
         flash[:alert] = "Sorry, this ISBN is unrecognized. Please enter book info manually."
-        redirect_to new_book_path
+        redirect_to new_school_book_path
       else
         @book.update_attribute(:course, params[:book][:course].delete(' ').downcase)
-        redirect_to new_bookprice_path(:book_id => @book.id)
+        redirect_to new_school_bookprice_path(:book_id => @book.id)
       end
     else
       @book = Book.create(book_params)
-      redirect_to new_bookprice_path(:book_id => @book.id)
+      redirect_to new_school_bookprice_path(:book_id => @book.id)
     end
   end
 
