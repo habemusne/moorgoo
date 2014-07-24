@@ -1,9 +1,12 @@
 <div align="center">
-  <%= form_tag( books_path, :method=>'get', :class=>'form-horizontal', :id=>'isbnForm') do %>
-    <div class="form-group shadowed-form-pane">
-      <h2 class="header_above_form">MoorGoo</h2>
-      <%= text_field_tag :search, nil, :placeholder=>'bookname/classcode/ISBN', :class=>'form-control index-book-search form_input_field', :id=>"bookname" %>
-      <i class="glyphicon glyphicon-search book-search-icon"></i>
+  <div class="form-group shadowed-form-pane">
+    <h2 class="header_above_form">MoorGoo</h2>
+    <div class="input_error_container">
+      <div class="input_error_notice"></div>
     </div>
-  <% end %>
+    <%= form_tag( books_path, :method=>'get', :class=>'form-horizontal', :id=>'isbnForm') do %>
+      <%= text_field_tag :search, nil, autofocus: true, :placeholder=>'bookname/classcode/ISBN', :class=>'form-control index-book-search form_input_field', :id=>"bookname" %>
+      <i class="glyphicon glyphicon-search book-search-icon"></i>
+  	<% end %>
+  </div>
 </div>

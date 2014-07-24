@@ -1,0 +1,68 @@
+
+/* _form.html.erb  */
+
+@media (max-width: 767px){
+  .book-search-icon{
+    top: -28px;
+    left:105px;
+  }
+}
+
+@media (min-width: 768px) {
+  .book-search-icon{
+    top: -28px;
+    left:130px;
+  }
+}
+
+
+/* home.html.erb */
+
+.index-background {
+  background: url('empty_book.jpg');
+  margin: 0 0 0 0;
+  opacity: 0.8;
+  background-size:cover;
+}
+
+.enter-sell-intro-container {
+  margin-top: 50px;
+}
+
+.enter-sell-intro-text {
+  font-size: 22px;
+  color: #2C3E50;
+  cursor: none;
+
+  transition-duration: 0.2s;
+}
+
+.enter-sell-container {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #222222;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.enter-sell-button {
+  width: 250px;
+  height: 40px;
+  margin-top: 20px;
+  padding: 10px 20px 30px 20px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ECF0F1;
+  background-color: #E74C3C;
+  cursor: pointer;
+  color: #ECF0F1;
+
+  transition-duration: 1s;
+  transition-delay: 0s;
+}
+
+.enter-sell-button:hover {
+  background-color: #ECF0F1;
+  color: #2C3E50;
+}
+
