@@ -8,7 +8,7 @@
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600,700' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body class=<%= yield(:background_img) %>>
   <%= render 'shared/header' %>
   <%= yield %>
   <%= render 'shared/footer' %>
