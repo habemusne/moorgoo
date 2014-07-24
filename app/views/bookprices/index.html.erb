@@ -11,7 +11,7 @@
     <% @bookprices.each do |bp|%>
       <div class="panel panel-default">
         <div class="panel-body">
-          <%= link_to book_path(bp.book) do %>
+          <%= link_to school_book_path(@school.name, bp.book) do %>
             <div class="col-sm-8">
               <%= render 'books/item', :b=>bp.book%>
             </div>
