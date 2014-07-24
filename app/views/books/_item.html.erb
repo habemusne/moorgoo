@@ -1,15 +1,10 @@
-<div class="panel panel-default">
-  <div class="panel-body">
-    <div class="col-sm-4">
-      <%= image_tag b.pic_url, :class=>'book-img'%>
-    </div>
-    <div class="col-sm-8">
-      <h4>Title: <%= b.title %></h4>
-      <h4>Author: <%= b.author %></h4>
-      <h4> ISBN: <%= b.isbn %></h4>
-      <br>
-    </div>
+<div class="panel panel-default book-card <%= "noprice" if @prices[b.id].empty? %>" >
+  <div class="col-xs-4 book-img-container">
+    <%= image_tag b.pic_url, :class=>'book-img'%>
+  </div>
+  <div class="col-xs-8 book-info-container">
+    <p class="book-title"><%= b.title %></p>
+    <p class="book-author">By <%= b.author %></p>
+    <br>
   </div>
 </div>
-  
-

@@ -1,6 +1,7 @@
 require 'open-uri'
 class BookpricesController < ApplicationController
   before_filter :check_user, :only=>[:index, :update]
+  before_filter :check_book, :only=>:new
 
   def index
     @bookprices = current_user.bookprices.where(:status=>params[:status].to_i).order(updated_at: :desc)
@@ -9,6 +10,7 @@ class BookpricesController < ApplicationController
 
   def new
     @bookprice = Bookprice.new
+    @book_id = params[:book_id].to_i
   end
 
   def update
@@ -18,21 +20,14 @@ class BookpricesController < ApplicationController
   end
 
   def create
-    @book = processISBN
-    if @book.nil?
-      flash[:alert] = "Invalid ISBN!"
-      redirect_to new_bookprice_path
+    if current_user
+      @bookprice = current_user.bookprices.create(bookprice_params)
+      redirect_to @bookprice.book
     else
-      if current_user
-        @bookprice = current_user.bookprices.create(bookprice_params)
-        @bookprice.update_attribute(:book_id, @book.id)
-        redirect_to @book
-      else
-        @bookprice = Bookprice.create(bookprice_params)
-        @bookprice.update_attribute(:book_id, @book.id)
-        cookies.signed[:tempPrice] = {:value => @bookprice.id, :expires => 1.hour.from_now}
-        redirect_to new_user_session_path
-      end
+      @bookprice = Bookprice.create(bookprice_params)
+      cookies.signed[:tempPrice] = {:value => @bookprice.id, :expires => 1.hour.from_now}
+      flash[:notice] = "You are almost there! Just sign in or sign up, and we'll do the rest!"
+      redirect_to new_user_session_path
     end
   end
 
@@ -42,8 +37,12 @@ class BookpricesController < ApplicationController
       redirect_to new_user_session_path unless user_signed_in?
     end
 
+    def check_book
+      redirect_to new_book_path unless params[:book_id]
+    end
+
     def bookprice_params
-      params.require(:bookprice).permit(:isbn, :price, :condition, :contact)
+      params.require(:bookprice).permit(:book_id, :price, :condition, :contact)
     end
 
     def processISBN

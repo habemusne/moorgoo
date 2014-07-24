@@ -1,9 +1,12 @@
-<% b.bookprices.order(:price).each do |p| %>
-  <div class="panel panel-default">
-    <div class="panel-heading"> $ <%= p.price%></div>
+<% prices.order(:price).each do |p| %>
+  <div class="panel panel-default price-card">
+    <div class="panel-heading">
+      <span class="book-condition"><%= p.condition.titleize%></span>
+      <span class="book-price">$ <%= p.price%></span> 
+      <p class="book-pricetime"><%=time_ago_in_words(p.created_at)%> ago </p>
+    </div>
     <div class="panel-body">
-      <p>Condition: <%= p.condition%></p>
-      <p>Contact: <%= p.contact%></p>
+      <p><%= p.contact%></p>
     </div>
   </div>
 <% end %>

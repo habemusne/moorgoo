@@ -54,4 +54,5 @@ gem 'cancan'
 
 gem 'devise'
 
+gem 'similar_text'
 gem 'passenger'

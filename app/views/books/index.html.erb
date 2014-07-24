@@ -1,8 +1,26 @@
-<% @books.each do |b| %>
-<div class="col-sm-8 col-sm-offset-2 bookinfo-row">
-  <%= render 'item', :b=>b%>
+<div class="container">
+  <div class="row booklist">
+    <div class="book-center-block">
+      <div class="col-md-6 bookinfo-row animated bounceIn">
+        <% even_arr(@books.count-1).each do |f|%>
+          <div class="single-book-block">
+            <%= render 'item', :b=>@books[f]%>
+            <div class="bookprice-area" style="display: none;">
+              <%= render 'pricelist', :prices => @prices[@books[f].id]%>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-md-6 bookinfo-row animated bounceIn">
+        <% odd_arr(@books.count-1).each do |f|%>
+          <div class="single-book-block">
+            <%= render 'item', :b=>@books[f]%>
+            <div class="bookprice-area" style="display: none;">
+              <%= render 'pricelist', :prices => @prices[@books[f].id]%>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="col-sm-8 col-sm-offset-2 bookinfo-row">
-  <%= render 'pricelist', :b=>b%>
-</div>
-<% end %>
