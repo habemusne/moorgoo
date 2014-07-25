@@ -6,12 +6,13 @@ Campustrade::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  root 'home#campus'
 
   resources :books
 
   resources :bookprices
 
+  match '/index', to: 'home#index', via: 'get'
   match '/about', to: 'home#about', via: 'get'
   match '/campus', to: 'home#campus', via: 'get'
   
