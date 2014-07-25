@@ -35,7 +35,9 @@
   <h2 align="center">What would you like to trade?</h2>
   <div align="center" class="row" style="display:inline;">
     <div class="col-sm-offset-1 col-sm-4">
-      <a href="index"><img class="img-responsive category-icon" src="/assets/book_close.png"/></a>
+      <%= link_to school_path(@school.name) do %>
+      <img class="img-responsive category-icon" src="/assets/book_close.png"/>
+      <% end %>
       <label class="category-icon-label">Books</label>
     </div>
     <div class="col-sm-offset-2 col-sm-4">
