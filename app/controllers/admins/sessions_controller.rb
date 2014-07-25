@@ -8,7 +8,7 @@ class Admins::SessionsController < Devise::SessionsController
     unless cookies.signed[:tempPrice].nil?
       bookprice = Bookprice.find(cookies.signed[:tempPrice])
       bookprice.update_attribute(:user_id, current_user.id)
-      flash[:success] = "#{view_context.link_to('VIEW', [@school.name, bookprice.book])}"
+      flash[:success] = "#{view_context.link_to('VIEW', school_book_path(@school.name, bookprice.book))}"
       cookies.signed[:tempPrice] = nil
     end
   end

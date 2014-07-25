@@ -23,7 +23,11 @@
         <b class="enter-sell-intro-text">You may also</b>
       </div>
       <div align="center" class="enter-sell-container">
-        <p class="enter-sell-button"><b>Sell Your Book</b></p>
+        <p class="enter-sell-button">
+          <b>
+            <%= link_to "Sell Your Books", new_school_book_path(@school.name) %>
+          </b>
+        </p>
       </div>
     </div>
   </div>
