@@ -1,0 +1,107 @@
+
+.thumbs {margin-top: 60px;}
+
+.thumb {
+  padding:0;
+  overflow: hidden;
+}
+
+.thumb img {
+  margin: 0;
+  padding: 0;
+/*  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;      
+*/}
+
+.thumb span {
+  position: absolute;
+  display: block;
+  bottom: 20px;
+  left: 10px;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0 20px;
+  transition: all 0.1s ease-in;    
+}
+
+.thumb:hover img {    
+    -webkit-transform: scale(1.05,1.05);
+    -moz-transform:scale(1.05,1.05);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;      
+}
+
+/*第三方code*/
+/*words moving down */
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+
+.campus-img-overlay {
+  opacity: .9;
+  background-color: black;
+  position: absolute;
+  max-width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+}
+
+.category-dialogue {
+  display: none;
+  position: fixed;
+  min-width: 450px;
+  background-color: rgba(213, 213, 213, 0.6980392);
+  margin-top: 150px;
+  margin-bottom: 150px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.category-icon {
+  cursor: pointer;
+  border-radius: 50%;
+  border-width: 3px;
+  border-color: white;
+
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+.category-icon:hover {
+  background-color: #E74C3C;
+}
+
+.category-icon-label {
+  font-size: 16px;
+}
