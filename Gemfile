@@ -58,3 +58,4 @@ gem 'similar_text'
 gem 'passenger'
 
 gem 'friendly_id', '~> 5.0.0'
+gem 'nokogiri', '1.6.2.1'
