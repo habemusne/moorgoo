@@ -51,3 +51,5 @@ gem 'rails_admin', '~> 0.6.2'
 gem 'cancan'
 
 gem 'devise'
+
+gem 'rails_12factor', group: :production
