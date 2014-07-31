@@ -56,4 +56,9 @@ gem 'similar_text'
 gem 'passenger'
 
 gem 'friendly_id', '~> 5.0.0'
-gem 'pg'
+group :production do
+  gem 'pg'
+end
+group :development, :test do
+  gem 'sqlite3'
+end
