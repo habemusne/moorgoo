@@ -36,6 +36,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'rails_12factor', group: :production
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
@@ -58,4 +59,4 @@ gem 'similar_text'
 gem 'passenger'
 
 gem 'friendly_id', '~> 5.0.0'
-gem 'nokogiri', '1.6.2.1'
+gem 'pg'
