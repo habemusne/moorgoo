@@ -54,13 +54,13 @@ gem 'devise'
 gem 'similar_text'
 
 gem 'friendly_id', '~> 5.0.0'
-gem 'rails_12factor', group: :production
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
+  gem 'rails_serve_static_assets', '~> 0.0.2'
+  gem 'unicorn'
 end
 
-gem 'unicorn'
 
 # rails_serve_static_assets makes assets usable
-gem 'rails_serve_static_assets', '~> 0.0.2'
 
