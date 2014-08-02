@@ -1,4 +1,4 @@
-<div class="first-screen container-fliud row">
+<!-- <div class="first-screen container-fliud row">
   <div class="center-row col-sm-offset-1 col-sm-9 col-md-offset-1 col-md-9">
     <h1 class="first-screen-intro-1">Welcome to MoorGoo.com</h1>
     <h3 class="first-screen-intro-2">MoorGoo.com is a platform for you to trade textbooks</h3>
@@ -8,43 +8,11 @@
 
   </div>
 </div>
+ -->
 
-<div class="thumbs">
-  <div class="col-xs-12 col-sm-4 col-lg-4 thumb">
-      <div class="campus-img-overlay"></div>
-      <img class="img-responsive campus-img" src="/assets/ucsd.jpg"/>
-    <span class="animated fadeInDown">UC San Diego</span>
-  </div>
-  <div class="col-xs-12 col-sm-4 col-lg-4 thumb">
-      <div class="campus-img-overlay"></div>
-      <img class="img-responsive campus-img" src="/assets/ucla.jpg"/>
-    <span class="animated fadeInDown">UC Los Angeles</span>
-  </div> 
-  <div class="col-xs-12 col-sm-4 col-lg-4 thumb">
-      <div class="campus-img-overlay"></div>
-      <img class="img-responsive campus-img" src="/assets/uci.jpg"/>
-    <span class="animated fadeInDown">UC Irvine</span>
-  </div>  
-  <div class="col-xs-12 col-sm-4 col-lg-4 thumb">
-      <div class="campus-img-overlay"></div>
-      <img class="img-responsive campus-img" src="/assets/sdsu.jpg"/>
-    <span class="animated fadeInDown">SDSU</span>
-  </div>
-  <div class="col-xs-12 col-sm-4 col-lg-4 thumb">
-      <div class="campus-img-overlay"></div>
-      <img class="img-responsive campus-img" src="/assets/usd.jpg"/>
-    <span class="animated fadeInDown">USD</span>
-  </div>
-  <div class="col-xs-12 col-sm-4 col-lg-4 thumb">
-      <div class="campus-img-overlay"></div>
-      <img class="img-responsive campus-img" src="/assets/usc.jpg"/>
-    <span class="animated fadeInDown">USC</span>
-  </div>
-</div>
-
-<div class="col-sm-offset-3 col-sm-6 category-dialogue">
+ <div class="col-sm-offset-3 col-sm-6 category-dialogue">
   <h2 align="center">What would you like to trade?</h2>
-  <div align="center" class="row" style="display:inline;">
+  <div align="center" class="row">
     <div class="col-sm-offset-1 col-sm-4">
       <%= link_to school_path(@school.name) do %>
       <img class="img-responsive category-icon" src="/assets/book_close.png"/>
@@ -57,5 +25,39 @@
     </div>
   </div>
 </div>
+
+<div class="thumbs">
+  <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+    <div class="campus-img-overlay"></div>
+    <img class="img-responsive campus-img" src="/assets/ucsd.jpg"/>
+    <span class="animated fadeInDown">UC San Diego</span>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+    <div class="campus-img-overlay"></div>
+    <img class="img-responsive campus-img" src="/assets/ucla.jpg"/>
+    <span class="animated fadeInDown">UC Los Angeles</span>
+  </div> 
+  <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+    <div class="campus-img-overlay"></div>
+    <img class="img-responsive campus-img" src="/assets/uci.jpg"/>
+    <span class="animated fadeInDown">UC Irvine</span>
+  </div>  
+  <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+    <div class="campus-img-overlay"></div>
+    <img class="img-responsive campus-img" src="/assets/sdsu.jpg"/>
+    <span class="animated fadeInDown">SDSU</span>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+    <div class="campus-img-overlay"></div>
+    <img class="img-responsive campus-img" src="/assets/usd.jpg"/>
+    <span class="animated fadeInDown">USD</span>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+    <div class="campus-img-overlay"></div>
+    <img class="img-responsive campus-img" src="/assets/usc.jpg"/>
+    <span class="animated fadeInDown">USC</span>
+  </div>
+</div>
+
 
 
