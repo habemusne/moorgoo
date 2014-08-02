@@ -60,3 +60,7 @@ group :production do
 end
 
 gem 'unicorn'
+
+# rails_serve_static_assets makes assets usable
+gem 'rails_serve_static_assets', '~> 0.0.2'
+

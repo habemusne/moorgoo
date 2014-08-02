@@ -182,6 +182,7 @@ DEPENDENCIES
   rails (= 4.0.2)
   rails_12factor
   rails_admin (~> 0.6.2)
+  rails_serve_static_assets
   sass-rails (~> 4.0.0)
   sdoc
   similar_text
