@@ -8,46 +8,32 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "Stuffs", school_path(@school.name), :class=>'navbar-brand'%>
+      <%= link_to "Stuffs", root_path, :class=>'navbar-brand'%>
     </div>
-
-
-    <div class="right-link-cluster">
-      <%= link_to '#', :class=>"right-link" do %>
-        <label class="right-link-label">Books</label>
-      <% end %>
-      <%= link_to '#', :class=>"right-link" do %>
-        <label class="right-link-label">Cars</label>
-      <% end %>
-      <div class="my-dropdown-trigger right-link">
-      <% if user_signed_in? %>
-        <label href="#" class="right-link-label">
-          <%= current_user.name%>
-        </label>
-        <ul class="my-dropdown-menu">
-          <li>
-            <%= link_to "My books", school_bookprices_path(@school.name, :status=>0) %>
-          </li>
-          <li>
-            <%= link_to "Settings", edit_user_registration_path%>
-          </li>
-          <li>
-            <%= link_to "Log out", destroy_user_session_path %>
-          </li>
-        </ul>
-      <% else %>
-        <%= link_to "Me", new_user_session_path, :class=>"right-link-label"%>
-        <ul class="my-dropdown-menu">
-          <li class="rignt-link-dropdown-entry">
-              <%= link_to "My books", new_user_session_path, :class=>"right-link-dropdown-a right-link-label"%>
-          </li>
-          <li class="rignt-link-dropdown-entry">
-              <%= link_to "Settings", new_user_session_path, :class=>"right-link-dropdown-a"%>
-          </li>
-        </ul>
-      <% end %>
-      </div>
+    <div class="collapse navbar-collapse navbar-right" id="navContent">
+      <ul class="nav navbar-nav">
+        <li class="right-link"><a href="/schools/ucsd">Books</a></li>
+        <li class="right-link"><a href="#">Cars</a></li>
+        <li class="dropdown right-dropdown right-link" >
+        <% if user_signed_in? %>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name%></a>
+          <ul class="dropdown-menu right-dropdown-ul" role="menu">
+            <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= school_bookprices_path(@school.name, :status=>0) %> >My Books</a></span></li>
+            <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= edit_user_registration_path %> ></a></span></li>
+            <li class="divider"></li>
+            <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= destroy_user_session_path %> >Logout</a></span></li>
+          </ul>
+        <% else %>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Me</a>
+          <ul class="dropdown-menu right-dropdown-ul" role="menu">
+            <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= new_user_session_path %> >My Books</a></span></li>
+            <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= new_user_session_path%> >Settings</a></span></li>
+          </ul>
+        <% end %>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
+
 

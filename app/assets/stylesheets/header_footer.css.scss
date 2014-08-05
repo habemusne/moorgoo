@@ -15,103 +15,70 @@
   z-index: 500px;
 }
 
-.right-link-cluster {
-  float: right;
-  margin: auto;
-}
-
-@media (max-width: 767px) {
-  .right-link-cluster {
-    display:none;
-  }
-}
-
-@media (min-width: 768px) {
-  .right-link-cluster {
-    display:block;
-  }
-}
-
 .right-link {
-  float: left;
-  display: block;
-  position: relative;
-  padding: 25px 40px 20px 40px;
-  width: 120px;
-  height: 70px;
-  cursor: pointer;
-  color: #2C3E50;
-
-
-  transition-property: color;
+  text-align: center;
+  min-width: 100px;
   transition-duration: 1s;
-  transition-delay:0s;
 }
 
-.right-link:hover {
-  color: #7F8C8D;
+/*.right-link:hover {
+  background-color: rgba(127, 140, 141, 0.1);
 }
 
-.right-link-label {
+*/.right-link > a {
+  transition-duration: 1s;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: rgba(127, 140, 141, 0.3);
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: white;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: rgba(127, 140, 141, 0.3);
+  color: white;
+}
+.right-dropdown {
+  transition-duration: 1s;
+}
+
+.right-dropdown:hover {
+  background-color: rgba(127, 140, 141, 0.3);
+}
+
+.right-dropdown-ul {
+  width: 280px;
+  background-color: rgba(127, 140, 141, 0.3);;
+}
+
+.right-dropdown-ul-li {
   font-size: 14px;
-  display: block;
-  text-align:center;
-  cursor: pointer;
-  color: #2C3E50;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-align: center;
+
+  transition-duration: 1s;
 }
 
-a:-webkit-any-link {
+.right-dropdown-ul-li:hover {
+  background-color: rgba(127, 140, 141, 0.7);
+}
+
+.right-dropdown-ul-li:hover > span > a {
+  color: white;
   text-decoration: none;
 }
 
-.my-dropdown-trigger {
-  /* This class is also used in home.js */
-  height: 70px;
-  transition-property: background-color;
+.right-dropdown-a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #777777;
+
   transition-duration: 1s;
-  transition-delay: 0s;
 }
-
-.my-dropdown-trigger:hover {
-  background-color: #222222;
-}
-
-.my-dropdown-menu {
-  display:none;
-  list-style: none;
-  position: absolute;
-  right: 0;
-  margin-top:25px;
-  min-width:160px;
-}
-
-.rignt-link-dropdown-entry {
-  padding: 10px 18px 10px 18px;
-  background-color: #555555;
-  color: #7F8C8D;
-
-  transition-propterty: color;
-  transition-duration: 1s;
-  transition-delay: 0s;
-}
-
-.rignt-link-dropdown-entry:hover {
-  color: #555555;
-}
-
-.right-link-dropdown-a {
-  display: block;
-  float:center;
-  padding: 3px 10px;
-  clear: both;
-  font-weight: normal;
-  line-height: 1.428571429;
-  white-space: nowrap;
-}
-
-
-
-
 
 /* _footer.html.erb */
 
