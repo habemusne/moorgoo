@@ -5,7 +5,7 @@ class BooksController < ApplicationController
     @books = Book.similar_search(params[:search])
     if @books.empty?
       flash[:alert] = 'No books found'
-      redirect_to root_path
+      redirect_to @school
     end
     if @books.count == 1
       redirect_to school_book_path(@school.name, @books.first)
