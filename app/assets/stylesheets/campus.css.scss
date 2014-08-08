@@ -2,8 +2,8 @@
 .first-screen {
   background-color: #1ABC9C;
   min-height: 650px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
   z-index: 5;
 }
 
@@ -12,13 +12,22 @@
 }
 
 .first-screen-intro-1 {
-  font-size: 50px;
+  font-size: 45px;
   color: white;
+
+  @media (max-width: 600px) {
+    font-size: 30px;
+  }
 }
 
+
 .first-screen-intro-2 {
-  font-size: 30px;
+  font-size: 25px;
   color: #BDC3C7;
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
 }
 
 .first-screen-button {
@@ -26,7 +35,7 @@
   margin-left: 33%;
   margin-right: 33%;
   margin-top: 50px;
-  padding: 10px 40px 10px 40px;
+  padding: 10px 0px 10px 0px;
   border-style: solid;
   border-width: 3px;
   border-color: #ECF0F1;
@@ -38,6 +47,10 @@
   transition-duration: 1s;
 }
 
+#startButton {
+  font-size: 30px;
+}
+
 .first-screen-button:hover {
   text-decoration: none;
   background-color: #E74C3C;
@@ -45,12 +58,12 @@
 }
 
 .thumbs {
-  min-height: 650px;
+  min-height: 610px;
   z-index: 5;
 }
 
 .thumb {
-  height: 270px;
+  height: 300px;
   padding:0;
   overflow: hidden;
 }
@@ -99,7 +112,8 @@
   transition: all 0.1s ease-in;
 }
 
-.active-thumb:hover img {    
+.active-thumb:hover img { 
+  opacity: 1.0;   
   -webkit-transform: scale(1.05,1.05);
   -moz-transform:scale(1.05,1.05);
   -webkit-transition: all 0.2s ease-in;
@@ -124,7 +138,7 @@
 }
 
 .active-campus-img-overlay {
-  opacity: .9;
+  opacity: .3;
   background-color: black;
   position: absolute;
   max-width: 100%;
