@@ -8,7 +8,6 @@
         <strong>Sorry!</strong> <%= flash[:alert] %>
       </div>
     <% end %>
-
     <% unless flash[:success].nil? %>
       <div class="alert alert-success alert-dismissible" role="alert">
         <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -23,11 +22,9 @@
         <b class="enter-sell-intro-text">You may also</b>
       </div>
       <div align="center" class="enter-sell-container">
-        <p class="enter-sell-button">
-          <b>
-            <%= link_to "Sell Your Books", new_school_book_path(@school.name) %>
-          </b>
-        </p>
+        <a align="center" class="enter-sell-button"  href=<% new_school_book_path(@school.name) %> >
+        Sell Your Books
+        </a>
       </div>
     </div>
   </div>
