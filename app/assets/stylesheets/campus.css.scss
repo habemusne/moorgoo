@@ -183,16 +183,33 @@
   width: 100%;
 }
 
-.category-dialogue {
-  display: none;
-  position: fixed;
-  min-width: 450px;
-  background-color: rgba(213, 213, 213, 0.6980392);
-  margin-top: -600px;
-  margin-bottom: 150px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  z-index: 10;
+@media (max-width: 767px) {
+  .category-dialogue {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: none;
+    position: fixed;
+    background-color: rgba(213, 213, 213, 0.8980392);
+    margin-top: -600px;
+    margin-bottom: 150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    z-index: 10;
+  }
+}
+
+@media (min-width: 768px) {
+  .category-dialogue {
+    display: none;
+    position: fixed;
+    min-width: 450px;
+    background-color: rgba(213, 213, 213, 0.8980392);
+    margin-top: -600px;
+    margin-bottom: 150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    z-index: 10;
+  }
 }
 
 .category-icon {
