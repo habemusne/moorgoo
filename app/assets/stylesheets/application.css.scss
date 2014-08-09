@@ -30,8 +30,13 @@ div.input_error_notice {
 }
 .center-row {
   text-align: center;
-  padding-top: 100px;
-  padding-bottom: 140px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  @media (max-width: 500px) {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
 }
 
 .info_form-auxChoice { 
@@ -50,6 +55,7 @@ div.input_error_notice {
     background-color: rgba(51, 51, 51, 0.2980392);
     position: relative;
     display: inline-block;
+    margin-top: 30px;
     padding-bottom: 20px
   }
   .form_input_field {
@@ -72,6 +78,7 @@ div.input_error_notice {
     background-color: rgba(51, 51, 51, 0.2980392);
     position: relative;
     display: inline-block;
+    margin-top: 50px;
     padding-bottom: 20px
   }
   .form_input_field {

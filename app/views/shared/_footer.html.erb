@@ -1,40 +1,48 @@
-<FOOTER class="row">
-	<div class="wrapper">
-		<div id="ls-Footer-Tag">
-			<img class="mg-responsive" src="assets/mushroom.png"/>
-			<span>&copy; 2014 MoorGoo.com</span>
+<div id="footer1">
+	<div class="myWrapper row">
+		<div class="col-xs-12 col-sm-2 col-lg-2">
+			<div id="ls-Footer-Tag">
+				<%= image_tag("mushroom.png", :alt => "Logo") %>
+				<span>&copy; 2014 MoorGoo.com</span>
+			</div>
 		</div>
-		<nav class="footerLinks">
-			<ul>
-				<li class="navHead">Navigation</li>
-				<li><a class="scrollPage" href="/#OurMethod">Our method</a></li>
-				<li><a class="scrollPage" href="/#Portfolio">Examples</a></li>
-				<li><a class="scrollPage" href="/designer">Work on Projects</a></li>
-			</ul>
-		</nav>
-		<nav class="footerLinks">
-			<ul>
-				<li class="navHead">Legal Stuff</li>
-				<li><a class="scrollPage" href="/privacypolicy">Privacy policy</a></li>
-				<li><a class="scrollPage" href="/termsofservice">Terms of service</a></li>
-				<li><a class="scrollPage" href="/copyrightpolicy">Copyright policy</a></li>
-			</ul>
-		</nav>
-		<nav class="footerLinks">
-			<ul>
-				<li class="navHead">About Us</li>
-				<%= link_to "The Team", about_path, :class=>"scrollPage" %>
-				<li><a class="scrollPage" href="#">Contact us</a></li>
-				<li><a class="scrollPage" target="_blank" href="http://help.launchsite.com">FAQs</a></li>
-			</ul>
-		</nav>
-		<nav class="footerLinks">
-			<ul>
-				<li class="navHead">Follow us</li>
-				<li><a class="scrollPage" target="_blank" href="http://facebook.com">Facebook</a></li>
-				<li><a class="scrollPage" target="_blank" href="http://twitter.com">Twitter</a></li>
-				<li><a class="scrollPage" target="_blank" href="#">Our Blog</a></li>
-			</ul>
-		</nav>
+		<div class="col-xs-12 col-sm-2 col-lg-2">
+			<nav class="footerLinks">
+				<ul>
+					<li class="navHead">Navigation</li>
+					<li><a class="scrollPage" href="/#OurMethod">Our method</a></li>
+					<li><a class="scrollPage" href="/#Portfolio">Examples</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="col-xs-12 col-sm-2 col-lg-2">
+			<nav class="footerLinks">
+				<ul>
+					<li class="navHead">Legal Stuff</li>
+					<li><a class="scrollPage" href="/privacypolicy">Privacy policy</a></li>
+					<li><a class="scrollPage" href="/termsofservice">Terms of service</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="col-xs-12 col-sm-2 col-lg-2">
+			<nav class="footerLinks">
+				<ul>
+					<li class="navHead">About Us</li>
+					<%= link_to "The Team", about_path, :class=>"scrollPage" %>
+					<li><a class="scrollPage" href="#">Contact us</a></li>
+					<li><a class="scrollPage" target="_blank" href="#">FAQs</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="col-xs-12 col-sm-2 col-lg-2">
+			<nav class="footerLinks">
+				<ul>
+					<li class="navHead">Follow us</li>
+					<li><a class="scrollPage" target="_blank" href="http://facebook.com">Facebook</a></li>
+					<li><a class="scrollPage" target="_blank" href="http://twitter.com">Twitter</a></li>
+					<li><a class="scrollPage" target="_blank" href="#">Our Blog</a></li>
+				</ul>
+			</nav>
+		</div>
 	</div>
-</FOOTER>
+</div>

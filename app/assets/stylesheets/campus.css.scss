@@ -1,22 +1,27 @@
 
 .first-screen {
   background-color: #1ABC9C;
-  min-height: 650px;
+  min-height: 450px;
   padding-left: 10px;
   padding-right: 10px;
   z-index: 5;
 }
 
 .first-screen-icon {
+  padding-top: 50px;
   width: 250px;
+
+  @media (max-width: 900px) {
+    width: 170px;
+  }
 }
 
 .first-screen-intro-1 {
   font-size: 45px;
   color: white;
 
-  @media (max-width: 600px) {
-    font-size: 30px;
+  @media (max-width: 900px) {
+    font-size: 35px;
   }
 }
 
@@ -25,8 +30,8 @@
   font-size: 25px;
   color: #BDC3C7;
 
-  @media (max-width: 600px) {
-    font-size: 20px;
+  @media (max-width: 900px) {
+    font-size: 17px;
   }
 }
 
@@ -46,9 +51,10 @@
 
   transition-duration: 1s;
 
-  @media (max-width: 700px) {
+  @media (max-width: 900px) {
     margin-left: 13%;
     margin-right: 13%;
+    margin-top: 40px;
   }
 } 
 
@@ -59,6 +65,9 @@
   color: #ECF0F1;
 }
 
+#startButton {
+  font-size: 25px;
+}
 
 .thumbs {
   min-height: 500px;
@@ -66,10 +75,9 @@
 }
 
 .thumb {
-  height: 300px;
   padding:0;
   overflow: hidden;
-  max-height: 250px;
+  max-height: 300px;
 }
 
 .thumb img {
@@ -167,14 +175,14 @@
   width: 100%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .category-dialogue {
     margin-left: 10%;
     margin-right: 10%;
     display: none;
     position: fixed;
     background-color: rgba(213, 213, 213, 0.8980392);
-    margin-top: -600px;
+    margin-top: -440px;
     margin-bottom: 150px;
     padding-top: 30px;
     padding-bottom: 30px;
