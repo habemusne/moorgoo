@@ -34,7 +34,7 @@
   display: block;
   margin-left: 33%;
   margin-right: 33%;
-  margin-top: 50px;
+  margin-top: 80px;
   padding: 10px 0px 10px 0px;
   border-style: solid;
   border-width: 3px;
@@ -45,6 +45,11 @@
   text-decoration: none;
 
   transition-duration: 1s;
+
+  @media (max-width: 700px) {
+    margin-left: 13%;
+    margin-right: 13%;
+  }
 }
 
 #startButton {
@@ -58,7 +63,7 @@
 }
 
 .thumbs {
-  min-height: 610px;
+  min-height: 600px;
   z-index: 5;
 }
 
