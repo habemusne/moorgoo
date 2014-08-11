@@ -20,9 +20,13 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name%></a>
           <ul class="dropdown-menu right-dropdown-ul" role="menu">
             <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= school_bookprices_path(@school.name, :status=>0) %> >My Books</a></span></li>
-            <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= edit_user_registration_path %> ></a></span></li>
+            <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= edit_user_registration_path %> >Change Password</a></span></li>
             <li class="divider"></li>
-            <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= destroy_user_session_path %> >Logout</a></span></li>
+            <li class="right-dropdown-ul-li">
+              <span>
+              <%= link_to "Logout", destroy_user_session_path, :method => :delete, :class => 'right-dropdown-a' %>
+              </span>
+            </li>
           </ul>
         <% else %>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account</a>
