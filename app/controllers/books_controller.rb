@@ -23,6 +23,8 @@ class BooksController < ApplicationController
   end
 
   def create
+    params[:book][:isbn] = convertISBN(params[:book][:isbn])
+
     if auto_mode?
       @book = processISBN
       if @book.nil?
@@ -49,6 +51,15 @@ class BooksController < ApplicationController
 
     def processISBN
       book = Book.find_by(:isbn => params[:book][:isbn]) || fetch_book(params[:book][:isbn])
+    end
+
+    def convertISBN(isbn)
+      if isbn.length == 10
+        isbn_13 = "978" + isbn.from(0).to(8) + ((10 - (9 + 3*7 + 8 + 3*(isbn.at(0).to_i) + isbn.at(1).to_i + 3*(isbn.at(2).to_i) + isbn.at(3).to_i + 3*(isbn.at(4).to_i) + isbn.at(5).to_i + 3*(isbn.at(6).to_i) + isbn.at(7).to_i + 3*(isbn.at(8).to_i)) % 10) % 10).to_s
+      else
+        isbn_13 = isbn
+      end
+      return isbn_13
     end
 
     def fetch_book(isbn)
