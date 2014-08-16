@@ -6,9 +6,9 @@
     <p class="book-title"><%= b.title %></p>
     <p class="book-author">By <%= b.author %></p>
     <p class="book-isbn">ISBN: <%= b.isbn %></p>
+    <!-- <br> -->
     <br>
-    <br>
-    <% unless prices.empty? %>
+    <% if (not prices.nil?) && (not prices.empty?) %>
     <span><%=image_tag("profile.png", :alt => "ICON", :class=>'icon') %> <%= pluralize(prices.count, " seller") %> | <%= image_tag("clock.png", :alt => "ICON", :class=>'icon') %> <%=time_ago_in_words(prices.order(:updated_at).first.updated_at) %> ago</span>
     <% end %>
   </div>

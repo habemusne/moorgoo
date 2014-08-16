@@ -23,7 +23,7 @@
           </div>
           <div class="row">
             <div class="col-md-6">
-              <%= render '/books/item', :b=>@book %>
+              <%= render '/books/item', :b=>@book, :prices=>nil %>
             </div>
             <div class="col-md-6">
               <%= form_for [@school.name, @bookprice], :url=>school_bookprices_path(@school.name, @bookprice), :html=>{:class=> 'form-horizontal', :style=>'margin: 30px auto;', id: 'sellForm'} do |bp| %>
