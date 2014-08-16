@@ -8,7 +8,7 @@
     <p class="book-isbn">ISBN: <%= b.isbn %></p>
     <br>
     <br>
-    <% if defined? prices %>
+    <% unless prices.empty? %>
     <span><%=image_tag("profile.png", :alt => "ICON", :class=>'icon') %> <%= pluralize(prices.count, " seller") %> | <%= image_tag("clock.png", :alt => "ICON", :class=>'icon') %> <%=time_ago_in_words(prices.order(:updated_at).first.updated_at) %> ago</span>
     <% end %>
   </div>
