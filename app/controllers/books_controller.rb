@@ -2,6 +2,7 @@ require 'open-uri'
 class BooksController < ApplicationController
 
   def index
+    params[:search] = convertISBN(params[:search])
     @books = Book.similar_search(params[:search])
     if @books.empty?
       flash[:alert] = 'No books found'

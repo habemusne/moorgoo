@@ -4,6 +4,8 @@
   <div class="center-row">
     <div class="container-fluid">
       <div align="center">
+        <% p '========'%>
+        <% p 'nil' if flash[:notice].nil? %>
         <% unless flash[:notice].nil? %>
           <div class="alert alert-info" role="alert">
             <%= flash[:notice]%>
