@@ -12,7 +12,6 @@
     <% unless flash[:success].nil? %>
       <div class="alert alert-success alert-dismissible" role="alert">
         <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <span> Success ! Your offer is saved ! </span>
         <strong style="margin-left: 5px;"><%= flash[:success].html_safe %></strong>
       </div>
     <% end %>

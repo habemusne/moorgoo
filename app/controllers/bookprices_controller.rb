@@ -11,6 +11,8 @@ class BookpricesController < ApplicationController
   def new
     @bookprice = Bookprice.new
     @book_id = params[:book_id].to_i
+    @book = Book.find(@book_id)
+    # @prices = @book.bookprices
   end
 
   def update
