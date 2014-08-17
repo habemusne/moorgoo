@@ -1,6 +1,6 @@
 <% provide(:background_img, 'index-background') %>
 
-<div class="container">
+<div class="row">
   <div class="center-row">
     <% unless flash[:alert].nil? %>
       <div class="alert alert-warning alert-dismissible" role="alert">
@@ -12,7 +12,6 @@
     <% unless flash[:success].nil? %>
       <div class="alert alert-success alert-dismissible" role="alert">
         <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <span> Success ! Your offer is saved ! </span>
         <strong style="margin-left: 5px;"><%= flash[:success].html_safe %></strong>
       </div>
     <% end %>
@@ -23,7 +22,9 @@
         <b class="enter-sell-intro-text">You may also</b>
       </div>
       <div align="center" class="enter-sell-container">
-        <p class="enter-sell-button"><b>Sell Your Book</b></p>
+        <a align="center" class="enter-sell-button"  href=<% new_school_book_path(@school.name) %> >
+        Sell Your Books
+        </a>
       </div>
     </div>
   </div>

@@ -4,7 +4,7 @@
       <div class="col-md-6 bookinfo-row animated bounceIn">
         <% even_arr(@books.count-1).each do |f|%>
           <div class="single-book-block">
-            <%= render 'item', :b=>@books[f]%>
+            <%= render 'item', :b=>@books[f], :prices => @prices[@books[f].id]%>
             <div class="bookprice-area" style="display: none;">
               <%= render 'pricelist', :prices => @prices[@books[f].id]%>
             </div>
@@ -14,7 +14,7 @@
       <div class="col-md-6 bookinfo-row animated bounceIn">
         <% odd_arr(@books.count-1).each do |f|%>
           <div class="single-book-block">
-            <%= render 'item', :b=>@books[f]%>
+            <%= render 'item', :b=>@books[f], :prices => @prices[@books[f].id]%>
             <div class="bookprice-area" style="display: none;">
               <%= render 'pricelist', :prices => @prices[@books[f].id]%>
             </div>

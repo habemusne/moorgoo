@@ -41,27 +41,59 @@
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #222222;
-  width: 50%;
-  margin-left: 25%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
-.enter-sell-button {
-  width: 250px;
-  height: 40px;
-  margin-top: 20px;
-  padding: 10px 20px 30px 20px;
-  border-style: solid;
-  border-width: 3px;
-  border-color: #ECF0F1;
-  background-color: #E74C3C;
-  cursor: pointer;
-  color: #ECF0F1;
+@media (max-width: 767px) {
+  .enter-sell-button {
+      display: block;
+      margin-top: 20px;
+      max-width: 250px;
+      padding: 10px 10px 10px 10px;
+      border-style: solid;
+      border-width: 3px;
+      border-color: #ECF0F1;
+      background-color: #E74C3C;
+      cursor: pointer;
+      color: #ECF0F1;
+      font-weight: 500;
+      font-size: 20px;
 
-  transition-duration: 1s;
-  transition-delay: 0s;
+      transition-duration: 1s;
+  }
+}
+
+@media (min-width: 768px) {
+  .enter-sell-button {
+      display: block;
+      margin-top: 20px;
+      max-width: 250px;
+      padding: 10px 10px 10px 10px;
+      border-style: solid;
+      border-width: 3px;
+      border-color: #ECF0F1;
+      background-color: #E74C3C;
+      cursor: pointer;
+      color: #ECF0F1;
+      font-weight: 500;
+      font-size: 24px;
+
+      transition-duration: 1s;
+  }
 }
 
 .enter-sell-button:hover {
+  text-decoration: none;
   background-color: #ECF0F1;
   color: #2C3E50;
+}
+
+
+/* tos.html.erb */
+
+.tos-container{
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: left;
 }

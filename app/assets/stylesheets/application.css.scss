@@ -30,8 +30,13 @@ div.input_error_notice {
 }
 .center-row {
   text-align: center;
-  padding-top: 150px;
-  padding-bottom: 170px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @media (max-width: 500px) {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
 }
 
 .info_form-auxChoice { 
@@ -45,15 +50,24 @@ div.input_error_notice {
 }
 
 @media (max-width: 767px){
+  .shadowed-form-pane {
+    width: 300px;
+    background-color: rgba(51, 51, 51, 0.2980392);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px
+  }
   .form_input_field {
-    width:250px;
+    width:240px;
     height:40px;
     margin-top:5px;
+    display: block;
   }
   .form_input_button {
-    width:250px;
+    width:240px;
     height:40px;
     margin-top:10px;
+    display: inline;
   }
 }
 
@@ -79,177 +93,4 @@ div.input_error_notice {
   }
 }
 
-
-
-
-
-
-
-/* No Longer Used: Tabs */
-/* From css3pie.com/demos/tabs/ */
-/*.tabBox .tabs {
-    margin: 0;
-    overflow: hidden;
-    margin-bottom: -1px;
-}
-
-.tabBox .tabs li {
-    display: inline-block;
-    float: center;
-    list-style: none;
-    margin: 0;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-    border-bottom: 1px solid #FFF;
-}
-
-.tabBox .tabs li.active {
-    z-index: 3;
-}
-
-.tabBox .content {
-    clear: left;
-    position: relative;
-    z-index: 2;
-    padding: 2em 1em;
-    border: 1px solid #CCC;
-    background: #FFF;
-    border-radius: 3px;
- -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: #CCC 0 0 .25em;
-    -moz-box-shadow: #CCC 0 0 .25em;
-    box-shadow: 0 0 1.0em #505050;
-        behavior: url(/pie/PIE.htc);
-}
-
-.tabs > li.active > img,
-.tabs > li.active > img:hover,
-.tabs > li.active > img:focus {
-  color: #555;
-  cursor: default;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-bottom-color: transparent;
-}
-
-.tabs > li.active,
-.tabs > li.active:hover,
-.tabs > li.active:focus {
-  box-shadow: 0 0 1.0em #505050;
-  margin-bottom: -5px;
-}
-
-
-@media (max-width: 767px){
-  .tabs > li > img {
-    width:80px;
-  }
-
-  .tabs li {
-    width:80px;
-    height: 80px;
-  }
-  .left_big_icon {
-    display: none;
-  }
-  .content {
-    width:300px;
-  }
-  .form_input_field {
-    width:250px;
-    height:40px;
-    margin-top:5px;
-  }
-  .form_input_button {
-    width:250px;
-    height:40px;
-    margin-top:10px;
-  }
-}
-
-@media (min-width: 768px) {
-  .tabs > li > img {
-    width:80px;
-  }
-
-  .tabs li {
-    width:80px;
-    height: 80px;
-  }
-  .left_big_icon img {
-     width:120px;
-     float: right;
-  }
-  .content {
-    width:400px;
-  }
-  .form_input_field {
-    width:300px;
-    height:40px;
-    margin-top:5px;
-  }
-  .form_input_button {
-    width:300px;
-    height:40px;
-    margin-top:10px;
-  }
-}
-
-.tabs {
-  padding-top:20px;
-}
-
-.arrow-container {
-  position: fixed;
-  top:0;
-  z-index:499px;
-  right: 100px;
-
-  transition-property: top;
-  transition-duration: 0.5s;
-  transition-delay:0s;
-}
-
-.arrow-top {
-  width: 80px;
-  height: 100px;
-  background: #ea6153;
-
-  transition-property: background;
-  transition-duration: 0.5s;
-  transition-delay:0s;
-}
-
-.arrow-bottom {
-  width: 0; 
-  height: 0; 
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-top: 20px solid #ea6153;
-
-  transition-property: border-top;
-  transition-duration: 0.5s;
-  transition-delay:0s;
-}
-
-.arrow-bottom-text {
-  position:relative;
-  bottom: 35px;
-  right: 16px;
-  font-size: 18px;
-  color: #f2a097;
-}
-.arrow-container:hover {
-  top: 40px;
-  .arrow-top {
-    background: #e74c3c;
-  }
-  .arrow-bottom {
-    border-top: 20px solid #e74c3c;
-  }
-}
-*/
 

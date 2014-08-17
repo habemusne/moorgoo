@@ -1,26 +1,32 @@
-<ul class="nav nav-tabs" role="tablist">
+<ul class="nav nav-tabs" role="tablist" style="margin-top: 100px;">
   <li class="unsold-book <%= 'active' if @sold == '0' %>">
-    <%= link_to "Unsold", bookprices_path(:status=>0)%>
+    <%= link_to "Unsold", school_bookprices_path(:status=>0)%>
   </li>
   <li class="sold-book <%= 'active' if @sold == '1' %>">
-    <%= link_to "Sold", bookprices_path(:status=>1)%>
+    <%= link_to "Sold", school_bookprices_path(:status=>1)%>
   </li>
 </ul>
 <div class="unsold-booklist">
-  <% unless @bookprices.empty? %>
+  <% if not @bookprices.empty? %>
     <% @bookprices.each do |bp|%>
       <div class="panel panel-default">
         <div class="panel-body">
-          <%= link_to book_path(bp.book) do %>
-            <div class="col-sm-8">
-              <%= render 'books/item', :b=>bp.book%>
-            </div>
-          <% end %>
+          <div class="col-sm-8">
+            <%= link_to school_book_path(@school.name, bp.book) do %>
+              <%= render 'books/item', :b=>bp.book %>
+            <% end %>
+          </div>
           <div class="col-sm-4">
             <%= render 'singleprice', :bookprice=>bp, :b=>bp.book%>
           </div>
         </div>
       </div>
     <% end %>
+  <% else %>
+    <div class="container">
+      <div class="col-xs-12" sytle="text-align: center;">
+        <h2>It seems nothing lies in such category...</h2>
+      </div>
+    </div>
   <% end %>
 </div>

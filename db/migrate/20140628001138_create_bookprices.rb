@@ -11,6 +11,5 @@ class CreateBookprices < ActiveRecord::Migration
       t.timestamps
     end
 
-    change_column :books, :isbn, :integer, index: true
   end
 end

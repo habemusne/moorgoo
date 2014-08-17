@@ -1,10 +1,14 @@
-<div class="panel panel-default book-card <%= "noprice" if @prices[b.id].empty? %>" >
+<div class="panel panel-default book-card <%= "noprice" if @prices && @prices[b.id].empty? %>" >
   <div class="col-xs-4 book-img-container">
     <%= image_tag b.pic_url, :class=>'book-img'%>
   </div>
   <div class="col-xs-8 book-info-container">
     <p class="book-title"><%= b.title %></p>
     <p class="book-author">By <%= b.author %></p>
+    <p class="book-isbn">ISBN13: <%= b.isbn %></p>
     <br>
+    <% if (defined? prices) && (not prices.nil?) && (not prices.empty?) %>
+    <span><%=image_tag("profile.png", :alt => "ICON", :class=>'icon') %> <%= pluralize(prices.count, " seller") %> | <%= image_tag("clock.png", :alt => "ICON", :class=>'icon') %> <%=time_ago_in_words(prices.order(:updated_at).first.updated_at) %> ago</span>
+    <% end %>
   </div>
 </div>

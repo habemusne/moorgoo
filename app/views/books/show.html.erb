@@ -3,9 +3,9 @@
     <div class="book-center-block">
       <div class="col-md-12 bookinfo-row">
         <div class="single-book-block">
-          <%= render 'item', :b=>@book.first%>
+          <%= render 'item', :b=>@book.first, :prices => @prices[@book.first.id] %>
             <div class="bookprice-area">
-              <%= render 'pricelist', :prices => @prices[@book.first.id]%>
+              <%= render 'pricelist', :prices => @prices[@book.first.id] %>
             </div>
         </div>
       </div>

@@ -2,104 +2,174 @@
 
 /* _header.html.erb */
 
-.shadowed_header {
+/*.shadowed_header {
   border-bottom: 0px;
   box-shadow: 0 0 1.5em #000000;
 }
+*/
 
-.navbar-default {
-  background-color: rgba(51, 51, 51, 0.0980392);
+@media (max-width: 767px) {
+  .navbar-default {
+    background-color: rgba(149, 165, 166, 0.8980392);
+  }
+}
+
+@media (min-width: 768px ) {
+  .navbar-default {
+    background-color: rgba(149, 165, 166, 0.8980392);
+  }
 }
 
 .container-fluid {
   z-index: 500px;
 }
 
-.right-link-cluster {
-  float: right;
-  margin: auto;
+.container-fluid-navbar {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.left-link {
+  text-align: center;
+  font-family: 'Armata', sans-serif;
+}
+
+.navbar-default .navbar-brand {
+  color: #ECF0F1;
+}
+
+.navbar-default:hover .navbar-brand:hover {
+  color: #ECF0F1;
 }
 
 .right-link {
-  float: left;
-  display: block;
-  position: relative;
-  padding: 25px 40px 20px 40px;
-  width: 120px;
-  cursor: pointer;
-  color: #2C3E50;
+  text-align: center;
+  min-width: 100px;
+  font-family: 'Armata', sans-serif;
+  letter-spacing:2px;
 
-
-  transition-property: color;
   transition-duration: 1s;
-  transition-delay:0s;
 }
 
-.right-link:hover {
-  color: #7F8C8D;
+.right-link > a {
+  transition-duration: 1s;
 }
 
-.right-link-label {
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: rgba(127, 140, 141, 0.3);
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: rgba(127, 140, 141, 0.3);
+  color: white;
+}
+
+.right-dropdown {
+  transition-duration: 1s;
+}
+
+.right-dropdown:hover {
+  background-color: rgba(127, 140, 141, 0.3);
+}
+
+.right-dropdown-ul {
+  width: 280px;
+  background-color: rgba(149, 165, 166, 0.8980392);
+}
+
+.right-dropdown-ul-li {
   font-size: 14px;
-  display: block;
-  text-align:center;
-  cursor: pointer;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-align: center;
+
+  transition-duration: 1s;
 }
 
-a:-webkit-any-link {
+.right-dropdown-ul-li:hover {
+  background-color: rgba(127, 140, 141, 0.7);
+}
+
+.right-dropdown-ul-li:hover > span > a {
+  color: white;
   text-decoration: none;
 }
 
-.my-dropdown-trigger {
-  /* This class is also used in home.js */
-
-  transition-property: background-color;
-  transition-duration: 1s;
-  transition-delay: 0s;
+.navbar-nav .open .dropdown-menu {
+  background-color: rgba(127, 140, 141, 0.7); 
 }
 
-.my-dropdown-trigger:hover {
-  background-color: #222222;
+.right-dropdown-a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
-
-.my-dropdown-menu {
-  display:none;
-  list-style: none;
-  position: absolute;
-  right: 0;
-  margin-top:20px;
-  min-width:160px;
-}
-
-.rignt-link-dropdown-entry {
-  padding: 10px 18px 10px 18px;
-  background-color: #555555;
-  color: #7F8C8D;
-
-  transition-propterty: color;
-  transition-duration: 1s;
-  transition-delay: 0s;
-}
-
-.rignt-link-dropdown-entry:hover {
-  color: #555555;
-}
-
-.right-link-dropdown-a {
-  display: block;
-  float:center;
-  padding: 3px 10px;
-  clear: both;
-  font-weight: normal;
-  line-height: 1.428571429;
-  white-space: nowrap;
-}
-
-
-
-
 
 /* _footer.html.erb */
+#footer1 {
+  position: relative;
+  display: block;
+  background-color: #2c3742;
+  margin: 0 -15px 0 -15px;
+  padding: 43px 0px 10px;
+  z-index: 0;
+  
+  li {
+    list-style: none;
+  }
+}
+
+.myWrapper {
+  display: block;
+  position: relative;
+  z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#ls-Footer-Tag {
+  display: inline-block;
+  margin-left: 40px;
+  vertical-align: top;
+  width: 150px;
+  margin-bottom: 20px;
+
+  span {
+    display: block;
+    color: #f2f2f2;
+  }
+  img {
+    width: 120px;
+  }
+}
+
+.footerLinks {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.navHead {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  color: #56a3da;
+  border-bottom: 1px solid #56a3da;
+}
+
+.scrollPage {
+  color: #f2f2f2;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+
 
 
 

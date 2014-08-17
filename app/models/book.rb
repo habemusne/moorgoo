@@ -11,9 +11,8 @@ class Book < ActiveRecord::Base
         @books = Book.find_by_title( word )
       end
     else
-      @books = Book.where(:isbn => word.to_i )
+      @books = Book.where( :isbn => word )
     end
-    @books
   end
 
   def self.find_by_title( title )

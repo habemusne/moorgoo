@@ -1,9 +1,77 @@
 
-.thumbs {margin-top: 60px;}
+.first-screen {
+  background-color: #1ABC9C;
+  min-height: 450px;
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 5;
+}
+
+.first-screen-icon {
+  padding-top: 50px;
+  width: 250px;
+
+  @media (max-width: 900px) {
+    width: 170px;
+  }
+}
+
+.first-screen-intro-1 {
+  font-size: 45px;
+  color: white;
+
+  @media (max-width: 900px) {
+    font-size: 35px;
+  }
+}
+
+
+.first-screen-intro-2 {
+  font-size: 25px;
+  color: #BDC3C7;
+
+  @media (max-width: 900px) {
+    font-size: 17px;
+  }
+}
+
+.first-screen-button {
+  display: inline-block;
+  margin-left: 33%;
+  margin-right: 33%;
+  margin-top: 20px;
+  padding: 10px 10px 10px 10px;
+  max-width: 300px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ECF0F1;
+  background-color: none;
+  cursor: pointer;
+  color: #ECF0F1;
+  text-decoration: none;
+  transition-duration: 1s;
+} 
+
+
+.first-screen-button:hover {
+  text-decoration: none;
+  background-color: #E74C3C;
+  color: #ECF0F1;
+}
+
+#startButton {
+  font-size: 25px;
+}
+
+.thumbs {
+  min-height: 500px;
+  z-index: 5;
+}
 
 .thumb {
   padding:0;
   overflow: hidden;
+  max-height: 300px;
 }
 
 .thumb img {
@@ -15,7 +83,7 @@
   transition: all 1s ease;      
 */}
 
-.thumb span {
+.active-thumb-span {
   position: absolute;
   display: block;
   bottom: 20px;
@@ -27,44 +95,68 @@
   transition: all 0.1s ease-in;    
 }
 
-.thumb:hover img {    
-    -webkit-transform: scale(1.05,1.05);
-    -moz-transform:scale(1.05,1.05);
+.inactive-thumb-span {
+  position: absolute;
+  display: block;
+  bottom: 20px;
+  left: 10px;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #585858;
+  padding: 0 20px;
+  transition: all 0.1s ease-in;    
+}
+
+.inactive-thumb-span-banner {
+  position: absolute;
+  display: block;
+  bottom: 100px;
+  left: 10px;
+  font-size: 30px;
+  color: #BDC3C7;
+  padding: 0 20px;
+  transition: all 0.1s ease-in;
+}
+
+.active-thumb:hover img { 
+  opacity: 1.0;   
+  -webkit-transform: scale(1.05,1.05);
+  -moz-transform:scale(1.05,1.05);
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;      
 }
 
-/*第三方code*/
-/*words moving down */
-
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+.coming-soon-banner {
+  font-size: 30px;
+  bottom: 100px;
 }
 
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
+.coming-soon-school {
+  color: grey;
 }
 
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
+.active-campus-image {
+  /* Used in Javascript */
 }
 
+.inactive-campus-image {
+  /* Used in Javascript */
+}
 
-.campus-img-overlay {
+.active-campus-img-overlay {
+  opacity: .3;
+  background-color: black;
+  position: absolute;
+  max-width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+}
+
+.inactive-campus-img-overlay {
   opacity: .9;
   background-color: black;
   position: absolute;
@@ -77,15 +169,33 @@
   width: 100%;
 }
 
-.category-dialogue {
-  display: none;
-  position: fixed;
-  min-width: 450px;
-  background-color: rgba(213, 213, 213, 0.6980392);
-  margin-top: 150px;
-  margin-bottom: 150px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+@media (max-width: 900px) {
+  .category-dialogue {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: none;
+    position: fixed;
+    background-color: rgba(213, 213, 213, 0.8980392);
+    margin-top: -440px;
+    margin-bottom: 150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    z-index: 10;
+  }
+}
+
+@media (min-width: 768px) {
+  .category-dialogue {
+    display: none;
+    position: fixed;
+    min-width: 450px;
+    background-color: rgba(213, 213, 213, 0.8980392);
+    margin-top: -600px;
+    margin-bottom: 150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    z-index: 10;
+  }
 }
 
 .category-icon {

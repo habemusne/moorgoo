@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -55,4 +52,15 @@ gem 'cancan'
 gem 'devise'
 
 gem 'similar_text'
-gem 'passenger'
+
+gem 'friendly_id', '~> 5.0.0'
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+  gem 'rails_serve_static_assets', '~> 0.0.2'
+  gem 'unicorn'
+end
+
+
+# rails_serve_static_assets makes assets usable
+
