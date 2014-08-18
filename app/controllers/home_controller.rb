@@ -11,5 +11,8 @@ class HomeController < ApplicationController
       redirect_to school_path(@school.name)
     end
   end
+
+  def tos
+  end
   
 end

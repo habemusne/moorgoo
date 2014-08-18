@@ -28,7 +28,9 @@
             <div class="col-md-6">
               <%= form_for [@school.name, @bookprice], :url=>school_bookprices_path(@school.name, @bookprice), :html=>{:class=> 'form-horizontal', :style=>'margin: 30px auto;', id: 'sellForm'} do |bp| %>
                 <%= bp.text_field :price, :class=> 'form-control form_input_field', :placeholder=> 'Price', :id => 'sellForm_price' %>
-                <%= bp.text_field :condition, :class=> 'form-control form_input_field', :placeholder=> 'Condition', :id => 'sellForm_condition' %>
+
+                <%= bp.select :condition, [ ["Condition: New", "New"], ["Condition: Like New", "Like New"], ["Condition: Used", "Used"], ["Condition: Fair", "Fair"] ], {}, :class => 'form-control form_input_field', :id => 'sellForm_condition' %>
+
                 <%= bp.text_area :contact, :class=> 'form-control form_input_field', :placeholder=> 'Contact', :id => 'sellForm_contact' %>
                 <%= bp.hidden_field :book_id, :value=>@book_id%>
                 <% if user_signed_in? %>
