@@ -6,4 +6,9 @@ class User < ActiveRecord::Base
   belongs_to :school
   has_many :bookprices
   has_many :books, :through=> :bookprices
+  ADMIN_LIST = ["z2tao@ucsd.edu"]
+
+  def admin?
+    User::ADMIN_LIST.include? self.email
+  end
 end
