@@ -16,6 +16,7 @@ def fetchBook (school, fetch_wait_time = 1):
   seller_number_arr = []
   most_recent_date_arr = []
   student_lowest_price_arr = []
+  partner_lowest_price_arr = []
 
   while (True):
     #Wait for the data to be fetched and displayed
@@ -33,6 +34,7 @@ def fetchBook (school, fetch_wait_time = 1):
     seller_numbers = driver.find_elements_by_xpath("//span[@class='owner']/span")
     most_recent_dates = driver.find_elements_by_xpath("//span[@class='clock']/span")
     student_lowest_prices = driver.find_elements_by_class_name("post-price")
+    view_posting_buttons = driver.find_elements_by_xpath("//button[@class='postingitem vpostingsbtn askseller_btn rc-btn']")
     for i in range(0, book_counter):
       bookname_arr.append(booknames[i].get_attribute("innerHTML"))
       author_arr.append(authors[i].get_attribute("innerHTML").strip().split(':&nbsp;')[1])
@@ -46,13 +48,19 @@ def fetchBook (school, fetch_wait_time = 1):
       seller_number_arr.append(seller_numbers[i].get_attribute("innerHTML").strip().split("&nbsp")[0])
       most_recent_date_arr.append(most_recent_dates[i].get_attribute("innerHTML").strip())
       student_lowest_price_arr.append(student_lowest_prices[i].get_attribute("innerHTML").split("from")[1].strip())
+      
+      # Click on the "View Posting" button
+      view_posting_buttons[i].click()
+      time.sleep(fetch_wait_time)
+      partner_lowest_price_arr.append(driver.find_element_by_xpath("//div[@class='instancehub-affiliate']/p[@class='aff-p']"))
+      
+      driver.back()
 
     # Wait for the "next page" button to show up. Solves ElementNotVisibleException
     time.sleep(fetch_wait_time)
 
     # Click on the "next page" button
     driver.find_element_by_xpath("//div[@class='tabcontrol postingouter']/div/div/a[@class='rightalign nbtn']").click()
-    
 
 if __name__=='__main__':
   fetchBook("ucsd", 1)
