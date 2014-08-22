@@ -9,34 +9,35 @@ from bs4 import BeautifulSoup
 
 def fetchBook (driver, bookinfo, start_from_page, end_at_page, fetch_wait_time = 1):
 
-  # This while loop goes to the 'start_from_page'
-  current_page_number = 1
+  # # This while loop goes to the 'start_from_page'
+  # current_page_number = 1
   
-  while(True):
-    if (current_page_number >= start_from_page):
-      break
+  # while(True):
+  #   if (current_page_number >= start_from_page):
+  #     break
 
-    # This while loop continuely tries to click on the "next page" button
-    waiting_sec = 0
-    has_next_page_button = True
-    while (True):
-      if (waiting_sec > 10):
-        has_next_page_button = False
-        break
-      time.sleep(1)
-      try:
-        driver.find_element_by_xpath("//div[@class='tabcontrol postingouter']/div/div/a[@class='rightalign nbtn']").click()
-        current_page_number = current_page_number + 1
-        break
-      except selenium.common.exceptions.ElementNotVisibleException:
-        waiting_sec = waiting_sec + 1
-        print "Can't see 'next page' button at current page: " + str(current_page_number) + ", waiting for " + str(waiting_sec) + " seconds..."
-        continue
+  #   # This while loop continuely tries to click on the "next page" button
+  #   waiting_sec = 0
+  #   has_next_page_button = True
+  #   while (True):
+  #     if (waiting_sec > 10):
+  #       has_next_page_button = False
+  #       break
+  #     time.sleep(1)
+  #     try:
+  #       driver.find_element_by_xpath("//div[@class='tabcontrol postingouter']/div/div/a[@class='rightalign nbtn']").click()
+  #       current_page_number = current_page_number + 1
+  #       break
+  #     except selenium.common.exceptions.ElementNotVisibleException:
+  #       waiting_sec = waiting_sec + 1
+  #       print "Can't see 'next page' button at current page: " + str(current_page_number) + ", waiting for " + str(waiting_sec) + " seconds..."
+  #       continue
 
-    if (has_next_page_button == False):
-      print "Can't find next page button on page " + str(current_page_number) + ". Stop program"
-      return
+  #   if (has_next_page_button == False):
+  #     print "Can't find next page button on page " + str(current_page_number) + ". Stop program"
+  #     return
 
+  current_page_number = start_from_page
   # This while loop fetches information from every post blocks and store it in bookinfo{}
   while (True):
     if (current_page_number > end_at_page):
