@@ -1,3 +1,4 @@
+require 'open-uri'
 class Book < ActiveRecord::Base
   belongs_to :school
   has_many :bookprices
@@ -30,5 +31,51 @@ class Book < ActiveRecord::Base
   def generalize_course
     self.course = self.course.delete(' ').downcase()
   end
+
+  def self.processISBN(isbn)
+    # p "processISBN called"
+    book = Book.find_by(:isbn => isbn) || Book.fetch_book(isbn)
+  end
+
+  def self.convertISBN(isbn)
+    # p "convertISBN called"
+    if isbn.length == 10
+      isbn_13 = "978" + isbn.from(0).to(8) + ((10 - (9 + 3*7 + 8 + 3*(isbn.at(0).to_i) + isbn.at(1).to_i + 3*(isbn.at(2).to_i) + isbn.at(3).to_i + 3*(isbn.at(4).to_i) + isbn.at(5).to_i + 3*(isbn.at(6).to_i) + isbn.at(7).to_i + 3*(isbn.at(8).to_i)) % 10) % 10).to_s
+    else
+      isbn_13 = isbn
+    end
+    return isbn_13
+  end
+
+  def self.fetch_book(isbn)
+    # p "fetch_book called"
+    url = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{isbn}"
+    result = JSON.load(open(url).read)
+    if result["totalItems"] == 0
+      nil
+    else
+      begin
+        book = Book.new(
+          :title => result["items"][0]["volumeInfo"]["title"],
+          :isbn => isbn,
+          :author => result["items"][0]["volumeInfo"]["authors"][0] || " ",
+          :pic_url => result["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
+        )
+      rescue
+        nil
+      end
+    end
+  end
+
+  def self.create_new_book(isbn, course, title, school_id)
+    if isbn != "None"
+      book = processISBN(isbn)
+    end
+    book ||= Book.new(:isbn=>'NA', :title=>title, :school_id=>school_id)
+    book.course = course
+    book.save
+    book
+  end
+
 
 end
