@@ -5,5 +5,5 @@
 <%= form_for [@school,bookprice], :method=>:put do |f| %>
   <%= hidden_field_tag('bookprice[id]', bookprice.id)%>
   <%= hidden_field_tag('bookprice[status]', bookprice.inverseStatus) %>
-  <%= f.submit inverseStatusQuote(bookprice.status) %>
+  <%= f.submit inverseStatusQuote(bookprice.status), :class=>'btn btn-success' %>
 <% end %>

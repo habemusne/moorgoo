@@ -15,9 +15,7 @@
   <div class="thumbs" id="thumbs">
     <div class="col-xs-12 col-sm-6 col-lg-6 thumb active-thumb">
       <div class="active-campus-img-overlay"></div>
-      <%= link_to school_path(@school.name) do %>
-        <img class="img-responsive active-campus-img" src="/assets/ucsd.jpg"/>
-      <% end %>
+      <%= link_to image_tag('ucsd.jpg'), school_path(@school.name), :class=>"img-responsive active-campus-img" %>
       <span class="active-thumb-span animated fadeInDown">UC San Diego</span>
     </div>
     <div class="col-xs-12 col-sm-6 col-lg-6 thumb">
