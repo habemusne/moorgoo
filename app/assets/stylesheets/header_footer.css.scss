@@ -111,14 +111,19 @@
 /* _footer.html.erb */
 #footer1 {
   position: relative;
+  bottom: 0;
+  left: 0;
   display: block;
   background-color: #2c3742;
   margin: 0 -15px 0 -15px;
   padding: 43px 0px 10px;
-  z-index: 0;
   
   li {
     list-style: none;
+  }
+
+  @media (max-width: 900px) {
+    padding-left: 35px;
   }
 }
 

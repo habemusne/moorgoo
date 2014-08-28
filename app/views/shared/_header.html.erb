@@ -8,13 +8,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
       <%= link_to "MOORGOO", root_path, :class=>'navbar-brand left-link'%>
     </div>
     <div class="collapse navbar-collapse navbar-right" id="navContent">
       <ul class="nav navbar-nav">
         <li class="right-link"><a href="/schools/ucsd">Books</a></li>
-        <li class="right-link"><a href="#">Cars</a></li>
+        <li class="right-link"><a href="#">蘑菇学堂</a></li>
         <li class="dropdown right-dropdown right-link" >
         <% if user_signed_in? %>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name%></a>

@@ -10,8 +10,8 @@
 			<nav class="footerLinks">
 				<ul>
 					<li class="navHead">Navigation</li>
-					<li><a class="scrollPage" href="/#OurMethod">Our method</a></li>
-					<li><a class="scrollPage" href="/#Portfolio">Examples</a></li>
+					<li><%= link_to "UCSD Book", school_path(@school.name), :class=>"scrollPage" %></li>
+					<li><a class="scrollPage" href="/#Portfolio">蘑菇学堂</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -19,7 +19,6 @@
 			<nav class="footerLinks">
 				<ul>
 					<li class="navHead">Legal Stuff</li>
-					<li><a class="scrollPage" href="/privacypolicy">Privacy policy</a></li>
 					<li><a class="scrollPage" href="/tos">Terms of service</a></li>
 				</ul>
 			</nav>
@@ -28,7 +27,7 @@
 			<nav class="footerLinks">
 				<ul>
 					<li class="navHead">About Us</li>
-					<%= link_to "The Team", about_path, :class=>"scrollPage" %>
+					<li><%= link_to "The Team", about_path, :class=>"scrollPage" %></li>
 					<li><a class="scrollPage" href="#">Contact us</a></li>
 					<li><a class="scrollPage" target="_blank" href="#">FAQs</a></li>
 				</ul>
@@ -38,9 +37,8 @@
 			<nav class="footerLinks">
 				<ul>
 					<li class="navHead">Follow us</li>
-					<li><a class="scrollPage" target="_blank" href="http://facebook.com">Facebook</a></li>
-					<li><a class="scrollPage" target="_blank" href="http://twitter.com">Twitter</a></li>
-					<li><a class="scrollPage" target="_blank" href="#">Our Blog</a></li>
+					<li><a class="scrollPage" target="_blank" href="https://www.facebook.com/moorgoo">Facebook</a></li>
+					<li><a class="scrollPage" target="_blank" href="http://twitter.com">Weibo</a></li>
 				</ul>
 			</nav>
 		</div>

@@ -12,35 +12,19 @@
 </div>
 
 <div class="row">
-  <div class="col-sm-offset-3 col-sm-6 category-dialogue">
-    <h2 align="center">What would you like to trade?</h2>
-    <div align="center" class="row">
-      <div class="col-xs-offset-1 col-xs-4 col-sm-offset-1 col-sm-4">
-        <%= link_to school_path(@school.name) do %>
-        <img class="img-responsive category-icon" src="/assets/book_close.png"/>
-        <% end %>
-        <label class="category-icon-label">Books</label>
-      </div>
-      <div class="col-xs-offset-2 col-xs-4 col-sm-offset-2 col-sm-4">
-        <a href="index"><img class="img-responsive category-icon" src="/assets/wheelchair.png"/></a>
-        <label class="category-icon-label">Cars</label>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
   <div class="thumbs" id="thumbs">
     <div class="col-xs-12 col-sm-6 col-lg-6 thumb active-thumb">
       <div class="active-campus-img-overlay"></div>
-      <img class="img-responsive active-campus-img" src="/assets/ucsd.jpg"/>
+      <%= link_to school_path(@school.name) do %>
+        <img class="img-responsive active-campus-img" src="/assets/ucsd.jpg"/>
+      <% end %>
       <span class="active-thumb-span animated fadeInDown">UC San Diego</span>
     </div>
     <div class="col-xs-12 col-sm-6 col-lg-6 thumb">
       <div class="inactive-campus-img-overlay"></div>
       <img class="img-responsive inactive-campus-img" src="/assets/ucla.jpg"/>
       <span class="inactive-thumb-span-banner animated fadeInDown">Coming Soon</span>
-      <span class="inactive-thumb-span animated fadeInDown">UC Los Angeles</span>
+      <span class="inactive-thumb-span animated fadeInDown">UCLA</span>
     </div> 
     <div class="col-xs-12 col-sm-6 col-lg-6 thumb">
       <div class="inactive-campus-img-overlay"></div>
