@@ -1,8 +1,10 @@
 require 'open-uri'
+require 'Nokogiri'
 class Book < ActiveRecord::Base
   belongs_to :school
   has_many :bookprices
   has_many :users, :through=> :bookprices
+  after_save :rescue_pic
 
 
   def self.similar_search( word )
@@ -72,10 +74,24 @@ class Book < ActiveRecord::Base
     if isbn != "None"
       book = processISBN(isbn)
     end
-    book ||= Book.new(:isbn=>'NA', :title=>title, :school_id=>school_id)
+    book ||= Book.new(:isbn=>isbn, :title=>title, :school_id=>school_id)
     book.course = course
     book.save
     book
+  end
+
+  def rescue_pic
+    if self.isbn.to_i > 0 && self.pic_url.nil?
+      url = "http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=#{self.isbn}"
+      img = Nokogiri::HTML(open(url)).xpath("//div[@id='result_0']/div/a/div/img")
+      if img.empty?
+        p "empty"
+      else
+        src = img.attribute("src").text()
+        p src
+        Book.find(self.id).update_attribute(:pic_url, src)
+      end
+    end
   end
 
 

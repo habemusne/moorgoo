@@ -22,6 +22,7 @@
               <%= f.text_field :isbn, :class=> 'form-control form_input_field', :placeholder=> 'ISBN', :id => 'sellForm_isbn' %>
               <%= hidden_field_tag :save_mode, :auto %>
             <% else %>
+              <%= f.text_field :isbn, :class=> 'form-control form_input_field', :placeholder=> 'ISBN', :id => 'sellForm_isbn' %>
               <%= f.text_field :title, :class=> 'form-control form_input_field', :placeholder=> 'Title', :id => 'sellForm_title' %>
               <%= f.text_area :author, :class=> 'form-control form_input_field', :placeholder=> 'Author', :id => 'sellForm_title' %>
               <%= hidden_field_tag :save_mode, :manual %>
