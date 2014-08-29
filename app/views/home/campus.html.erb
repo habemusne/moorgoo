@@ -11,13 +11,18 @@
   </div>
 </div>
 
+<%= link_to image_tag('ucsd.jpg'), school_path(@school.name), :class=>"img-responsive active-campus-img" %>
+
 <div class="row">
   <div class="thumbs" id="thumbs">
+
     <div class="col-xs-12 col-sm-6 col-lg-6 thumb active-thumb">
       <div class="active-campus-img-overlay"></div>
       <%= link_to image_tag('ucsd.jpg'), school_path(@school.name), :class=>"img-responsive active-campus-img" %>
       <span class="active-thumb-span animated fadeInDown">UC San Diego</span>
     </div>
+
+    
     <div class="col-xs-12 col-sm-6 col-lg-6 thumb">
       <div class="inactive-campus-img-overlay"></div>
       <img class="img-responsive inactive-campus-img" src="/assets/ucla.jpg"/>

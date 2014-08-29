@@ -4,6 +4,7 @@ class BooksController < ApplicationController
   def index
     params[:search] = convertISBN(params[:search])
     @books = Book.similar_search(params[:search])
+
     if @books.empty?
       flash[:alert] = 'No books found'
       redirect_to @school
@@ -58,7 +59,11 @@ class BooksController < ApplicationController
       if isbn.length == 10
         isbn_13 = "978" + isbn.from(0).to(8) + ((10 - (9 + 3*7 + 8 + 3*(isbn.at(0).to_i) + isbn.at(1).to_i + 3*(isbn.at(2).to_i) + isbn.at(3).to_i + 3*(isbn.at(4).to_i) + isbn.at(5).to_i + 3*(isbn.at(6).to_i) + isbn.at(7).to_i + 3*(isbn.at(8).to_i)) % 10) % 10).to_s
       else
-        isbn_13 = isbn
+        if isbn == ""
+          isbn_13 = "a"
+        else
+          isbn_13 = isbn
+        end
       end
       return isbn_13
     end

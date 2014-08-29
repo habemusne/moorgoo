@@ -39,7 +39,7 @@
 }
 
 .navbar-default:hover .navbar-brand:hover {
-  color: #00FF00;
+  color: #1ABC9C;
 }
 
 .right-link {
@@ -121,6 +121,7 @@
   
   li {
     list-style: none;
+    text-align: left;
   }
 
   @media (max-width: 900px) {
