@@ -6,4 +6,8 @@
   <%= hidden_field_tag('bookprice[id]', bookprice.id)%>
   <%= hidden_field_tag('bookprice[status]', bookprice.inverseStatus) %>
   <%= f.submit inverseStatusQuote(bookprice.status), :class=>'btn btn-success' %>
+
+  <h3><%= bookprice.price %></h3>
+  <h3><%= bookprice.condition%></h3>
+
 <% end %>

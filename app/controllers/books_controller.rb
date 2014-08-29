@@ -2,7 +2,7 @@ require 'open-uri'
 class BooksController < ApplicationController
 
   def index
-    params[:search] = convertISBN(params[:search])
+    params[:search] = Book.convertISBN(params[:search])
     @books = Book.similar_search(params[:search])
 
     if @books.empty?
@@ -25,10 +25,10 @@ class BooksController < ApplicationController
   end
 
   def create
-    params[:book][:isbn] = convertISBN(params[:book][:isbn])
+    params[:book][:isbn] = Book.convertISBN(params[:book][:isbn])
 
     if auto_mode?
-      @book = processISBN
+      @book = Book.processISBN(params[:book][:isbn])
       if @book.nil?
         flash[:alert] = "Sorry, this ISBN is unrecognized. Please enter book info manually."
         redirect_to new_school_book_path

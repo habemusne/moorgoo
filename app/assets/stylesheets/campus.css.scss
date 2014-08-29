@@ -16,7 +16,6 @@
   }
 
   @media (max-width: 900px) {
-    padding-top: 5px;
     width: 170px;
   }
 }
@@ -165,30 +164,6 @@
   height: 100%;
   overflow: auto;
   width: 100%;
-}
-
-@media (max-width: 900px) {
-  .category-dialogue {
-    padding-top: 40px;
-    display: none;
-    background-color: rgba(213, 213, 213, 0.8980392);
-    
-    z-index: 10;
-  }
-}
-
-@media (min-width: 768px) {
-  .category-dialogue {
-    display: none;
-    position: fixed;
-    min-width: 450px;
-    background-color: rgba(213, 213, 213, 0.8980392);
-    margin-top: -600px;
-    margin-bottom: 150px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    z-index: 10;
-  }
 }
 
 .category-icon {
