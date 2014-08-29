@@ -14,5 +14,8 @@ class HomeController < ApplicationController
 
   def tos
   end
+
+  def wechat
+  end
   
 end
