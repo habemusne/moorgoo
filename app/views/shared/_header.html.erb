@@ -8,13 +8,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
       <%= link_to "MOORGOO", root_path, :class=>'navbar-brand left-link'%>
     </div>
     <div class="collapse navbar-collapse navbar-right" id="navContent">
       <ul class="nav navbar-nav">
         <li class="right-link"><a href="/schools/ucsd">Books</a></li>
-        <li class="right-link"><a href="#">Cars</a></li>
+        <li class="right-link"><a href="#">蘑菇学堂 (Coming)</a></li>
         <li class="dropdown right-dropdown right-link" >
         <% if user_signed_in? %>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name%></a>
@@ -32,7 +33,8 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account</a>
           <ul class="dropdown-menu right-dropdown-ul" role="menu">
             <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= new_user_session_path %> >My Books</a></span></li>
-            <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= new_user_session_path%> >Settings</a></span></li>
+            <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= new_user_session_path %> >Settings</a></span></li>
+            <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= new_user_session_path %> >Login</a></span></li>
           </ul>
         <% end %>
         </li>

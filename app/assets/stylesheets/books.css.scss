@@ -20,7 +20,7 @@
         font-size: 16px;
         width: 440px;
         @media(max-width: 500px){
-          width: 360px;
+          width: 280px;
         }
         margin: 0px auto 3px auto;
         .panel-heading{
@@ -58,10 +58,12 @@
   width: 440px;
   height: 200px;
   text-align: left;
+
   @media( max-width: 500px){
     width: 360px;
     height: 170px;
   }
+
   padding: 0px;
   margin: 30px auto 5px auto;
   box-shadow: 1px 1px 4px #aeaeae;
@@ -102,6 +104,56 @@
     }
     span {
       font-size: 15px;
+    }
+  }
+}
+
+  @media( max-width: 500px){
+    .book-card{
+    width: 280px;
+    height: 150px;
+    text-align: left;
+    padding: 0px;
+    margin: 20px auto 5px auto;
+    box-shadow: 1px 1px 4px #aeaeae;
+    border-width: 0px;
+    &:hover{
+      box-shadow: 1px 1px 6px #aeaeae;
+    }
+
+    .book-img-container{
+      height: 100%;
+      padding: 0px;
+      .book-img{
+        height: 100%;
+        width: 110px;
+      }
+    }
+
+    .book-info-container{
+      padding: 10px 0 0 25px;
+      .book-title{
+        font-size: 16px;
+        color: #555;
+        line-height: 94%;
+      } 
+      .book-author{
+        font-size: 14px;
+        font-weight: 400;
+        color: #888;
+        font-style: italic;
+      }
+      .book-isbn{
+        font-size: 11px;
+        font-weight: 400;
+        color: #555;
+      }
+      .icon {
+        width: 11px;
+      }
+      span {
+        font-size: 10px;
+      }
     }
   }
 }
