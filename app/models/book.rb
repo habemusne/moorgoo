@@ -7,6 +7,8 @@ class Book < ActiveRecord::Base
   after_save :rescue_pic
 
 
+  protected
+
   def self.similar_search( word )
     if word.to_i == 0
       @books = Book.where(:course => word.delete(' ').downcase())
@@ -82,7 +84,7 @@ class Book < ActiveRecord::Base
   def rescue_pic
     if self.isbn.to_i > 0 && self.pic_url.nil?
       url = "http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=#{self.isbn}"
-      img = Nokogiri::HTML(open(url)).xpath("//div[@id='result_0']/div/a/div/img")
+      img = Nokogiri::HTML(open(url)).xpath("//div[@id='result_0']/div[@class='image imageContainer']/a/div/img")
       if img.empty?
         p "empty"
       else
