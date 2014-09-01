@@ -1,5 +1,5 @@
 require 'open-uri'
-require 'Nokogiri'
+require 'nokogiri'
 class Book < ActiveRecord::Base
   belongs_to :school
   has_many :bookprices
