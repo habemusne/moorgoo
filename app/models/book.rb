@@ -4,7 +4,7 @@ class Book < ActiveRecord::Base
   belongs_to :school
   has_many :bookprices
   has_many :users, :through=> :bookprices
-  after_save :rescue_pic
+  # after_save :rescue_pic
 
 
   protected
@@ -36,9 +36,9 @@ class Book < ActiveRecord::Base
     self.course = self.course.delete(' ').downcase()
   end
 
-  def self.processISBN(isbn)
+  def self.processISBN(isbn, school_id)
     # p "processISBN called"
-    book = Book.find_by(:isbn => isbn) || Book.fetch_book(isbn)
+    book = Book.where("isbn = ? and school_id = ?",isbn, school_id).first || Book.fetch_book(isbn, school_id)
   end
 
   def self.convertISBN(isbn)
@@ -51,11 +51,11 @@ class Book < ActiveRecord::Base
     return isbn_13
   end
 
-  def self.fetch_book(isbn)
+  def self.fetch_book(isbn, school_id)
     # p "fetch_book called"
     url = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{isbn}"
-    result = JSON.load(open(url).read)
-    if result["totalItems"] == 0
+    result = JSON.load(open(url).read) rescue nil
+    if result && result["totalItems"] == 0
       nil
     else
       begin
@@ -63,7 +63,8 @@ class Book < ActiveRecord::Base
           :title => result["items"][0]["volumeInfo"]["title"],
           :isbn => isbn,
           :author => result["items"][0]["volumeInfo"]["authors"][0] || " ",
-          :pic_url => result["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
+          :pic_url => result["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"],
+          :school_id => school_id
         )
       rescue
         nil
@@ -71,12 +72,13 @@ class Book < ActiveRecord::Base
     end
   end
 
-  def self.create_new_book(isbn, course, title, school_id)
+  def self.create_new_book(isbn, course, title, school_id, pic)
     if isbn != "None"
-      book = processISBN(isbn)
+      book = processISBN(isbn, school_id)
     end
     book ||= Book.new(:isbn=>isbn, :title=>title, :school_id=>school_id)
     book.course = course
+    book.pic_url = pic if book.pic_url.nil?
     book.save
     book
   end

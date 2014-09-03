@@ -2,7 +2,7 @@ require 'open-uri'
 
 task :parser => :environment do
   f = File.open(ARGV[1])
-  admin_id = User.where(:email=>'sil024@ucsd.edu').first.id
+  admin_id = User.where(:email=>'z2tao@ucsd.edu').first.id
   school_id = School.where(:name=>'ucsd').first.id
 
   f.each do |line|
@@ -20,8 +20,9 @@ task :parser => :environment do
         condition = info[5]
         contact = info[0].split(":")[1]
         price = info[7].gsub("$","")
+        pic_url = info[9]
         if firstTimeBook
-          @book = Book.create_new_book(isbn, course, title, school_id)
+          @book = Book.create_new_book(isbn, course, title, school_id, pic_url)
           p "book is inserted with title #{@book.title}"
           firstTimeBook = false
         end
