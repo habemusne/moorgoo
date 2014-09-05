@@ -31,6 +31,7 @@
 .left-link {
   text-align: center;
   font-family: 'Armata', sans-serif;
+  font-weight: bold;
 }
 
 .navbar-default .navbar-brand {
@@ -38,7 +39,7 @@
 }
 
 .navbar-default:hover .navbar-brand:hover {
-  color: #ECF0F1;
+  color: #1ABC9C;
 }
 
 .right-link {
@@ -111,14 +112,20 @@
 /* _footer.html.erb */
 #footer1 {
   position: relative;
+  bottom: 0;
+  left: 0;
   display: block;
   background-color: #2c3742;
   margin: 0 -15px 0 -15px;
   padding: 43px 0px 10px;
-  z-index: 0;
   
   li {
     list-style: none;
+    text-align: left;
+  }
+
+  @media (max-width: 900px) {
+    padding-left: 33px;
   }
 }
 
@@ -168,8 +175,3 @@
   font-weight: 600;
   line-height: 32px;
 }
-
-
-
-
-

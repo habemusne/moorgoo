@@ -11,6 +11,10 @@
   padding-top: 50px;
   width: 250px;
 
+  div {
+    padding: 0 auto 0 auto;
+  }
+
   @media (max-width: 900px) {
     width: 170px;
   }
@@ -37,8 +41,6 @@
 
 .first-screen-button {
   display: inline-block;
-  margin-left: 33%;
-  margin-right: 33%;
   margin-top: 20px;
   padding: 10px 10px 10px 10px;
   max-width: 300px;
@@ -146,11 +148,6 @@
 .active-campus-img-overlay {
   opacity: .3;
   background-color: black;
-  position: absolute;
-  max-width: 100%;
-  display: block;
-  margin: 0;
-  padding: 0;
   height: 100%;
   overflow: auto;
   width: 100%;
@@ -167,35 +164,6 @@
   height: 100%;
   overflow: auto;
   width: 100%;
-}
-
-@media (max-width: 900px) {
-  .category-dialogue {
-    margin-left: 10%;
-    margin-right: 10%;
-    display: none;
-    position: fixed;
-    background-color: rgba(213, 213, 213, 0.8980392);
-    margin-top: -440px;
-    margin-bottom: 150px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    z-index: 10;
-  }
-}
-
-@media (min-width: 768px) {
-  .category-dialogue {
-    display: none;
-    position: fixed;
-    min-width: 450px;
-    background-color: rgba(213, 213, 213, 0.8980392);
-    margin-top: -600px;
-    margin-bottom: 150px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    z-index: 10;
-  }
 }
 
 .category-icon {

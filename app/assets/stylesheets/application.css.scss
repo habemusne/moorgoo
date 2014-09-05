@@ -19,6 +19,10 @@ h1, h2, h3, h4, h5, p{
   font-family: 'Open Sans', sans-serif;
 }
 
+html {
+  height: 100%;
+}
+
 .input_error_container{
   height: 20px;
 }
@@ -51,7 +55,7 @@ div.input_error_notice {
 
 @media (max-width: 767px){
   .shadowed-form-pane {
-    width: 300px;
+    width: 270px;
     background-color: rgba(51, 51, 51, 0.2980392);
     position: relative;
     display: inline-block;
@@ -90,7 +94,7 @@ div.input_error_notice {
     height:40px;
     margin-top:10px;
     display: inline;
+
+    transition-duration: 1s;
   }
 }
-
-

@@ -27,4 +27,11 @@ class Admins::SessionsController < Devise::SessionsController
       flash[:notice] = "Please verify your account first!" if not user.first.confirmed?
     end
   end
+
+
+  protected
+
+  def after_sign_in_path_for(resource)
+    params[:redirect] || '/schools/ucsd'
+  end
 end

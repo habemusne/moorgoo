@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
   belongs_to :school
-  has_many :bookprices
+  has_many :bookprices, dependent: :destroy
   has_many :books, :through=> :bookprices
   ADMIN_LIST = ["z2tao@ucsd.edu", "nac001@ucsd.edu", "sil024@ucsd.edu"]
 

@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
+gem 'nokogiri'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
@@ -33,6 +37,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'json'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
