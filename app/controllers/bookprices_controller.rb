@@ -47,22 +47,4 @@ class BookpricesController < ApplicationController
       params.require(:bookprice).permit(:book_id, :price, :condition, :contact)
     end
 
-    def processISBN
-      book = Book.find_by(:isbn => params[:bookprice][:isbn]) || fetch_book(params[:bookprice][:isbn])
-    end
-
-    def fetch_book(isbn)
-      url = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{isbn}"
-      result = JSON.load(open(url).read)
-      if result["totalItems"] == 0
-        nil
-      else
-        book = Book.create(
-          :title => result["items"][0]["volumeInfo"]["title"],
-          :isbn => isbn,
-          :author => result["items"][0]["volumeInfo"]["authors"][0] || " ",
-          :pic_url => result["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
-        )
-      end
-    end
 end
