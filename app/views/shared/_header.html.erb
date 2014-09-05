@@ -32,8 +32,15 @@
         <% else %>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account</a>
           <ul class="dropdown-menu right-dropdown-ul" role="menu">
-            <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= new_user_session_path %> >My Books</a></span></li>
-            <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= new_user_session_path %> >Settings</a></span></li>
+            <li class="right-dropdown-ul-li">
+              <span>
+                <%= link_to 'My Books', new_user_session_path(:redirect=>'/schools/ucsd/bookprices?status=0'), :class=>'right-dropdown-a' %>
+              </span></li>
+            <li class="right-dropdown-ul-li">
+              <span>
+                <%= link_to 'Change Password', new_user_session_path(:redirect=>'/users/edit'), :class=>'right-dropdown-a' %>
+              </span>
+            </li>
             <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= new_user_session_path %> >Login</a></span></li>
           </ul>
         <% end %>

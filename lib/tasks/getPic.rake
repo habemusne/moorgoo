@@ -1,5 +1,5 @@
 require 'open-uri'
-require 'Nokogiri'
+require 'nokogiri'
 
 task :getPic, [:isbn] => [:environment] do |t, args|
   puts "Args were: #{args}"

@@ -12,13 +12,14 @@
           </div>
         <% end %>
         <div class="form-group shadowed-form-pane">
-          <h2 class="header_above_form">Signin MoorGoo</h2>  
+          <h2 class="header_above_form">Signin MoorGoo</h2>
           <div class="input_error_container">
             <div class="input_error_notice"></div>
           </div>
           <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => { :id => 'signinForm', :class => 'form-horizontal'}) do |f| %>
             <%= f.email_field :email, autofocus: true, class: 'form_input_field form-control', placeholder: 'Email' %>
             <%= f.password_field :password, autocomplete: "off", class: 'form-control form_input_field', placeholder: 'Password' %>
+            <%= hidden_field_tag(:redirect, params[:redirect]) %>
             <%= f.submit "Sign in", class: "btn btn-default form_input_button" %>
             <% if devise_mapping.rememberable? -%>
               <div>
