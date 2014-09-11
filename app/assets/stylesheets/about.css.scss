@@ -1,14 +1,133 @@
-.photo {
-	width: 220px;
+.role-photo {
+  width: 220px;
 }
 
 .combb {
-	text-align: left;
-	padding: 20px 0 0 40px;
-	border: 1px solid #000000;
-	margin: 1px 1px 1px 1px
+  text-align: left;
+  padding: 20px 0 0 40px;
+  border: 1px solid #000000;
+  margin: 1px 1px 1px 1px
 }
 
 .bigcontain {
-	margin: 40px 0 20px 0;
+  margin: 40px 0 20px 0;
+}
+
+.role-cluster {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-height: 300px;
+  font-size: 20px;
+  color: #ECF0F1;
+}
+
+@media(max-width: 767px) {
+  .role-cluster {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+@media(min-width: 768px) {
+  .role-cluster {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
+
+.role-master {
+  background-color: #95A5A6;
+  min-height: 100px;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+  margin-bottom: 2px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: transparent;
+  cursor: pointer;
+  padding-top: 20px;
+
+  transition-duration: 0.5s;
+}
+
+.role-master:hover {
+  border-color: rgba(46,204,113, 0.8);
+}
+
+.role-marketing {
+  background-color: #D35400;
+  min-height: 200px;
+  border-bottom-left-radius:20px;
+  margin-left: -2px;
+  margin-right: 2px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent;
+  cursor: pointer;
+  padding-top: 30px;
+
+  transition-duration: 0.5s;
+}
+
+.role-marketing:hover {
+  border-color: rgba(46,204,113, 0.8);
+}
+
+.role-technical {
+  background-color: #3498DB;
+  min-height: 200px;
+  border-bottom-right-radius:20px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: transparent;
+  cursor: pointer;
+  padding-top: 30px;
+
+  transition-duration: 0.5s;
+}
+
+.role-technical:hover {
+  border-color: rgba(46,204,113, 0.8);
+}
+
+.role-container {
+  margin-top: 40px;
+}
+
+.role-title {
+  font-size: 30px;
+  margin-left: 20%;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-left: 20%;
+}
+
+.about-divider {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #BDC3C7;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 20px;
+}
+
+.role-master-container {
+  display:none;
+}
+
+.role-marketing-container {
+  display:none;
+}
+
+.role-technical-container {
+  display:none;
+}
+
+.role-list-container {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.role-list-block {
+  max-height: 340px;
 }
