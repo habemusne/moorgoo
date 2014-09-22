@@ -104,6 +104,3 @@ if __name__=='__main__':
   outputfile = open(outputfilename, "a")
   fetchAllBookNames(driver, outputfile, start_from_page, end_at_page)
   outputfile.close()
-
-
-
