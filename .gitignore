@@ -27,6 +27,6 @@ config/secrets.yml
 .secret
 .elasticbeanstalk/
 .env
-
+/app/assets/.DS_Store
 
 /public/assets/

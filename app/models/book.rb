@@ -30,7 +30,9 @@ class Book < ActiveRecord::Base
       result[b.id] = title.similar b.title
     end
     result.sort_by{|k,v| v}.last(6).each do |f|
-      books << Book.find(f[0])
+      if f[1] > 50
+        books << Book.find(f[0])
+      end
     end
     books.reverse
   end
