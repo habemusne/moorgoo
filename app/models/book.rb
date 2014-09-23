@@ -14,10 +14,13 @@ class Book < ActiveRecord::Base
       @books = Book.where(:course => word.delete(' ').downcase())
       if @books.empty?
         @books = Book.find_by_title( word )
+        p "----------"
+        p @books
       end
     else
       @books = Book.where( :isbn => word )
     end
+    # @books
   end
 
   def self.find_by_title( title )
