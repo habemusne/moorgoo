@@ -44,12 +44,5 @@ class DataController < ApplicationController
     @season_linear = Datum.increToLinear(@season_incre, 0)
     @month_linear = Datum.increToLinear(@month_incre, @season_linear[-2])
     @week_linear = Datum.increToLinear(@week_incre, @month_linear[-2])
-    @week_time = Datum.formTime(@week_incre.size, 1)
-    @month_time = Datum.formTime(@month_incre.size, 7)
-    @season_time = Datum.formTime(@season_incre.size, 30)
-    # p "============================"
-     p @season_time
-     p @month_time
-     p @week_time
   end
 end

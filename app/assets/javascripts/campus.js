@@ -13,4 +13,6 @@ $(function() {
       }
     }
   });
+
+  $("#to_day").click();
 });

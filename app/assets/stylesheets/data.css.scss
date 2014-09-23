@@ -8,12 +8,23 @@
 .axis path,
   .axis line {
     fill: none;
-    stroke: black;
+    stroke: teal;
     shape-rendering: crispEdges;
 }
 
 .dline{
-  fill: none;
+  fill: rgba(0, 100, 100, 0.1);
   stroke: rgba(0, 100, 100, 0.5);
   stroke-width: 3;
+}
+
+.data-switch{
+  width: 80px;
+  color: #008080;
+  border-color: #B0D6D6;
+  &:hover, &:focus{
+    color: #008080;
+    border-color: #B0D6D6;
+    background-color: rgba(0, 128, 128, 0.3);
+  }
 }
