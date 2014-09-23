@@ -38,7 +38,7 @@
                   .append("text")
                   .text(function(d){ return d; })
                   .attr("x", function(d, i){ return xScale(i); })
-                  .attr("y", function(d){ return yScale(d) - padding/2; })
+                  .attr("y", function(d){ return yScale(d) - 10; })
                   .attr("text-anchor", "middle")
                   .attr("fill", "rgb(0, 100, 100)");
   var line = d3.svg.line()
@@ -68,4 +68,12 @@
      .attr("class", "axis")
      .attr("transform", "translate(" + padding/2 + ", 0)")
      .call(yAxis);
+
+
+  d3.select("#to_month").on('click', function(){
+    xScale.domain([0,3]);
+    yScale.domain([d3.min(month) / 2, d3.max(month)]);
+    circles.remove().data(month).attr("cx", function(d, i){ return xScale(i); })
+         .attr("cy", function(d){ return yScale(d); });
+  });
 </script>
