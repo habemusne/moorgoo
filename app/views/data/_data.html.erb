@@ -1,0 +1,107 @@
+<script type="text/javascript">
+  var week = <%= week %>
+  var month = <%= month %>
+  var season = <%= season %>
+  var padding = 100;
+  var dayTime = 1000 * 3600 * 24;
+  var maxDate = new Date(Date.now() - 1 * dayTime);
+  var minDate = new Date(Date.now() - 4 * dayTime);
+  var week_time = [<%= (Date.today-6).to_s %>, <%= (Date.today-5).to_s %>,<%= (Date.today-4).to_s %>,<%= (Date.today-3).to_s %>,<%= (Date.today-2).to_s %>,<%= (Date.today-1).to_s %>, <%= (Date.today).to_s %>]
+
+  var w = 1000;
+  var h = 500;
+  var svg = d3.select(".week-inspector")
+    .append("svg")
+    .attr("width", w)
+    .attr("height", h);
+  var circles = svg.selectAll("circle")
+                    .data(week)
+                    .enter()
+                    .append("circle");
+  var xScale = d3.scale.linear()
+                 .domain([0, 4])
+                 .range([padding, w - padding]);
+  var timeScale = d3.time.scale()
+                    .domain([minDate, maxDate])
+                    .range([padding, w - padding])
+                    .nice(d3.time.day); 
+  var yScale = d3.scale.linear()
+                 .domain([d3.min(week) / 2, d3.max(week)])
+                 .range([h - padding, padding]);
+  circles.attr("cx", function(d, i){ return xScale(i); })
+         .attr("cy", function(d){ return yScale(d); })
+         .attr("r", 5)
+         .attr("fill", "teal");
+  var labels = svg.selectAll("text")
+                  .data(week)
+                  .enter()
+                  .append("text")
+                  .text(function(d){ return d; })
+                  .attr("x", function(d, i){ return xScale(i); })
+                  .attr("y", function(d){ return yScale(d) - 10; })
+                  .attr("text-anchor", "middle")
+                  .attr("fill", "rgb(0, 100, 100)");
+  var line = d3.svg.line()
+                   .x(function(d, i){ return xScale(i); })
+                   .y(function(d){ return yScale(d); })
+                   .interpolate("basis");
+  var linePath = svg.append("path").attr("class", "dline").attr("d", line(week));
+  
+  var xAxis = d3.svg.axis()
+                .scale(timeScale)
+                .orient("buttom")
+                .ticks(5)
+                .tickFormat(d3.time.format("%m-%d"));
+  var xxx = svg.append("g")
+     .attr("class", "axis")
+     .attr("transform", "translate(0, " + (h - padding) +")")
+     .call(xAxis);
+  var yAxis = d3.svg.axis()
+                .scale(yScale)
+                .orient("left")
+                .ticks(5);
+  var yyy = svg.append("g")
+     .attr("class", "axis")
+     .attr("transform", "translate(" + padding/2 + ", 0)")
+     .call(yAxis);
+
+
+  d3.select("#to_month").on('click', function(){
+    yScale.domain([d3.min(month) / 2, d3.max(month)]);
+    circles.data(month).transition().duration(500).ease("elastic").attr("cy", function(d){ return yScale(d); });
+    labels.data(month).transition().text(function(d){ return d; }).attr("y", function(d){ return yScale(d) - 10; });
+    linePath.transition().attr("d", line(month));
+    minDate = new Date(Date.now() - 21 * dayTime);
+    timeScale.domain([minDate, maxDate]).nice(d3.time.week);
+    xAxis.scale(timeScale).ticks(5).tickFormat(d3.time.format("%m-%d"));
+    xxx.call(xAxis);
+    yAxis.scale(yScale);
+    yyy.call(yAxis);
+  });
+
+  d3.select("#to_season").on('click', function(){
+    yScale.domain([d3.min(season) / 2, d3.max(season)]);
+    circles.data(season).transition().duration(500).ease("elastic").attr("cy", function(d){ return yScale(d); });
+    labels.data(season).transition().text(function(d){ return d; }).attr("y", function(d){ return yScale(d) - 10; });
+    linePath.transition().attr("d", line(season));
+    minDate = new Date(Date.now() - 100 * dayTime);
+    timeScale.domain([minDate, maxDate]).nice(d3.time.month);
+    xAxis.scale(timeScale).ticks(4).tickFormat(d3.time.format("%B"));
+    xxx.call(xAxis);
+    yAxis.scale(yScale);
+    yyy.call(yAxis);
+  });
+
+  d3.select("#to_day").on('click', function(){
+    yScale.domain([d3.min(week) / 2, d3.max(week)]);
+    circles.data(week).transition().duration(500).ease("elastic").attr("cy", function(d){ return yScale(d); });
+    labels.data(week).transition().text(function(d){ return d; }).attr("y", function(d){ return yScale(d) - 10; });
+    linePath.transition().attr("d", line(week));
+    minDate = new Date(Date.now() - 4 * dayTime);
+    timeScale.domain([minDate, maxDate]).nice(d3.time.day);
+    xAxis.scale(timeScale).ticks(5).tickFormat(d3.time.format("%m-%d"));
+    xxx.call(xAxis);
+    yAxis.scale(yScale);
+    yyy.call(yAxis);
+  });
+</script>

@@ -40,13 +40,5 @@ $(function(){
         });
   });
 
-
-  //Dropdown Menu Animation
-  $('.my-dropdown-trigger').mouseover(function(event) {
-    $('.my-dropdown-menu')[0].style.display = 'block';
-  });
-  $('.my-dropdown-trigger').mouseout(function(event) {
-    $('.my-dropdown-menu')[0].style.display = 'none';
-  });
 })
 

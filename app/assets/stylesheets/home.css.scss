@@ -23,6 +23,7 @@
   margin: 0 0 0 0;
   opacity: 0.8;
   background-size:cover;
+  background-repeat: no-repeat;
 }
 
 .enter-sell-intro-container {
@@ -45,41 +46,35 @@
   margin-right: 15%;
 }
 
+.enter-sell-button {
+  border-color: #ECF0F1;
+  background-color: rgba(52,152,219, 0.7);
+  cursor: pointer;
+  color: #ECF0F1;
+  border-style: solid;
+  display: block;
+  transition-duration: 0.5s;
+}
+
 @media (max-width: 767px) {
   .enter-sell-button {
-      display: block;
       margin-top: 20px;
       max-width: 250px;
       padding: 10px 10px 10px 10px;
-      border-style: solid;
-      border-width: 3px;
-      border-color: #ECF0F1;
-      background-color: #E74C3C;
-      cursor: pointer;
-      color: #ECF0F1;
+      border-width: 2px;
       font-weight: 500;
       font-size: 20px;
-
-      transition-duration: 1s;
   }
 }
 
 @media (min-width: 768px) {
   .enter-sell-button {
-      display: block;
       margin-top: 20px;
       max-width: 250px;
       padding: 10px 10px 10px 10px;
-      border-style: solid;
-      border-width: 3px;
-      border-color: #ECF0F1;
-      background-color: #E74C3C;
-      cursor: pointer;
-      color: #ECF0F1;
+      border-width: 2px;
       font-weight: 500;
-      font-size: 24px;
-
-      transition-duration: 1s;
+      font-size: 20px;
   }
 }
 

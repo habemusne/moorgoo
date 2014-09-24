@@ -32,9 +32,9 @@
 }
 
 .left-tab {
-  padding: 10px 20px 10px 20px;
+  padding: 10px 10px 10px 10px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   min-width: 200px;
   display:block;
   border-width: 2px;
@@ -107,21 +107,52 @@
 
 .video-intro-block-1 {
   float:left;
-}
-
-.video-intro-block-2 {
-  float:right;
-  max-width: 300px;
+  width: 400px;
+  text-align: left;
 }
 
 .video-intro-1 {
-  color: black;
-  font-size: 14px;
-}
-
-.video-intro-2 {
-  float: left;
   color: grey;
   font-size: 14px;
 }
 
+.course-desc {
+  padding: 10px 10px 10px 10px;
+  display: none;
+  margin-top: 30px;
+  background-color: #ECF0F1;
+  border-style: solid;
+  border-color: #BDC3C7;
+  border-width: 1px;
+  height: auto;
+  text-align: left;
+  width: 680px;
+  z-index:1;
+  margin-left: 249px;
+}
+
+.below-title {
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+
+.below-desc-title {
+  font-size: 16px;
+  color: black;
+}
+
+.below-desc {
+  font-size: 14px;
+  color: grey;
+}
+
+.below-summ-title {
+  font-size: 16px;
+  color: black;
+}
+
+.below-summ {
+  font-size: 14px;
+  color: grey;
+}

@@ -66,6 +66,8 @@ group :production do
   gem 'unicorn'
 end
 
+gem "d3-rails"
+
 
 # rails_serve_static_assets makes assets usable
 

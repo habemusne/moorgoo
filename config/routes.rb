@@ -21,6 +21,7 @@ Campustrade::Application.routes.draw do
   match '/wechat', to: 'home#wechat', via: 'get'
   match '/video', to: 'home#video', via: 'get'
   
+  get '/data' => 'data#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,8 +1,10 @@
+
+
 <div align="center">
   <div class="form-group shadowed-form-pane">
     <h2 class="header_above_form">MoorGoo</h2>
     <div class="input_error_container">
-      <div class="input_error_notice"></div>
+      <div class="input_error_notice">请优先使用 ISBN 搜索书籍！</div>
     </div>
     <%= form_tag( school_books_path(@school.name), :method=>'get', :class=>'form-horizontal', :id=>'isbnForm') do %>
       <%= text_field_tag :search, nil, autofocus: true, :placeholder=>'Bookname/ Classcode/ ISBN', :class=>'form-control index-book-search form_input_field', :id=>"bookname" %>

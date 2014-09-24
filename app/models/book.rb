@@ -14,10 +14,13 @@ class Book < ActiveRecord::Base
       @books = Book.where(:course => word.delete(' ').downcase())
       if @books.empty?
         @books = Book.find_by_title( word )
+        p "----------"
+        p @books
       end
     else
       @books = Book.where( :isbn => word )
     end
+    # @books
   end
 
   def self.find_by_title( title )
@@ -27,7 +30,9 @@ class Book < ActiveRecord::Base
       result[b.id] = title.similar b.title
     end
     result.sort_by{|k,v| v}.last(6).each do |f|
-      books << Book.find(f[0])
+      if f[1] > 50
+        books << Book.find(f[0])
+      end
     end
     books.reverse
   end

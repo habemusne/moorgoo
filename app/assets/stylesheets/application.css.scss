@@ -53,6 +53,19 @@ div.input_error_notice {
   padding-bottom: 30px;
 }
 
+.form_input_button {
+  background-color: #E74C3C;
+  border-width: 0px;
+  transition-duration: 0.5s;
+  transition-property: background-color;
+  color: white;
+}
+
+.form_input_button:hover {
+  background-color: #F74C3C;
+  color: white;
+}
+ 
 @media (max-width: 767px){
   .shadowed-form-pane {
     width: 270px;
@@ -94,7 +107,31 @@ div.input_error_notice {
     height:40px;
     margin-top:10px;
     display: inline;
-
-    transition-duration: 1s;
   }
 }
+
+
+/* _links.html.erb */
+.shared-link-container {
+  float: center;
+}
+
+.shared-link-container > a {
+  font-size: 15px;
+}
+
+@media(max-width: 767px) {
+  .shared-link-container {
+    width: 90%;
+  }
+}
+
+@media(min-width: 768px) {
+  .shared-link-container {
+    width: 40%;
+  }
+}
+
+
+
+

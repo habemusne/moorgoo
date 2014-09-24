@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def has_alert?
-    not flash[:alert].nil?
+  def biggerThanFive input
+    input > 5 ? "Yes" : "No"
   end
 end

@@ -2,7 +2,7 @@ require 'open-uri'
 
 task :parser => :environment do
   f = File.open(ARGV[1])
-  admin_id = User.where(:email=>'z2tao@ucsd.edu').first.id
+  admin_id = User.where(:email=>'sil024@ucsd.edu').first.id
   school_id = School.where(:name=>'ucsd').first.id
 
   f.each do |line|
