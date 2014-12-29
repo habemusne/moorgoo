@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Moorgoo</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => false %>
+  
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render 'shared/header' %>
+<%= render 'shared/flash' %>
+<%= yield %>
+
+</body>
+</html>
+<%= javascript_include_tag "application", "data-turbolinks-track" => false %>
