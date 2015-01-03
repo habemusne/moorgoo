@@ -1,0 +1,18 @@
+<%= form_for @request do |f| %>
+  School: <%= f.text_field :school, :class=>'form-control' %><br />
+  Course: <%= f.text_field :course, :class=>'form-control' %><br />
+  Length: <%= f.text_field :length, :class=>'form-control' %><br />
+  Area: <%= f.text_field :area, :class=>'form-control' %><br />
+  1st Choice of Time: <%= f.text_field :time_one, :class=>'form-control' %><br />
+  2nd Choice: <%= f.text_field :time_two, :class=>'form-control' %><br />
+  3rd Choice: <%= f.text_field :time_three, :class=>'form-control' %><br />
+  Frequency: <%= f.text_field :frequency, :class=>'form-control' %><br />
+  <% if user_signed_in? %>
+    <%= hidden_field_tag "user_id",  current_user.id %>
+    <!-- <div class="form-group"> -->
+      <%= f.submit "Submit", :class=>'btn btn-default' %>
+    <!-- </div> -->
+  <% else %>
+    <%= link_to "Sign in First", new_user_session_path, :class=>"btn btn-default" %>
+  <% end %>
+<% end %>
