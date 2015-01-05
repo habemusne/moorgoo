@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h2>Thank you for your request! </h2>
+    <p>
+      This is your confirmation number: <h2><%= @request.code %></h2>
+    </p>
+    <p>
+      To finish your order, please use the code as your payment message. Thank you!
+    </p>
+    <%= link_to "Pay Now", @url, :class=>'btn btn-default' %>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h2>Thank you for your request! </h2>
+    <p>
+      This is your confirmation code: <strong><%= @request.code %></strong>
+    </p>
+    <p> The following is the detail of your request:<br />
+      School: <%= @request.school%><br />
+      Course: <%= @request.course%><br />
+      Length: <%= @request.length%><br />
+      Area: <%= @request.area%><br />
+      1st Choice of Time: <%= @request.time_one%><br />
+      2nd Choice of Time: <%= @request.time_two%><br />
+      3rd Choice of Time: <%= @request.time_three%><br />
+      Frequency: <%= @request.frequency%>
+    </p>
+    <% if @user.tutor_requests.count == 1 %>
+      <p> This is a free trial! We'll contact you shortly! </p>
+    <% else %>
+      <p>
+        To finish your order, please complete your payment by clicking <%= link_to "this link", @url%>. Remember to enter your confirmatin code as the message for recipient. Thank you!
+      </p>
+    <% end %>
+  </body>
+</html>
