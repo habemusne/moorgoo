@@ -14,3 +14,25 @@
  
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+::selection{
+	background:#34495E !important;
+	color:#ECF0F1 !important;
+}
+
+.pi-border-bottom-strong-base{
+  border-bottom:1px solid #2e343a !important;
+}
+
+
+.pi-section-white .pi-border-top:after, .pi-section-white .pi-border-left:after{
+  background:#34495E !important;
+}
+
+.pi-img-overlay{
+  background:rgba(52, 73, 94, 0.8) !important;
+}
+
+.pi-img-border, .pi-img-round, .pi-img-border > img{
+  border-radius:10% !important;
+}

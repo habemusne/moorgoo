@@ -15,3 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
+//= require jquery.colorbox
+//= require jquery.easing
+//= require jquery.scrollTo.min
+//= require nestable-rails

@@ -1,0 +1,44 @@
+.moorgoo-form-container{
+  background:rgba(52, 73, 94, 0.1);
+  margin-top:1%;
+  margin-bottom:2%;
+  min-width:300px;
+}
+
+.moorgoo-form-element{
+  margin-left:2% !important;
+  margin-right:2% !important;
+  text-align: center;
+}
+
+.moorgoo-form-button{
+  background-color: rgb(52, 73, 94) !important;
+  box-shadow:none !important;
+  border-radius: 0 3px 3px 0;
+  color:#ECF0F1 !important;
+  width:100%;
+}
+
+.moorgoo-form-button:hover{
+  box-shadow:none !important;
+  border-color:transparent !important;
+  background:#2C3E50 !important;
+}
+
+.moorgoo-form-button-danger{
+  background-color: #E74C3C !important;
+  box-shadow:none !important;
+  border-radius: 0 3px 3px 0;
+  color:#ECF0F1 !important;
+  width:100%;
+}
+
+.moorgoo-form-button-danger:hover{
+  box-shadow:none !important;
+  border-color:transparent !important;
+  background:#C0392B !important;
+}
+
+.moorgoo-form-select{
+  color:#2C3E50 !important;
+}

@@ -21,6 +21,10 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-colorbox-rails', '~> 0.2.1'
+gem 'jquery-easing-rails', '~> 0.0.2'
+gem 'jquery-scrollto-rails', '~> 1.4.3'
+gem 'nestable-rails', '~> 0.0.1'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

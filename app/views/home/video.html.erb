@@ -1,41 +1,121 @@
-<div class="center-row" style="height: auto;">
-  <ul class="left-tab-container">
-    <p class="left-class-intro">Courses</p>
-    <li class="left-tab-li"><a class="left-tab" id="econ41button">Econ 4 Video 1 会计账户介绍</a></li>
-    <li class="left-tab-li"><a class="left-tab" id="econ42button">Econ 4 Video 2: 会计分录方法</a></li>
-    <li class="left-tab-li"><a class="left-tab" id="econ11button">Econ1 Midterm1 讲解</a></li>
-    <li class="left-tab-li"><a class="left-tab" id="econ31button">Econ3 Midterm1 讲解</a></li>
-    <li class="left-tab-li"><a class="left-tab" id="cse111button">CSE 11 Quiz2 讲解</a></li>
-    <li class="left-tab-li"><a class="left-tab" id="math20abutton">Math 20A Midterm 讲解</a></li>
-    <li class="left-tab-li"><a class="left-tab" id="math20cbutton">Math20C Midterm1 讲解</a></li>
-    <li class="left-tab-li"><a class="left-tab" id="math20ebutton">Math20E Video 1</a></li>
-    <li class="left-tab-li"><a class="left-tab" id="econ43button">Econ 4 Mid Term Review</a></li>
-  </ul>
-  <div class="video-big-container">
-    <div class="youtube-video" id="youtube-video">
-      <div class="video-default-container">
-        <div align="right" style="float:left;">
-          <p class="video-default-intro-1">We make videos just for exams : )</p>
-          <p class="video-default-intro-2">Select a video to learn</p>
-        </div>
-        <div align="left" style="float:left;">
-          <img src="assets/video.png" class="video-default-img"/>
-        </div>
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}
+</style>
+
+<section class="vbox" style="min-height:650px;">
+  <section id="main">
+    <section class="vbox">
+      <div class="container">
+        <div class="wrapper">
+          <div class="list-group col-lg-3">
+            <div class="dd wrapper" id="nestable1">
+              <ol class="dd-list">
+                <li class="dd-item">
+                  <button data-action="collapse" type="button">Collapse</button>
+                  <div class="dd-handle">Mathematics - Fall 2014</div>
+                  <ol class="dd-list" style="">
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Math 20A - Midterm1</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Math 20A - Midterm2</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Math 20A - Final</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Math 20C - Midterm1</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Math 20C - Midterm2</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Math 20C - Final</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Math 20E - Midterm1</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Math 20E - Midterm2</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Math 20E - Final</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Math 20F - Midterm1</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Math 20F - Midterm2</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Math 20F - Final</a></div>
+                    </li>
+                  </ol>
+                </li>
+                <li class="dd-item">
+                  <button data-action="collapse" type="button">Collapse</button>
+                  <div class="dd-handle">Economics - Fall 2014</div>
+                  <ol class="dd-list" style="">
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Econ 1 - Midterm</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Econ 1 - Final</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Econ 3 - Midterm</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Econ 3 - Final</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Econ 4 - Video1</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Econ 4 - Video2</a></div>
+                    </li>
+                  </ol>
+                </li>
+                <li class="dd-item">
+                  <button data-action="collapse" type="button">Collapse</button>
+                  <div class="dd-handle">Computer Science - Fall 2014</div>
+                  <ol class="dd-list" style="">
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">CSE 11 - Quiz</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">CSE 11 - Final</a></div>
+                    </li>
+                  </ol>
+                </li>
+                <li class="dd-item">
+                  <button data-action="collapse" type="button">Collapse</button>
+                  <div class="dd-handle">Chemistry - Fall 2014</div>
+                  <ol class="dd-list" style="">
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Chem 6A - Midterm1</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Chem 6A - Midterm2</a></div>
+                    </li>
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">Chem 6A - Final</a></div>
+                    </li>
+                  </ol>
+                </li>
+                <li class="dd-item">
+                  <button data-action="expand" type="button">Expand</button>
+                  <div class="dd-handle">Others</div>
+                  <ol class="dd-list" style="">
+                    <li class="dd-item">
+                      <div class="dd-handle"><a href="#">SDCC Video1</a></div>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div> <!-- wrapper -->
       </div>
-    </div>
-    <div class="video-intro-container">
-      <div class="video-intro-block-1">
-        <p class="video-intro-1" id="video-intro-class-name"></p>
-        <a href="#" class="video-intro-1" id="video-intro-moorgee" data-toggle="tooltip" title="haha"></a>
-        <p class="video-intro-1" id="video-intro-affli"></p>
-      </div>
-    </div>
-  </div>
-  <div class="course-desc">
-    <p class="below-title" id="below-title"></p>
-    <p class="below-desc-title" id="below-desc-title">Description</p>
-    <p class="below-desc" id="below-desc"></p>
-    <p class="below-summ-title" id="below-summ-title">本节内容</p>
-    <p class="below-summ" id="below-summ"></p>
-  </div>
-</div>
+    </section>
+  </section>
+</section> <!-- vbox -->
