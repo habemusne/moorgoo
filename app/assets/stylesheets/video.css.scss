@@ -1,0 +1,15 @@
+// Place all the styles related to the Videos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.dd-handle > a{
+  color:#575757;
+  text-decoration:none;
+}
+
+.dd-handle:hover > a{
+  text-decoration:none;
+}
+
+.dd-handle:hover{
+  background:#f5f5f5 !important;
+}

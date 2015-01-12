@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141229060341) do
+ActiveRecord::Schema.define(version: 20150103003711) do
+
+  create_table "tutor_requests", force: true do |t|
+    t.string   "school"
+    t.string   "course"
+    t.string   "length"
+    t.string   "area"
+    t.string   "time_one"
+    t.string   "time_two"
+    t.string   "time_three"
+    t.integer  "user_id"
+    t.string   "frequency"
+    t.boolean  "paid",       default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "code"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

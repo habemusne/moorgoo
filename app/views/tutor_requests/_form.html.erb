@@ -1,0 +1,22 @@
+<%= form_for @request do |f| %>
+  <%= f.select :school, [ ["School: UCSD", "UCSD"] ], {}, :class => 'form-control moorgoo-form-element moorgoo-form-select'%><br/>
+
+  <%= f.select :course, [ ["Course: CSE 8A", "CSE 8A"], ["Course: CSE 11", "CSE 11"] ], {}, :class => 'form-control moorgoo-form-element moorgoo-form-select'%><br/>
+
+  <%= f.select :area, [ ["Area: Homework help", "Homework help"], ["Area: Lab assignment", "Lab assignment"], ["Area: Material Review", "Material Review"] ], {}, :class => 'form-control moorgoo-form-element moorgoo-form-select'%><br/>
+
+  <%= f.select :length, [ ["Length: 45 Min", "45 Min"], ["Length: 90 Min", "90 Min"] ], {}, :class => 'form-control moorgoo-form-element moorgoo-form-select'%><br/>
+
+  <%= f.text_field :time_one, :class=>'form-control moorgoo-form-element', placeholder: 'Month Day, Time. For example, Dec 21, 11:00 a.m.' %><br />
+  <%= f.text_field :time_two, :class=>'form-control moorgoo-form-element', placeholder: 'Month Day, Time. For example, Dec 23, 15:00 a.m.' %><br />
+  <%= f.text_field :time_three, :class=>'form-control moorgoo-form-element', placeholder: 'Month Day, Time. For example, Dec 24, 19:50 a.m.' %><br />
+
+  <% if user_signed_in? %>
+    <!-- <%= hidden_field_tag "user_id",  current_user.id %> -->
+    <!-- <div class="form-group"> -->
+      <%= f.submit "Submit", :class=>'btn btn-default moorgoo-form-button' %>
+    <!-- </div> -->
+  <% else %>
+    <%= link_to "Make Appointment", new_user_session_path, :class=>"btn btn-default moorgoo-form-button" %>
+  <% end %>
+<% end %>
