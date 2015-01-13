@@ -1,0 +1,10 @@
+<%= form_for @tutor do |f| %>
+  Type: <%= f.text_field :type %><br />
+  Course: <%= f.text_field :course %><br />
+  Name: <%= f.text_field :name %><br />
+  Phone: <%= f.text_field :phone %><br />
+  Email: <%= f.text_field :email %><br />
+  Degree: <%= f.text_field :degree %><br />
+  Why are you qualified: <%= f.text_area :description %><br />
+  <%= f.submit %>
+<% end %>
