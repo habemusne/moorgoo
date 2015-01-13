@@ -9,6 +9,7 @@ Moorgoo::Application.routes.draw do
   get 'video' => 'home#video'
 
   resources :tutor_requests
+  resources :tutors
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
