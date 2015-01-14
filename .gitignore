@@ -4,16 +4,25 @@ capybara-*.html
 /log
 /tmp
 /db/*.sqlite3
+<<<<<<< HEAD
 /db/*.sqlite3-journal
+=======
+>>>>>>> f468b900ff45b4f27eac6d391f1f41454e5c777b
 /public/system
 /coverage/
 /spec/tmp
 **.orig
 rerun.txt
 pickle-email-*.html
+<<<<<<< HEAD
 
 # TODO Comment out these rules if you are OK with secrets being uploaded to the repo
 config/initializers/secret_token.rb
+=======
+/db/schema.rb
+
+# config/initializers/secret_token.rb
+>>>>>>> f468b900ff45b4f27eac6d391f1f41454e5c777b
 config/secrets.yml
 
 ## Environment normalisation:
@@ -21,6 +30,7 @@ config/secrets.yml
 /vendor/bundle
 
 # these should all be checked in to normalise the environment:
+<<<<<<< HEAD
 Gemfile.lock
 .ruby-version
 .ruby-gemset
@@ -32,3 +42,15 @@ Gemfile.lock
 /vendor/assets/bower_components
 *.bowerrc
 bower.json
+=======
+# Gemfile.lock
+
+# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+.rvmrc
+.secret
+.elasticbeanstalk/
+.env
+/app/assets/.DS_Store
+
+/public/assets/
+>>>>>>> f468b900ff45b4f27eac6d391f1f41454e5c777b
