@@ -130,11 +130,6 @@ $(function(){
 $(document).ready(function()
 {
     // activate Nestable for list 1
-    $('#nestable1').nestable({
-        group: 1
-    });
-
-    $('#nestable1').nestable('collapseAll');
 });
 
 $(document).ready(function(){
