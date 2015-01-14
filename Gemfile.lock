@@ -72,7 +72,6 @@ GEM
       jquery-rails
       railties (>= 3.1)
     orm_adapter (0.5.0)
-    pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -149,7 +148,6 @@ DEPENDENCIES
   jquery-rails
   jquery-scrollto-rails (~> 1.4.3)
   nestable-rails (~> 0.0.1)
-  pg
   rails (= 4.0.2)
   sass-rails (~> 4.0.0)
   sdoc
