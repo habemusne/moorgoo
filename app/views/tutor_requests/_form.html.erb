@@ -10,13 +10,6 @@
   <%= f.text_field :time_one, :class=>'form-control moorgoo-form-element', placeholder: 'Month Day, Time. For example, Dec 21, 11:00 a.m.' %><br />
   <%= f.text_field :time_two, :class=>'form-control moorgoo-form-element', placeholder: 'Month Day, Time. For example, Dec 23, 15:00 a.m.' %><br />
   <%= f.text_field :time_three, :class=>'form-control moorgoo-form-element', placeholder: 'Month Day, Time. For example, Dec 24, 19:50 a.m.' %><br />
+  <a class="btn btn-default moorgoo-form-button-disabled">Available soon</a>
 
-  <% if user_signed_in? %>
-    <!-- <%= hidden_field_tag "user_id",  current_user.id %> -->
-    <!-- <div class="form-group"> -->
-      <%= f.submit "Submit", :class=>'btn btn-default moorgoo-form-button' %>
-    <!-- </div> -->
-  <% else %>
-    <%= link_to "Make Appointment", new_user_session_path, :class=>"btn btn-default moorgoo-form-button" %>
-  <% end %>
 <% end %>

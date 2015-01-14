@@ -13,3 +13,22 @@
 .dd-handle:hover{
   background:#f5f5f5 !important;
 }
+
+.video-container{
+  min-height:650px;
+  text-align:center;
+  margin:0 auto;
+}
+
+.video-text-container{
+  padding-top:30px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color:#34495E;
+  width:50%;
+  margin:0 auto;
+}
+
+.video-text-desc{
+  text-align: left
+}

@@ -39,6 +39,22 @@
   background:#C0392B !important;
 }
 
+.moorgoo-form-button-disabled{
+  background:#666666;
+  box-shadow:none !important;
+  border-radius: 0 3px 3px 0;
+  color:#34495E;
+  width:100%;
+}
+
+.moorgoo-form-button-disabled:hover{
+  cursor:no-drop;
+}
+
 .moorgoo-form-select{
   color:#2C3E50 !important;
+}
+
+.moorgoo-form-input-descition{
+  min-height:100px;
 }

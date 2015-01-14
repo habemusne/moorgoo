@@ -134,17 +134,9 @@ $(document).ready(function()
         group: 1
     });
 
-    var $expand = false;
-    $('#nestable-menu').on('click', function(e)
-    {
-        if ($expand) {
-            $expand = false;
-            $('.dd').nestable('expandAll');
-        }else {
-            $expand = true;
-            $('.dd').nestable('collapseAll');
-        }
-    });
-
+    $('#nestable1').nestable('collapseAll');
 });
 
+$(document).ready(function(){
+    $('video').attr("data-setup", '{ "techOrder": ["youtube"], "src": "http://www.youtube.com/watch?v=xjS6SftYQaQ" }');
+});
