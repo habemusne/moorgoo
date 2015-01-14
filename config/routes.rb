@@ -6,6 +6,36 @@ Moorgoo::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  get 'video' => 'home#video'
+  get 'math20a_m1_fa14' => 'home#math20a_m1_fa14'
+  get 'math20a_m2_fa14' => 'home#math20a_m2_fa14'
+  get 'math20a_final1_fa14' => 'home#math20a_final1_fa14'
+  get 'math20a_final2_fa14' => 'home#math20a_final2_fa14'
+  get 'math20c_m1_fa14' => 'home#math20c_m1_fa14'
+  get 'math20c_m2_fa14' => 'home#math20c_m2_fa14'
+  get 'math20c_final_fa14' => 'home#math20c_final_fa14'
+  get 'math20e_m1_fa14' => 'home#math20e_m1_fa14'
+  get 'math20e_m2_fa14' => 'home#math20e_m2_fa14'
+  get 'math20e_final_fa14' => 'home#math20e_final_fa14'
+  get 'math20f_m1_fa14' => 'home#math20f_m1_fa14'
+  get 'math20f_m2_fa14' => 'home#math20f_m2_fa14'
+  get 'econ1_m1_fa14' => 'home#econ1_m1_fa14'
+  get 'econ1_m2_fa14' => 'home#econ1_m2_fa14'
+  get 'econ1_final_fa14' => 'home#econ1_final_fa14'
+  get 'econ3_m1_fa14' => 'home#econ3_m1_fa14'
+  get 'econ3_m2_fa14' => 'home#econ3_m2_fa14'
+  get 'econ3_final_fa14' => 'home#econ3_final_fa14'
+  get 'econ4_1_fa14' => 'home#econ4_1_fa14'
+  get 'econ4_2_fa14' => 'home#econ4_2_fa14'
+  get 'cse11_quiz2_fa14' => 'home#cse11_quiz2_fa14'
+  get 'cse11_quiz3_fa14' => 'home#cse11_quiz3_fa14'
+  get 'chem6a_m2_fa14' => 'home#chem6a_m2_fa14'
+  get 'chem6a_final_fa14' => 'home#chem6a_final_fa14'
+  get 'sdcc_fa14' => 'home#sdcc_fa14'
+
+
+  resources :tutor_requests
+  resources :tutors
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

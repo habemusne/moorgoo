@@ -1,5 +1,374 @@
 
+<style>
+.content-fbox {
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}
+.box1 {
+}
+.box2 {
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+}
+.box3 {
+}
 
-<div class="container">
-  <h1>Fill in with your content</h1>
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.site-title {
+  margin-top: 10px;
+}
+
+.price-table {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+.col-xs-15 {
+  width: 20%;
+  float: left;
+}
+@media (min-width: 768px) {
+  .col-sm-15 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-15 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-15 {
+    width: 20%;
+    float: left;
+  }
+}
+</style>
+
+
+<script>
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  }
+  return null;
+}
+
+function removeCookie(name) {
+  document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;';
+}
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + "; " + expires +"; path=/;";
+}
+
+function getPosition(element) {
+  var xPosition = 0;
+  var yPosition = 0;
+  while(element) {
+    xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+    yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+    element = element.offsetParent;
+  }
+  return { x: xPosition, y: yPosition };
+}
+</script>
+
+
+<div id="overlord">
+
+
+  <!--FENGE1-->
+
+
+  <div class="container carousel-container">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active carousel-radio"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1" class="carousel-radio"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img class="banner-background-img" src="assets/boat.jpg"/>
+        <div class="pi-texture" style="background: rgba(24, 28, 32, 0.8)"></div>
+        <div class="row banner-container">
+          <div class="col-sm-6 banner-left-container">
+            <img class="banner-left-img" src="assets/Algorithm_Class.jpg"/>
+          </div>
+          <div class="col-sm-6 banner-right-container">
+            <h6 class="lead-24 pi-text-silver banner-right-title">Moorgoo Videos</h6>
+            <p class="lead-16 pi-text-silver banner-right-text">We make best videos blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
+            <a class="btn btn-warning banner-button" href="video">View videos</a>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="banner-background-img" src="assets/boat.jpg"/>
+        <div class="pi-texture" style="background: rgba(24, 28, 32, 0.8)"></div>
+        <div class="row banner-container">
+          <div class="col-sm-6 banner-left-container">
+            <img class="banner-left-img" src="assets/icpclogo_big_1.png"/>
+          </div>
+          <div class="col-sm-6 banner-right-container">
+            <h6 class="lead-24 pi-text-silver banner-right-title">Moorgoo Tutor</h6>
+            <p class="lead-16 pi-text-silver banner-right-text">We provide best one-to-one tutor service blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
+            <a class="btn btn-warning banner-button" href="tutor_requests/new">Make appointment</a>
+          </div>
+        </div>
+      </div>
+
+    <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+  <!--FENGE-->
+
+
+  <span class="revolution-slider"></span>
+
+  <div class="pi-section-w pi-section-white pi-border-top pi-border-bottom">
+    <div class="pi-section pi-padding-bottom-3`0">
+      <div class="pi-text-center">
+        <h1 class="pi-uppercase pi-weight-700 pi-has-border pi-has-tall-border pi-has-short-border">Select your campus</h1>
+      </div>
+      <div class="school-selection-container">
+        <a class="col-xs-6 col-sm-3 school-selection-tab school-selection-tab-active" href="#">
+          <img src="assets/ucsd.jpg" class="school-selection-img"/>
+          <h4 class="school-selection-text">UCSD</h4>
+        </a>
+<!--         <a class="col-xs-6 col-sm-3 school-selection-tab" href="#">
+          <img src="assets/uci.jpg" class="school-selection-img"/>
+          <h4 class="school-selection-text">UCI</h4>
+        </a>
+        <a class="col-xs-6 col-sm-3 school-selection-tab" href="#">
+          <img src="assets/usc.jpg" class="school-selection-img"/>
+          <h4 class="school-selection-text">USC</h4>
+        </a>
+        <a class="col-xs-6 col-sm-3 school-selection-tab" href="#">
+          <img src="assets/ucla.jpg" class="school-selection-img"/>
+          <h4 class="school-selection-text">UCLA</h4>
+        </a>
+ -->      </div>
+    </div>
+  </div>
+
+
+  <div class="pi-section-w pi-section-white pi-border-top pi-border-bottom" style="">
+    <div class="pi-section pi-padding-bottom-30 ">
+      <div class="pi-text-center">
+        <h1 class="pi-uppercase pi-weight-700 pi-has-border pi-has-tall-border pi-has-short-border">Our services</h1>
+      </div>
+
+      <div class="pi-shadow-effect7">    
+        <div class="pi-box pi-box-slave pi-border pi-round pi-border-left servive-tab-border">
+          <div class="pi-row">
+            <div class="pi-col-sm-3">
+              <div class="pi-img-w pi-img-round-corners pi-img-shadow">
+                <a href="video">
+                  <img src="assets/Algorithm_Class.jpg" alt="">
+                </a>
+              </div>
+            </div>
+
+            <div class="pi-col-sm-9">
+              <h4 class="pi-weight-600 pi-margin-bottom-5"></h4>
+              <h2 class="h3 pi-margin-top-minus-5">
+                <a href="video" class="pi-link-dark">Moorgoo Videos</a>
+              </h2>
+              <a href="video" class="btn pi-btn-big pi-btn-promo pi-pull-right service-tab-button">View List</a>
+              <p>
+                We have such great wonder amazing fantastic marvelous brilliant excellent perfect fabulus videos
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+            
+      <div class="pi-shadow-effect7">    
+        <div class="pi-box pi-box-slave pi-border pi-round pi-border-left servive-tab-border">
+          <div class="pi-row">
+            <div class="pi-col-sm-3">
+              <div class="pi-img-w pi-img-round-corners pi-img-shadow">
+                <a href="tutor_requests/new">
+                  <img src="assets/Advanced_Class_1.jpg" alt="">
+                </a>
+              </div>
+            </div>
+
+            <div class="pi-col-sm-9">
+              <h4 class="pi-weight-600 pi-margin-bottom-5"></h4>
+              <h2 class="h3 pi-margin-top-minus-5">
+                <a href="tutor_requests/new" class="pi-link-dark">Moorgoo Tutor</a>
+              </h2>
+
+              <a href="tutor_requests/new" class="btn pi-btn-big pi-btn-promo pi-pull-right service-tab-button">Make appointment</a>
+              <p>
+                I love you I want you I love you I want you I love you I want you I love you I want you I love you I want you I love you I want you I love you I want you I love you I want you I love you I want you 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pi-section-w pi-shadow-inside pi-section-grey">
+    <div class="pi-texture" style="background: url(/static/aura/img/hexagon.png)"></div>
+    <div class="pi-section">
+      <div class="pi-text-center">
+          <h1 class="pi-uppercase pi-weight-700 pi-has-border pi-has-tall-border pi-has-short-border pi-margin-bottom-70">
+          Feedbacks
+          </h1>
+      </div>
+      <div class="pi-row">
+          <!-- Col 6 -->
+          <div class="pi-col-xs-4">
+            <div class="pi-testimonial pi-testimonial-author-with-photo">
+              <div class="pi-testimonial-content pi-testimonial-white pi-testimonial-content-quotes">
+                <p>Great help, great fun</p>
+              </div>
+              <div class="pi-testimonial-author pi-clearfix">
+                <span class="pi-testimonial-author-photo"><img src="assets/f1.jpg" alt=""></span>
+                <div>
+                  <h6 class="pi-weight-700 pi-no-margin-bottom">Alice</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End col 6 -->
+          <!-- Col 6 -->
+          <div class="pi-col-xs-4">
+            <div class="pi-testimonial pi-testimonial-author-with-photo">
+              <div class="pi-testimonial-content pi-testimonial-white pi-testimonial-content-quotes">
+                <p>So tama great that I can't bare it</p>
+              </div>
+              <div class="pi-testimonial-author pi-clearfix">
+                <span class="pi-testimonial-author-photo pi-img-round"><img src="assets/m1.jpg" alt=""></span>
+                <div>
+                  <h6 class="pi-weight-700 pi-no-margin-bottom">Ric</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End col 6 -->
+          <!-- Col 6 -->
+          <div class="pi-col-xs-4">
+            <div class="pi-testimonial pi-testimonial-author-with-photo">
+              <div class="pi-testimonial-content pi-testimonial-dark pi-testimonial-content-quotes">
+                <p>Helpful tutors</p><br>
+              </div>
+              <div class="pi-testimonial-author pi-clearfix">
+                <span class="pi-testimonial-author-photo pi-img-round"><img src="assets/m2.jpg" alt=""></span>
+                <div>
+                  <h6 class="pi-weight-700 pi-no-margin-bottom">John</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End col 6 -->
+      </div>
+
+      <div class="pi-row">
+        <!-- Col 6 -->
+        <div class="pi-col-xs-4">
+          <div class="pi-testimonial pi-testimonial-author-with-photo">
+            <div class="pi-testimonial-content pi-testimonial-white pi-testimonial-content-quotes">
+              <p>Thank you Thank you Thank you Thank you</p> <br> <br> <br>
+            </div>
+            <div class="pi-testimonial-author pi-clearfix">
+              <span class="pi-testimonial-author-photo pi-img-round"><img src="assets/m3.jpg" alt=""></span>
+              <div>
+                <h6 class="pi-weight-700 pi-no-margin-bottom">Mark</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End col 6 -->
+        <!-- Col 6 -->
+        <div class="pi-col-xs-4">
+          <div class="pi-testimonial pi-testimonial-author-with-photo">
+            <div class="pi-testimonial-content pi-testimonial-white pi-testimonial-content-quotes">
+              <p>Hahahahahhahahahahahahahahaha hahahahahahah</p><br> <br>
+            </div>
+            <div class="pi-testimonial-author pi-clearfix">
+              <span class="pi-testimonial-author-photo pi-img-round"><img src="assets/m4.jpg" alt=""></span>
+              <div>
+                <h6 class="pi-weight-700 pi-no-margin-bottom">Joe</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End col 6 -->
+        <!-- Col 6 -->
+        <div class="pi-col-xs-4">
+          <div class="pi-testimonial pi-testimonial-author-with-photo">
+            <div class="pi-testimonial-content pi-testimonial-dark pi-testimonial-content-quotes">
+              <p>NiceNiceNiceNiceNiceNiceNiceNiceNice NiceNiceNiceNiceNice</p>
+            </div>
+            <div class="pi-testimonial-author pi-clearfix">
+              <span class="pi-testimonial-author-photo pi-img-round"><img src="assets/f2.png" alt=""></span>
+              <div>
+                <h6 class="pi-weight-700 pi-no-margin-bottom">Samantha</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End col 6 -->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="pi-section-w pi-shadow-inside-top pi-section-grey">
+    <div class="pi-texture" style="background: url(assets/hexagon.png) repeat"></div>
+    <div class="pi-section">
+      <h2 class="pi-weight-700 pi-uppercase pi-letter-spacing pi-text-center pi-margin-bottom-15">
+        Provide your feedback
+      </h2>
+      <!-- Forms -->
+      <form name="myform" class="pi-search-form-wide pi-text-center pi-margin-bottom-20" role="form" action="#" method="">
+        <div style="width:410px;margin:0 auto">
+          <input type="text" class="form-control input-lg pi-input-wide form-advice" placeholder="Tell us what you think" style="border-radius: 3px 0px 0px 3px; border-color: rgb(52, 73, 94);">
+          <button type="submit" id="submitAdvice" class="btn pi-btn-base pi-btn-big pi-btn-icon-big advice-button">
+            Submit
+          </button>
+        </div>
+      </form>
+      <!-- End forms -->
+    </div>
+  </div>
+
 </div>

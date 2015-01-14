@@ -1,0 +1,28 @@
+
+<div class="container pi-section-w pi-shadow-inside-top pi-section-grey">
+  <div class="pi-texture" style="background: url(../assets/hexagon.png) repeat"></div>
+
+  <div class="col-sm-4 col-sm-offset-4 pi-section moorgoo-form-container">
+    <h2 class="pi-weight-700 pi-uppercase pi-letter-spacing pi-text-center pi-margin-bottom-15">Apply to be a tutor</h2>
+    <p class="lead-20 pi-text-center">--Available soon--</p>
+
+
+
+  <%= form_for @tutor do |f| %>
+    <%= f.select :type, [ ["Type: Video tutor", "Video tutor"], ["Type: Personal tutor", "Personal tutor"] ], {}, :class => 'form-control moorgoo-form-element moorgoo-form-select'%><br/>
+    <%= f.text_field :course, :class=>'form-control moorgoo-form-element', placeholder: 'Course' %><br />
+    <%= f.text_field :name, :class=>'form-control moorgoo-form-element', placeholder: 'Your name. Format: First Last' %><br />
+    <%= f.text_field :phone, :class=>'form-control moorgoo-form-element', placeholder: 'Phone Number' %><br />
+    <%= f.text_field :email, :class=>'form-control moorgoo-form-element', placeholder: 'Email' %><br />
+    <%= f.select :degree, [ ["Your Degree: Freshman", "Freshman"], ["Your Degree: Sophomore", "Sophomore"], ["Your Degree: Junior", "Junior"], ["Your Degree: Senior", "Senior"], ["Your Degree: Graduate", "Graduate"] ], {}, :class => 'form-control moorgoo-form-element moorgoo-form-select'%><br/>
+    <%= f.text_field :description, :class=>'form-control moorgoo-form-element moorgoo-form-input-descition', placeholder: '你有什么特长或经历让你胜任这个职位/Your qualifications or experiences to this position' %><br />
+
+    <a class="btn btn-default moorgoo-form-button-disabled">Available soon</a>
+
+  <% end %>
+
+
+
+
+  </div>
+</div>
