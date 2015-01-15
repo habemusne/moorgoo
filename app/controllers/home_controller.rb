@@ -6,78 +6,228 @@ class HomeController < ApplicationController
   end
 
   def math20a_m1_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'math20a_m1_fa14'
+    end
   end
 
-  def math20a_m2_fa14
+  def math20a_m2_fa14 
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'math20a_m2_fa14'
+    end
   end
 
   def math20a_final1_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'math20a_final1_fa14'
+    end
   end
 
   def math20a_final2_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'math20a_final2_fa14'
+    end
   end
 
   def math20c_m1_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'math20c_m1_fa14'
+    end
   end
 
   def math20c_m2_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'math20c_m2_fa14'
+    end
   end
 
   def math20c_final_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'math20c_final_fa14'
+    end
   end
 
   def math20e_m1_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'math20e_m1_fa14'
+    end
   end
 
   def math20e_m2_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'math20e_m2_fa14'
+    end
   end
 
   def math20e_final_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'math20e_final_fa14'
+    end
   end
 
   def math20f_m1_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'math20f_m1_fa14'
+    end
   end
 
   def math20f_m2_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'math20f_m2_fa14'
+    end
   end
 
   def econ1_m1_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'econ1_m1_fa14'
+    end
   end
 
   def econ1_m2_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'econ1_m2_fa14'
+    end
   end
 
   def econ1_final_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'econ1_final_fa14'
+    end
   end
 
   def econ3_m1_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'econ3_m1_fa14'
+    end
   end
 
   def econ3_m2_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'econ3_m2_fa14'
+    end
   end
 
   def econ3_final_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'econ3_final_fa14'
+    end
   end
 
   def econ4_1_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'econ4_1_fa14'
+    end
   end
 
   def econ4_2_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'econ4_2_fa14'
+    end
   end
 
   def cse11_quiz2_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'cse11_quiz2_fa14'
+    end
   end
 
   def cse11_quiz3_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'cse11_quiz3_fa14'
+    end
   end
 
   def chem6a_m2_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'chem6a_m2_fa14'
+    end
   end
 
   def chem6a_final_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'chem6a_final_fa14'
+    end
   end
 
   def sdcc_fa14
+    if not current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    else
+      redirect_to 'sdcc_fa14'
+    end
   end
 end
 

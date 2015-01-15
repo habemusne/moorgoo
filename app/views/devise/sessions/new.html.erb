@@ -4,6 +4,7 @@
 
   <div class="col-sm-4 col-sm-offset-4 pi-section moorgoo-form-container">
     <h2 class="pi-weight-700 pi-uppercase pi-letter-spacing pi-text-center pi-margin-bottom-15">Log in</h2>
+    <div class="moorogo-alert"><%= flash[:alert] %></div>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html=>{class: "form-horizontal"}) do |f| %>
       <div class="form-group moorgoo-form-element"><%= f.label :email, :class=>'control-label' %><br />
