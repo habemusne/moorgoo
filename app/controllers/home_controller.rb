@@ -10,7 +10,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'math20a_m1_fa14'
+      redirect_to math20a_m1_fa14_path
     end
   end
 
@@ -19,7 +19,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'math20a_m2_fa14'
+      redirect_to math20a_m2_fa14_path
     end
   end
 
@@ -28,7 +28,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'math20a_final1_fa14'
+      redirect_to math20a_final1_fa14_path
     end
   end
 
@@ -37,7 +37,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'math20a_final2_fa14'
+      redirect_to math20a_final2_fa14_path
     end
   end
 
@@ -46,7 +46,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'math20c_m1_fa14'
+      redirect_to math20c_m1_fa14_path
     end
   end
 
@@ -55,7 +55,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'math20c_m2_fa14'
+      redirect_to math20c_m2_fa14_path
     end
   end
 
@@ -64,7 +64,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'math20c_final_fa14'
+      redirect_to math20c_final_fa14_path
     end
   end
 
@@ -73,7 +73,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'math20e_m1_fa14'
+      redirect_to math20e_m1_fa14_path
     end
   end
 
@@ -82,7 +82,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'math20e_m2_fa14'
+      redirect_to math20e_m2_fa14_path
     end
   end
 
@@ -91,7 +91,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'math20e_final_fa14'
+      redirect_to math20e_final_fa14_path
     end
   end
 
@@ -100,7 +100,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'math20f_m1_fa14'
+      redirect_to math20f_m1_fa14_path
     end
   end
 
@@ -109,7 +109,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'math20f_m2_fa14'
+      redirect_to math20f_m2_fa14_path
     end
   end
 
@@ -118,7 +118,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'econ1_m1_fa14'
+      redirect_to econ1_m1_fa14_path
     end
   end
 
@@ -127,7 +127,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'econ1_m2_fa14'
+      redirect_to econ1_m2_fa14_path
     end
   end
 
@@ -136,7 +136,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'econ1_final_fa14'
+      redirect_to econ1_final_fa14_path
     end
   end
 
@@ -145,7 +145,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'econ3_m1_fa14'
+      redirect_to econ3_m1_fa14_path
     end
   end
 
@@ -154,7 +154,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'econ3_m2_fa14'
+      redirect_to econ3_m2_fa14_path
     end
   end
 
@@ -163,7 +163,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'econ3_final_fa14'
+      redirect_to econ3_final_fa14_path
     end
   end
 
@@ -172,7 +172,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'econ4_1_fa14'
+      redirect_to econ4_1_fa14_path
     end
   end
 
@@ -181,7 +181,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'econ4_2_fa14'
+      redirect_to econ4_2_fa14_path
     end
   end
 
@@ -190,7 +190,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'cse11_quiz2_fa14'
+      redirect_to cse11_quiz2_fa14_path
     end
   end
 
@@ -199,7 +199,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'cse11_quiz3_fa14'
+      redirect_to cse11_quiz3_fa14_path
     end
   end
 
@@ -208,7 +208,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'chem6a_m2_fa14'
+      redirect_to chem6a_m2_fa14_path
     end
   end
 
@@ -217,7 +217,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'chem6a_final_fa14'
+      redirect_to chem6a_final_fa14_path
     end
   end
 
@@ -226,7 +226,7 @@ class HomeController < ApplicationController
       flash[:alert] = "To view the video, please sign in first."
       redirect_to new_user_session_path
     else
-      redirect_to 'sdcc_fa14'
+      redirect_to sdcc_fa14_path
     end
   end
 end
