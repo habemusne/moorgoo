@@ -42,6 +42,7 @@ Gemfile.lock
 /vendor/assets/bower_components
 *.bowerrc
 bower.json
+<<<<<<< HEAD
 =======
 # Gemfile.lock
 
@@ -54,3 +55,6 @@ bower.json
 
 /public/assets/
 >>>>>>> f468b900ff45b4f27eac6d391f1f41454e5c777b
+=======
+db/schema.rb
+>>>>>>> 447f7e393262e7971e6f9b01f2f4027d3aa00d9b
