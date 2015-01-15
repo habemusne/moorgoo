@@ -8,10 +8,12 @@
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html=>{class: "form-horizontal"}) do |f| %>
       <%= devise_error_messages! %>
 
-      <p class="lead-14" style="color:#E74C3C;">In order to maintain the stable operation, we highly suggest our users to avoid registering with their school email which end up with the edu. 我们建议不要用学校邮箱注册。</p>
-
-      <div class="form-group moorgoo-form-element"><%= f.label :email, :class=>'control-label' %><br />
-      <%= f.email_field :email, autofocus: true, :class=>'form-control' %></div>
+      <div class="form-group moorgoo-form-element">
+        
+        <p class="lead-14" style="color:#E74C3C;">In order to maintain the stable operation, we highly suggest our users to avoid registering with their school email which end up with the edu. 我们建议不要用学校邮箱注册。</p>
+        <%= f.label :email, :class=>'control-label' %><br />
+        <%= f.email_field :email, autofocus: true, :class=>'form-control' %>
+      </div>
 
       <div class="form-group moorgoo-form-element"><%= f.label :password, :class=>'control-label' %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
         <%= f.password_field :password, autocomplete: "off", :class=>'form-control' %></div>

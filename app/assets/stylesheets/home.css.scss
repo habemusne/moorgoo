@@ -133,6 +133,14 @@
   bottom:35%;
 }
 
+.school-selection-text-active{
+  color:#ECF0F1;
+}
+
+.school-selection-text-inactive{
+  color:#2C3E50;
+}
+
 .school-selection-img{
   width:100%;
   transition-duration:1s;
@@ -140,7 +148,7 @@
 }
 
 .school-selection-img-active{
-  opacity:0.4;
+  opacity:0.6;
 }
 
 .school-selection-img-inactive{
