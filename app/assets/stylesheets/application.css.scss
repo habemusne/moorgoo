@@ -39,3 +39,19 @@ body {
 .pi-img-border, .pi-img-round, .pi-img-border > img{
   border-radius:10% !important;
 }
+
+#error_explanation{
+	color:#E74C3C;
+}
+
+#error_explanation > h2{
+  text-align: center;
+  font-size:18px;
+  font-style: italic;
+  font-weight: 200;
+}
+
+#error_explanation > ul > li{
+  font-size:14px;
+  font-style: italic;
+}
