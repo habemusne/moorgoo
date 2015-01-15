@@ -5,7 +5,7 @@
   <div class="col-sm-6 tutor-desc-container">
     <img class="tutor-desc-icon" src="../assets/info.png"/>
     <h3 class="lead-26">DESCRIPTION</h3>
-    <p class="lead-16" style="text-align:center;"></p>
+    <p class="lead-16" style="text-align:left;">To become a tutor, fill in the application form and submit your previous and current academic records relate to the courses that you would like to tutor. Then we will contact you to schedule the interview with our regional Moorgoo delegates. Once you successfully pass the interview, you are a part of the Moorgoo family and Congratulations.</p>
   </div>
   <div class="col-sm-6 moorgoo-form-container" style="padding: 20px">
     <h2 class="pi-weight-700 pi-uppercase pi-letter-spacing pi-text-center pi-margin-bottom-15">
@@ -20,7 +20,8 @@
     <%= f.text_field :phone, :class=>'form-control moorgoo-form-element', placeholder: 'Phone Number' %><br />
     <%= f.text_field :email, :class=>'form-control moorgoo-form-element', placeholder: 'Email' %><br />
     <%= f.select :degree, [ ["Your Degree: Freshman", "Freshman"], ["Your Degree: Sophomore", "Sophomore"], ["Your Degree: Junior", "Junior"], ["Your Degree: Senior", "Senior"], ["Your Degree: Graduate", "Graduate"] ], {}, :class => 'form-control moorgoo-form-element moorgoo-form-select'%><br/>
-    <%= f.text_field :description, :class=>'form-control moorgoo-form-element moorgoo-form-input-descition', placeholder: '你有什么特长或经历让你胜任这个职位/Your qualifications or experiences to this position' %><br />
+
+    <%= f.text_area :description, :class=>'form-control moorgoo-form-element moorgoo-form-input-description', placeholder: '你有什么特长或经历让你胜任这个职位/Your qualifications or experiences to this position' %><br />
 
     <a class="btn btn-default moorgoo-form-button-disabled">Available soon</a>
 
