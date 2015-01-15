@@ -1,7 +1,7 @@
 <%= form_for @request do |f| %>
   <%= f.select :school, [ ["School: UCSD", "UCSD"] ], {}, :class => 'form-control moorgoo-form-element moorgoo-form-select'%><br/>
 
-  <%= f.select :course, [ ["Course: CSE 8A", "CSE 8A"], ["Course: CSE 11", "CSE 11"] ], {}, :class => 'form-control moorgoo-form-element moorgoo-form-select'%><br/>
+  <%= f.select :course, [ ["Course: ", ""] ], {}, :class => 'form-control moorgoo-form-element moorgoo-form-select'%><br/>
 
   <%= f.select :area, [ ["Area: Homework help", "Homework help"], ["Area: Lab assignment", "Lab assignment"], ["Area: Material Review", "Material Review"] ], {}, :class => 'form-control moorgoo-form-element moorgoo-form-select'%><br/>
 
