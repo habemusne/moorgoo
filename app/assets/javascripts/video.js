@@ -129,9 +129,9 @@ $(function(){
 
 $(document).ready(function()
 {
-    // activate Nestable for list 1
+
 });
 
-$(document).ready(function(){
-    $('video').attr("data-setup", '{ "techOrder": ["youtube"], "src": "http://www.youtube.com/watch?v=xjS6SftYQaQ" }');
-});
+
+
+

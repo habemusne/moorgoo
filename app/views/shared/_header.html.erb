@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid container-fluid-navbar">
     
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,12 +33,38 @@
             </li>
           </ul>
         </li>
-        <li class="right-link" >
-          <%= link_to "Login", new_user_session_path %>
+
+      <% if user_signed_in? %>
+        <li class="dropdown right-dropdown right-link" >
+        
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name%></a>
+          <ul class="dropdown-menu right-dropdown-ul" role="menu">
+            <li class="right-dropdown-ul-li"><span><a class="right-dropdown-a" href=<%= edit_user_registration_path %> >Change Password</a></span></li>
+            <li class="divider"></li>
+            <li class="right-dropdown-ul-li">
+              <span>
+              <%= link_to "Logout", destroy_user_session_path, :method => :delete, :class => 'right-dropdown-a' %>
+              </span>
+            </li>
+          </ul>
         </li>
-        <li class="right-link" >
-          <%= link_to "Sign up", new_user_registration_path %>
+      <% else %>
+        <li class="dropdown right-dropdown right-link" >
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account</a>
+          <ul class="dropdown-menu right-dropdown-ul" role="menu">
+            <li class="right-dropdown-ul-li">
+              <span>
+                <%= link_to "Login", new_user_session_path, :class=>'right-dropdown-a'%>
+              </span>
+            </li>
+            <li class="right-dropdown-ul-li">
+              <span>
+                <%= link_to "Sign up", new_user_registration_path, :class=>'right-dropdown-a' %>
+              </span>
+            </li>
+          </ul>
         </li>
+      <% end %>
       </ul>
     </div>
   </div>

@@ -11,9 +11,12 @@
  *= require_self
  *= require_tree .
 */
- 
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+body {
+    padding-top: 70px;
+}
 
 ::selection{
 	background:#34495E !important;
