@@ -104,12 +104,23 @@
   background:#f8fafa;
 }
 
-.school-selection-tab:hover{
+.school-selection-tab-active:hover{
   .school-selection-img{
     opacity:0.5;
   }
 }
 
+.school-selection-small-text{
+  position:absolute;
+  text-align: center;
+  font-size:16px;
+  font-weight:200;
+  text-decoration: none;
+  width:100%;
+  right:2%;
+  bottom:15%;
+  color:#666666;
+}
 
 .school-selection-text{
   position:absolute;
@@ -120,14 +131,20 @@
   width:100%;
   right:2%;
   bottom:35%;
-  cursor:pointer;
 }
 
 .school-selection-img{
-  cursor:pointer;
-  opacity:0.2;
   width:100%;
   transition-duration:1s;
+  cursor:default;
+}
+
+.school-selection-img-active{
+  opacity:0.4;
+}
+
+.school-selection-img-inactive{
+  opacity:0.1;
 }
 
 .service-tab-button{
