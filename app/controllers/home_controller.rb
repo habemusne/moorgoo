@@ -89,6 +89,13 @@ class HomeController < ApplicationController
     end
   end
 
+  def math20f_final_fa14
+    if !current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    end
+  end
+
   def econ1_m1_fa14
     if !current_user
       flash[:alert] = "To view the video, please sign in first."

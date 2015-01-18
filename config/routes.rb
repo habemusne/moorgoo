@@ -19,6 +19,7 @@ Moorgoo::Application.routes.draw do
   get 'math20e_final_fa14' => 'home#math20e_final_fa14'
   get 'math20f_m1_fa14' => 'home#math20f_m1_fa14'
   get 'math20f_m2_fa14' => 'home#math20f_m2_fa14'
+  get 'math20f_final_fa14' => 'home#math20f_final_fa14'
   get 'econ1_m1_fa14' => 'home#econ1_m1_fa14'
   get 'econ1_m2_fa14' => 'home#econ1_m2_fa14'
   get 'econ1_final_fa14' => 'home#econ1_final_fa14'
