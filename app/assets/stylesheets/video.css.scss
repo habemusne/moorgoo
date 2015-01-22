@@ -32,3 +32,33 @@
 .video-text-desc{
   text-align: left
 }
+
+.video-list-small-text{
+  color:#95A5A6 !important;
+  font-size:14px !important;
+  font-weight: 200;
+  display:inline;
+  margin-left:10px;
+}
+
+.video-list-newup{
+  background:#A3FEBA !important;
+}
+
+.panel-default > .panel-heading{
+  background:#F9FEFF !important;
+  color:#34495E !important;
+  transition-duration:0.5s;
+}
+
+.panel-default > .panel-heading:hover{
+  background:#ECF0F1 !important;
+}
+
+.video-list-small-text-danger{
+  color:#E74C3C !important;
+  font-size:14px !important;
+  font-weight: 200;
+  display:inline;
+  margin-left:10px;
+}
