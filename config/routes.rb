@@ -7,6 +7,7 @@ Moorgoo::Application.routes.draw do
   root 'home#index'
 
   get 'video' => 'home#video'
+  get 'math20b_m1_wi15' => 'home#math20b_m1_wi15'
   get 'math20a_m1_fa14' => 'home#math20a_m1_fa14'
   get 'math20a_m2_fa14' => 'home#math20a_m2_fa14'
   get 'math20a_final1_fa14' => 'home#math20a_final1_fa14'
