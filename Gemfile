@@ -51,10 +51,6 @@ gem 'unicorn'
 
 gem 'devise'
 
-# Nan Added: Use to precompile faster
-gem 'yui-compressor'
-
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

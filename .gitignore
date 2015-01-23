@@ -41,6 +41,5 @@ bower.json
 .env
 /app/assets/.DS_Store
 
-/public/assets/
 
 db/schema.rb

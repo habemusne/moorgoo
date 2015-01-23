@@ -12,6 +12,16 @@ class HomeController < ApplicationController
     end
   end
 
+  def chem6b_m1_wi15
+    if !current_user
+      flash[:alert] = "To view the video, please sign in first."
+      redirect_to new_user_session_path
+    end
+  end
+
+
+  
+
   def math20a_m1_fa14
     if !current_user
       flash[:alert] = "To view the video, please sign in first."
