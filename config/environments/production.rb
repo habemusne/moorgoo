@@ -93,4 +93,5 @@ Moorgoo::Application.configure do
      :password             => 'moorgoo123',
      :authentication       => :plain,
      :enable_starttls_auto => true  }
+
 end
