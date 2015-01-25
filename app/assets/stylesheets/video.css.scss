@@ -64,7 +64,21 @@
 }
 
 .video-iframe{
-  margin-left: 10%;
-  margin-right: 10%;
-  width: 80%;
+  max-width:640px;
+}
+
+@media(max-width:767px){
+  .video-iframe{
+    width: 98%;
+    margin-left:1%;
+    margin-right:1%;
+  }
+}
+
+@media(min-width:768px){
+  .video-iframe{
+    width: 80%;
+    margin-left:10%;
+    margin-right:10%;
+  }
 }
