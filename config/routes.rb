@@ -14,11 +14,13 @@ Moorgoo::Application.routes.draw do
   get 'econ100a_m1_wi15' => 'home#econ100a_m1_wi15'
   get 'chem6b_q1_wi15' => 'home#chem6b_q1_wi15'
   get 'chem6b_q2_wi15' => 'home#chem6b_q2_wi15'
+  get 'chem6b_m2_wi15' => 'home#chem6b_m2_wi15'
   get 'chem140a_m1_wi15' => 'home#chem140a_m1_wi15'
   get 'phys2a_quiz1_wi15' => 'home#phys2a_quiz1_wi15'
   get 'phys2a_quiz5_wi15' => 'home#phys2a_quiz5_wi15'
   get 'cse11_quiz2_wi15' => 'home#cse11_quiz2_wi15'
   get 'cse11_m_wi15' => 'home#cse11_m_wi15'
+  get 'cse100_m_wi15' => 'home#cse100_m_wi15'
   get 'mmw12_pp1_wi15' => 'home#mmw12_pp1_wi15'
   get 'psyc_m1_wi15' => 'home#psyc_m1_wi15'
 
