@@ -15,6 +15,8 @@ Moorgoo::Application.routes.draw do
   get 'chem6b_q1_wi15' => 'home#chem6b_q1_wi15'
   get 'chem6b_q2_wi15' => 'home#chem6b_q2_wi15'
   get 'chem6b_m2_wi15' => 'home#chem6b_m2_wi15'
+  get 'chem6b_c14_wi15' => 'home#chem6b_c14_wi15'
+  get 'chem6b_c15_wi15' => 'home#chem6b_c15_wi15'
   get 'chem140a_m1_wi15' => 'home#chem140a_m1_wi15'
   get 'phys2a_quiz1_wi15' => 'home#phys2a_quiz1_wi15'
   get 'phys2a_quiz5_wi15' => 'home#phys2a_quiz5_wi15'
@@ -25,6 +27,7 @@ Moorgoo::Application.routes.draw do
   get 'cse11_m_wi15' => 'home#cse11_m_wi15'
   get 'cse100_m_wi15' => 'home#cse100_m_wi15'
   get 'mmw12_pp1_wi15' => 'home#mmw12_pp1_wi15'
+  get 'mmw12_pp2_wi15' => 'home#mmw12_pp2_wi15'
   get 'psyc_m1_wi15' => 'home#psyc_m1_wi15'
 
   get 'math20a_m1_fa14' => 'home#math20a_m1_fa14'
