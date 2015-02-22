@@ -11,6 +11,7 @@ Moorgoo::Application.routes.draw do
   get 'math20b_m1_wi15_en' => 'home#math20b_m1_wi15_en'
   get 'math109_m1_1_wi15' => 'home#math109_m1_1_wi15'
   get 'math109_m1_2_wi15' => 'home#math109_m1_2_wi15'
+  get 'math109_m2_wi15' => 'home#math109_m2_wi15'
   get 'econ100a_m1_wi15' => 'home#econ100a_m1_wi15'
   get 'chem6b_q1_wi15' => 'home#chem6b_q1_wi15'
   get 'chem6b_q2_wi15' => 'home#chem6b_q2_wi15'
