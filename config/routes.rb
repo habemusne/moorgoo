@@ -9,6 +9,7 @@ Moorgoo::Application.routes.draw do
   get 'video' => 'home#video'
   get 'math20b_m1_wi15' => 'home#math20b_m1_wi15'
   get 'math20b_m1_wi15_en' => 'home#math20b_m1_wi15_en'
+  get 'math20b_m2_wi15' => 'home#math20b_m2_wi15'
   get 'math109_m1_1_wi15' => 'home#math109_m1_1_wi15'
   get 'math109_m1_2_wi15' => 'home#math109_m1_2_wi15'
   get 'math109_m2_wi15' => 'home#math109_m2_wi15'
