@@ -21,6 +21,7 @@ Moorgoo::Application.routes.draw do
   get 'chem6b_c14_wi15' => 'home#chem6b_c14_wi15'
   get 'chem6b_c15_wi15' => 'home#chem6b_c15_wi15'
   get 'chem140a_m1_wi15' => 'home#chem140a_m1_wi15'
+  get 'chem140a_ch57_wi15' => 'home#chem140a_ch57_wi15'
   get 'phys2a_quiz1_wi15' => 'home#phys2a_quiz1_wi15'
   get 'phys2a_quiz5_wi15' => 'home#phys2a_quiz5_wi15'
   get 'phys2a_quiz6_wi15' => 'home#phys2a_quiz6_wi15'
