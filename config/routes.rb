@@ -15,6 +15,7 @@ Moorgoo::Application.routes.draw do
   get 'math109_m2_wi15' => 'home#math109_m2_wi15'
   get 'econ100a_m1_wi15' => 'home#econ100a_m1_wi15'
   get 'econ120a_m2_wi15' => 'home#econ120a_m2_wi15'
+  get 'econ4_final_wi15' => 'home#econ4_final_wi15'
   get 'chem6b_q1_wi15' => 'home#chem6b_q1_wi15'
   get 'chem6b_q2_wi15' => 'home#chem6b_q2_wi15'
   get 'chem6b_q4_wi15' => 'home#chem6b_q4_wi15'
@@ -37,6 +38,7 @@ Moorgoo::Application.routes.draw do
   get 'mmw12_pp1_wi15' => 'home#mmw12_pp1_wi15'
   get 'mmw12_pp2_wi15' => 'home#mmw12_pp2_wi15'
   get 'psyc_m1_wi15' => 'home#psyc_m1_wi15'
+  get 'mgt5_final_wi15' => 'home#mgt5_final_wi15'
 
   get 'math20a_m1_fa14' => 'home#math20a_m1_fa14'
   get 'math20a_m2_fa14' => 'home#math20a_m2_fa14'
