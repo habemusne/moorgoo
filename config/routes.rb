@@ -33,10 +33,12 @@ Moorgoo::Application.routes.draw do
   get 'cse11_quiz3_2_wi15' => 'home#cse11_quiz3_2_wi15'
   get 'cse11_quiz4_1_wi15' => 'home#cse11_quiz4_1_wi15'
   get 'cse11_quiz4_2_wi15' => 'home#cse11_quiz4_2_wi15'
+  get 'cse11_quiz5_wi15' => 'home#cse11_quiz5_wi15'
   get 'cse11_m_wi15' => 'home#cse11_m_wi15'
   get 'cse100_m_wi15' => 'home#cse100_m_wi15'
   get 'mmw12_pp1_wi15' => 'home#mmw12_pp1_wi15'
   get 'mmw12_pp2_wi15' => 'home#mmw12_pp2_wi15'
+  get 'mmw12_pp3_wi15' => 'home#mmw12_pp3_wi15'
   get 'psyc_m1_wi15' => 'home#psyc_m1_wi15'
   get 'mgt5_final_wi15' => 'home#mgt5_final_wi15'
 
